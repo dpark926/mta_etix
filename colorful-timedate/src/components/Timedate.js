@@ -11,6 +11,12 @@ var hour = d.getHours()
 var minute = d.getMinutes()
 var second = d.getSeconds()
 
+setInterval(function(){ addSecond(second); }, 1000);
+
+function addSecond(sec) {
+  return sec + 1
+}
+
 function Timedate() {
   return (
     <div>

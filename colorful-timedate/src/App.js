@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import TimeContainer from './containers/TimeContainer.js'
 import Timedate from './components/Timedate.js'
 import ColorBlock from './components/ColorBlock.js'
 
@@ -15,6 +16,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p> */}
+        <TimeContainer/>
         <Timedate/>
         <ColorBlock/>
       </div>
