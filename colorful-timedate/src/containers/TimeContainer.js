@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import '../styles/TimeDate.css';
 
 class TimeContainer extends Component {
   constructor() {
@@ -38,9 +39,9 @@ class TimeContainer extends Component {
     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
     return (
-      <div>
-        <h1>TimeContainer</h1>
-        <p>{days[this.state.day]}, {months[this.state.month]} {this.state.date}, {this.state.year} {this.state.second}</p>
+      <div className='timeclock-main'>
+        {/* <h1>TimeContainer</h1> */}
+        <h3 className='timeclock-text'>{days[this.state.day]}, {months[this.state.month]} {this.state.date}, {this.state.year} {this.state.second}</h3>
       </div>
     )
   }

@@ -1,0 +1,12 @@
+.timeclock-main {
+  /*margin: 10px;*/
+  width: 100%;
+  height: 200px;
+  position: fixed;
+  text-align: center;
+  /*border: 1px solid blue;*/
+}
+
+.timeclock-text {
+  padding-top: 75px;
+}

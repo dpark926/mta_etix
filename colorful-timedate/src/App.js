@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import TimeContainer from './containers/TimeContainer.js'
 import ColorBlock from './components/ColorBlock.js'
@@ -15,8 +15,12 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p> */}
-        <TimeContainer/>
-        <ColorBlock/>
+        <div className='colorblock-wrapper'>
+          <TimeContainer/>
+          <div className='block1'><ColorBlock/></div>
+          <div className='block2'><ColorBlock/></div>
+          <div className='block3'><ColorBlock/></div>
+        </div>
       </div>
     );
   }
