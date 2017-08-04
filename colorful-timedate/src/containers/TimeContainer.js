@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import Timedate from '../components/Timedate.js'
 
 class TimeContainer extends Component {
   constructor() {
@@ -42,7 +41,6 @@ class TimeContainer extends Component {
       <div>
         <h1>TimeContainer</h1>
         <p>{days[this.state.day]}, {months[this.state.month]} {this.state.date}, {this.state.year} {this.state.second}</p>
-        <Timedate second={this.state.second}/>
       </div>
     )
   }
