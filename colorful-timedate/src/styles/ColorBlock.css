@@ -1,6 +1,6 @@
 .time-block-wrapper {
-  border: 1px solid red;
-  margin: 10px;
+  border: 1px solid black;
+  /*margin: 10px;*/
 }
 
 .colorblock-main {
@@ -10,8 +10,8 @@
 
 .each-block {
   display: inline-block;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   background-color: yellow;
   border: 1px solid black;
 }

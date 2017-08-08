@@ -19,8 +19,8 @@ class App extends Component {
         <div className='time-block-wrapper'>
           <TimeContainer/>
           <ColorBlock/>
-          <Button/>
         </div>
+        <Button/>
       </div>
     );
   }
