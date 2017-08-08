@@ -15,7 +15,7 @@ class TimeContainer extends Component {
       hour: d.getHours(),
       minute: d.getMinutes(),
       second: d.getSeconds(),
-      time: d.toLocaleTimeString()
+      time: d.toLocaleTimeString(),
     }
 
     this.countingSecond = this.countingSecond.bind(this)

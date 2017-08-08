@@ -1,9 +1,9 @@
 import React from 'react'
 import '../styles/Button.css'
 
-function Button() {
+function Button(props) {
   return (
-    <div className='half-circle'>
+    <div className='half-circle' onClick={props.handleClick}>
       <i className="fa fa-angle-down"></i>
     </div>
   )

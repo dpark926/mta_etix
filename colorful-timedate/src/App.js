@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import TimeContainer from './containers/TimeContainer.js'
-import ColorBlock from './components/ColorBlock.js'
-import Button from './components/Button.js'
+import AppContainer from './containers/AppContainer.js'
+// import TimeContainer from './containers/TimeContainer.js'
+// import ColorBlock from './components/ColorBlock.js'
+// import Button from './components/Button.js'
 
 class App extends Component {
   render() {
@@ -16,11 +17,14 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p> */}
-        <div className='time-block-wrapper'>
+
+        {/* <div className='time-block-wrapper'>
           <TimeContainer/>
           <ColorBlock/>
         </div>
-        <Button/>
+        <Button/> */}
+
+        <AppContainer/>
       </div>
     );
   }
