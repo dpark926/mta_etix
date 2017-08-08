@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import TimeContainer from './containers/TimeContainer.js'
 import ColorBlock from './components/ColorBlock.js'
+import Button from './components/Button.js'
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
         <div className='time-block-wrapper'>
           <TimeContainer/>
           <ColorBlock/>
+          <Button/>
         </div>
       </div>
     );
