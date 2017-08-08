@@ -15,11 +15,9 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p> */}
-        <div className='colorblock-wrapper'>
+        <div className='time-block-wrapper'>
           <TimeContainer/>
-          <div className='block1'><ColorBlock/></div>
-          <div className='block2'><ColorBlock/></div>
-          <div className='block3'><ColorBlock/></div>
+          <ColorBlock/>
         </div>
       </div>
     );

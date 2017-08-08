@@ -2,31 +2,37 @@ import React, {Component} from 'react'
 import '../styles/TimeDate.css';
 
 class TimeContainer extends Component {
+
   constructor() {
     super()
 
+    let d = new Date()
     this.state = {
-      day: (new Date()).getDay(),
-      month: (new Date()).getMonth(),
-      date: (new Date()).getDate(),
-      year: (new Date()).getFullYear(),
-      hour: (new Date()).getHours(),
-      minute: (new Date()).getMinutes(),
-      second: (new Date()).toLocaleTimeString()
+      day: d.getDay(),
+      month: d.getMonth(),
+      date: d.getDate(),
+      year: d.getFullYear(),
+      hour: d.getHours(),
+      minute: d.getMinutes(),
+      second: d.getSeconds(),
+      time: d.toLocaleTimeString()
     }
 
     this.countingSecond = this.countingSecond.bind(this)
   }
 
   countingSecond() {
+    let d = new Date()
     this.setState({
-      day: (new Date()).getDay(),
-      month: (new Date()).getMonth(),
-      date: (new Date()).getDate(),
-      year: (new Date()).getFullYear(),
-      hour: (new Date()).getHours(),
-      minute: (new Date()).getMinutes(),
-      second: (new Date()).toLocaleTimeString(),
+      day: d.getDay(),
+      month: d.getMonth(),
+      date: d.getDate(),
+      year: d.getFullYear(),
+      hour: d.getHours(),
+      minute: d.getMinutes(),
+      second: d.getSeconds(),
+      milliseconds: d.getMilliseconds(),
+      time: d.toLocaleTimeString()
     })
   }
 
@@ -41,7 +47,7 @@ class TimeContainer extends Component {
     return (
       <div className='timeclock-main'>
         {/* <h1>TimeContainer</h1> */}
-        <h3 className='timeclock-text'>{days[this.state.day]}, {months[this.state.month]} {this.state.date}, {this.state.year} {this.state.second}</h3>
+        <h3 className='timeclock-text'>{days[this.state.day]}, {months[this.state.month]} {this.state.date}, {this.state.year} {this.state.time}</h3>
       </div>
     )
   }
