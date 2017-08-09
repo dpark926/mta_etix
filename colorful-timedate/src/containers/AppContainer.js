@@ -25,7 +25,6 @@ class AppContainer extends Component {
     if (this.state.clicked === false) {
       return (
         <div className="app-container animated slideInDown">
-
           <div className='time-block-wrapper'>
             <TimeContainer handleClick={this.handleClick}/>
             <ColorBlock handleClick={this.handleClick}/>
