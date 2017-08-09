@@ -1,11 +1,11 @@
 .time-block-wrapper {
-  border: 1px solid black;
+  border-bottom: 1px solid black;
   /*margin: 10px;*/
 }
 
 .colorblock-main {
   margin: 10px;
-  border: 1px solid blue;
+  /*border: 1px solid blue;*/
 }
 
 .each-block {
@@ -14,6 +14,33 @@
   height: 250px;
   background-color: yellow;
   border: 1px solid black;
+  animation-name: block;
+  animation-duration: 30s;
+  animation-iteration-count: 100;
+}
+
+
+@-webkit-keyframes block {
+    0%  {opacity: 1}
+    5%  {opacity: 0.5}
+    10% {opacity: 1}
+    15% {opacity: 0.5}
+    20% {opacity: 1}
+    25% {opacity: 0.5}
+    30% {opacity: 1}
+    35% {opacity: 0.5}
+    40% {opacity: 1}
+    45% {opacity: 0.5}
+    50% {opacity: 1}
+    55% {opacity: 0.5}
+    60% {opacity: 1}
+    65% {opacity: 0.5}
+    70% {opacity: 1}
+    75% {opacity: 0.5}
+    80% {opacity: 1}
+    85% {opacity: 0.5}
+    90% {opacity: 1}
+    100% {opacity: 0.5}
 }
 
 .block1 {

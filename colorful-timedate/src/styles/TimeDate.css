@@ -2,12 +2,47 @@
   margin: 10px;
   width: 100%;
   height: 200px;
-  /*position: fixed;*/
+  position: fixed;
   text-align: center;
-  border: 1px solid green;
+  /*border: 1px solid green;*/
 }
 
 .timeclock-text {
   /*padding-top: 75px;*/
   font-size: 2em;
+  color: white;
+  text-shadow:
+    3px 3px 0 #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  position: relative;
+  animation-name: example;
+  animation-duration: 40s;
+  animation-iteration-count: 100;
+}
+
+
+@-webkit-keyframes example {
+    0%  {top:0px;}
+    5%  {top:120px;}
+    10% {top:0px;}
+    15% {top:120px;}
+    20% {top:0px;}
+    25% {top:120px;}
+    30% {top:0px;}
+    35% {top:120px;}
+    40% {top:0px;}
+    45% {top:120px;}
+    50% {top:0px;}
+    55% {top:120px;}
+    60% {top:0px;}
+    65% {top:120px;}
+    70% {top:0px;}
+    75% {top:120px;}
+    80% {top:0px;}
+    85% {top:120px;}
+    90% {top:0px;}
+    100% {top:120px;}
 }

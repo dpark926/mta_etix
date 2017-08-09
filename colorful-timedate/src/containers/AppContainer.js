@@ -3,7 +3,6 @@ import TimeContainer from './TimeContainer.js'
 import ColorBlock from '../components/ColorBlock.js'
 import Button from '../components/Button.js'
 import Barcode from '../components/Barcode.js'
-import barcodeImg from '../styles/imgs/2d-barcode.png'
 
 class AppContainer extends Component {
   constructor() {
@@ -25,25 +24,31 @@ class AppContainer extends Component {
   render() {
     if (this.state.clicked === false) {
       return (
-        <div className="app-container">
+        <div className="app-container animated slideInDown">
 
           <div className='time-block-wrapper'>
             <TimeContainer handleClick={this.handleClick}/>
             <ColorBlock handleClick={this.handleClick}/>
+            <p>Tap to reveal barcode</p>
           </div>
           <a href='#'><Button handleClick={this.handleClick}/></a>
         </div>
       );
     } else {
       return (
-        <div className="app-container">
-          <Barcode/>
-          <img src={barcodeImg}></img>
+        <div className="app-container animated slideInUp">
+          <div className='time-block-wrapper'>
+            <Barcode/>
+            <p>Tap to view color bar</p>
+          </div>
           <a href='#'><Button handleClick={this.handleClick}/></a>
         </div>
       );
     }
   }
 }
+
+// Link?
+// hide?
 
 export default AppContainer;
