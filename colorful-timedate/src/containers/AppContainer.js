@@ -31,7 +31,7 @@ class AppContainer extends Component {
             <ColorBlock handleClick={this.handleClick}/>
             <p>Tap to reveal barcode</p>
           </div>
-          <a href='#'><Button handleClick={this.handleClick}/></a>
+          <a href='#'><Button handleClick={this.handleClick} clicked={this.state.clicked}/></a>
         </div>
       );
     } else {
@@ -41,7 +41,7 @@ class AppContainer extends Component {
             <Barcode/>
             <p>Tap to view color bar</p>
           </div>
-          <a href='#'><Button handleClick={this.handleClick}/></a>
+          <a href='#'><Button handleClick={this.handleClick} clicked={this.state.clicked}/></a>
         </div>
       );
     }
