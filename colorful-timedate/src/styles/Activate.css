@@ -5,16 +5,16 @@
   height: 100%;
 }
 
-.activate-circle {
+.activate-box {
   margin: auto;
-  margin-top: 15%;
+  margin-top: 20%;
   text-align: center;
   background-color: #ffcc5c;
-  width: 200px;
-  height: 100px;
+  width: 300px;
+  height: 150px;
 }
 
-.activate-circle a {
+.activate-box a {
   text-decoration: none;
 }
 
@@ -25,6 +25,6 @@
 
 .text h1 {
   color: #ff6f69;
-  padding-top: 30px;
+  padding-top: 55px;
   margin: auto;
 }

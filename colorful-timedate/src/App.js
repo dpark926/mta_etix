@@ -25,7 +25,7 @@ class App extends Component {
   render() {
     if (this.state.activate === false) {
       return (
-        <div className="activate-main animated slideInDown">
+        <div className="activate-main">
           <Activate handleActivate={this.handleActivate}/>
         </div>
       )
