@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import '../styles/OriginDest.css'
 
 let locations = ['Albertson', 'Amagansett', 'Amityville', 'Ansonia', 'Appalachian Trail',
@@ -21,9 +22,9 @@ function Destination (props) {
 
   let loc = newArray.map( location =>
     <div className="location-list-blah">
-      <a href="activate">
+      <Link to="/activate">
         <div className="location-each">{location}</div>
-      </a>
+      </Link>
     </div>
   )
 

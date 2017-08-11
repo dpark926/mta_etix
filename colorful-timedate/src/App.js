@@ -89,7 +89,7 @@ class App extends Component {
           <ColorBlock/>
         </div>
         <Button/> */}
-        {/* <Redirect to='/origin' /> */}
+        <Redirect to='/origin' />
         <Route path="/origin" render={() => <Origin
           handleOrigin={this.handleOrigin}
           origin={this.state.origin}/>}
