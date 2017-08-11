@@ -8,17 +8,35 @@ let locations = ['Albertson', 'Amagansett', 'Amityville', 'Ansonia', 'Appalachia
   'Botanical Garden', 'Branchville', 'Breakneck Ridge', 'Brentwood', 'Brewster',
   'Bridgehampton', 'Bridgeport', 'Broadway', 'Bronxville', 'Cannondale']
 
-let loc = locations.map( location => <div className="location-list-blah"><a href="destination"><div className="location-each">{location}</div></a></div>)
+function Origin (props) {
+  let origin = props.origin
+  let newArray = []
 
-function Origin () {
+  for (var i = 0; i < locations.length; i++) {
+    let location = locations[i]
+      if (location.slice(0, origin.length).toLowerCase() === origin.toLowerCase() && !newArray.includes(location)) {
+        newArray.push(location)
+      }
+  }
+
+  let loc = newArray.map( location =>
+    <div className="location-list-blah">
+      <a href="destination">
+        <div className="location-each">{location}</div>
+      </a>
+    </div>
+  )
+
   return (
-    <div className="animated slideInRight">
+    <div>
       <div className="location-header">
         <h2 className="location-header-text">Select Origin Station</h2>
       </div>
-      <input className="location-search"placeholder="Search for Origins"></input>
-      <div className="location-list">
-        {loc}
+      <div className="animated slideInRight">
+        <input className="location-search" type='text' onChange={props.handleOrigin} placeholder="Search for Origins"></input>
+        <div className="location-list">
+          {loc}
+        </div>
       </div>
     </div>
   )

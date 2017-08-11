@@ -19,11 +19,26 @@ class App extends Component {
     }
 
     this.handleActivate = this.handleActivate.bind(this)
+    this.handleOrigin = this.handleOrigin.bind(this)
+    this.handleDestination = this.handleDestination.bind(this)
   }
+
 
   handleActivate() {
     this.setState({
       activate: true
+    })
+  }
+
+  handleOrigin(event) {
+    this.setState({
+      origin: event.target.value
+    })
+  }
+
+  handleDestination(event) {
+    this.setState({
+      destination: event.target.value
     })
   }
 
@@ -75,8 +90,14 @@ class App extends Component {
         </div>
         <Button/> */}
         {/* <Redirect to='/origin' /> */}
-        <Route path="/origin" component={Origin}/>
-        <Route path="/destination" component={Destination}/>
+        <Route path="/origin" render={() => <Origin
+          handleOrigin={this.handleOrigin}
+          origin={this.state.origin}/>}
+        />
+        <Route path="/destination" render={() => <Destination
+          handleDestination={this.handleDestination}
+          destination={this.state.destination}/>}
+        />
         <Route path="/activate" component={Activate}/>
         <Route path="/access" component={AppContainer}/>
       </div>

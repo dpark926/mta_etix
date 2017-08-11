@@ -18,10 +18,14 @@
 }
 
 .location-list-blah {
-  margin: 0 30px;
+  /*margin: 0 30px;*/
   /*border-top: 1px solid gray;*/
-  border-bottom: 1px solid gray;
-  padding: 15px;
+  /*border-bottom: 1px solid gray;*/
+  /*padding: 15px;*/
+}
+
+.location-list-blah:hover {
+  background-color: blue;
 }
 
 .location-list a {
@@ -30,7 +34,14 @@
 }
 
 .location-each {
+  margin: 0 30px;
+  /*border-top: 1px solid gray;*/
+  border-bottom: 1px solid gray;
+  padding: 15px;
+}
 
+.location-each:hover {
+  color: white;
 }
 
 .location-search {

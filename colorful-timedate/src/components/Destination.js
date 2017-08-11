@@ -8,17 +8,35 @@ let locations = ['Albertson', 'Amagansett', 'Amityville', 'Ansonia', 'Appalachia
   'Botanical Garden', 'Branchville', 'Breakneck Ridge', 'Brentwood', 'Brewster',
   'Bridgehampton', 'Bridgeport', 'Broadway', 'Bronxville', 'Cannondale']
 
-let loc = locations.map( location => <div className="location-list-blah"><a href="activate"><div className="location-each">{location}</div></a></div>)
+function Destination (props) {
+  let destination = props.destination
+  let newArray = []
 
-function Destination () {
+  for (var i = 0; i < locations.length; i++) {
+    let location = locations[i]
+      if (location.slice(0, destination.length).toLowerCase() === destination.toLowerCase() && !newArray.includes(location)) {
+        newArray.push(location)
+      }
+  }
+
+  let loc = newArray.map( location =>
+    <div className="location-list-blah">
+      <a href="activate">
+        <div className="location-each">{location}</div>
+      </a>
+    </div>
+  )
+
   return (
-    <div className="animated slideInRight">
+    <div>
       <div className="location-header">
         <h2 className="location-header-text">Select Destination Station</h2>
       </div>
-      <input className="location-search"placeholder="Search for Destinations"></input>
-      <div className="location-list">
-        {loc}
+      <div className="animated slideInRight">
+        <input className="location-search" type='text' onChange={props.handleDestination} placeholder="Search for Destinations"></input>
+        <div className="location-list">
+          {loc}
+        </div>
       </div>
     </div>
   )
