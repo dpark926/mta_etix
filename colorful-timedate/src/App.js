@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import { Route, Redirect } from 'react-router-dom'
 // import logo from './logo.svg';
 import './App.css';
+import Origin from './components/Origin.js'
+import Destination from './components/Destination.js'
 import AppContainer from './containers/AppContainer.js'
 import Activate from './components/Activate.js'
 import './styles/Activate.css'
@@ -10,7 +13,9 @@ class App extends Component {
     super()
 
     this.state = {
-      activate: false
+      activate: false,
+      origin: '',
+      destination: '',
     }
 
     this.handleActivate = this.handleActivate.bind(this)
@@ -45,8 +50,10 @@ class App extends Component {
             <ColorBlock/>
           </div>
           <Button/> */}
-
-          <AppContainer/>
+          <Redirect to='/' />
+          <Route path="/origin" component={Origin}/>
+          <Route path="/destination" component={Destination}/>
+          <Route path="/access" component={AppContainer}/>
         </div>
       );
     }
