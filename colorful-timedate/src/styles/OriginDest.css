@@ -1,0 +1,46 @@
+.location-header {
+  height: 70px;
+  background-color: blue;
+  color: white;
+}
+
+.location-header h2 {
+  margin: auto;
+  padding: 20px;
+  /*border: 1px solid red;*/
+  vertical-align: middle;
+  width: 50%;
+}
+
+.location-list {
+  margin: 0 30%;
+  border: 1px solid black;
+}
+
+.location-list-blah {
+  margin: 0 30px;
+  /*border-top: 1px solid gray;*/
+  border-bottom: 1px solid gray;
+  padding: 15px;
+}
+
+.location-list a {
+  text-decoration: none;
+  color: black;
+}
+
+.location-each {
+
+}
+
+.location-search {
+  margin: 30px;
+  width: 40%;
+  height: 40px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  font-size: 14px;
+  background-color: white;
+  text-align: center;
+}
