@@ -21,9 +21,9 @@ function Origin (props) {
   }
 
   let loc = newArray.map( location =>
-    <div className="location-list-blah">
+    <div className="location-list-blah" onClick={props.handleClickedOrigin}>
       <Link to='/destination'>
-        <div className="location-each">{location}</div>
+        <div className="location-each" id={location}>{location}</div>
       </Link>
     </div>
   )

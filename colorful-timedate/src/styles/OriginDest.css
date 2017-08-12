@@ -55,3 +55,28 @@
   background-color: white;
   text-align: center;
 }
+
+.origin-destination {
+  /*border: 1px solid green;*/
+  margin: auto;
+  width: 40%;
+  /*text-align: !important center;*/
+  vertical-align: middle;
+}
+
+.origin-destination-third {
+  display: inline-block;
+  /*border: 1px solid red;*/
+  width: 40%;
+  vertical-align: middle;
+}
+
+.origin-destination-middle {
+  width: 15%;
+  vertical-align: middle;
+  /*border: 1px solid red;*/
+}
+
+#arrow-right {
+  color: blue;
+}

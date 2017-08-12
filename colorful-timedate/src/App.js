@@ -16,11 +16,13 @@ class App extends Component {
       activate: false,
       origin: '',
       destination: '',
+      clickedOrigin: '',
     }
 
     this.handleActivate = this.handleActivate.bind(this)
     this.handleOrigin = this.handleOrigin.bind(this)
     this.handleDestination = this.handleDestination.bind(this)
+    this.handleClickedOrigin = this.handleClickedOrigin.bind(this)
   }
 
 
@@ -39,6 +41,13 @@ class App extends Component {
   handleDestination(event) {
     this.setState({
       destination: event.target.value
+    })
+  }
+
+  handleClickedOrigin(event) {
+    debugger
+    this.setState({
+      clickedOrigin: event.target.id
     })
   }
 
@@ -92,11 +101,13 @@ class App extends Component {
         <Redirect to='/origin' />
         <Route path="/origin" render={() => <Origin
           handleOrigin={this.handleOrigin}
-          origin={this.state.origin}/>}
+          origin={this.state.origin}
+          handleClickedOrigin={this.handleClickedOrigin}/>}
         />
         <Route path="/destination" render={() => <Destination
           handleDestination={this.handleDestination}
-          destination={this.state.destination}/>}
+          destination={this.state.destination}
+          clickedOrigin={this.state.clickedOrigin}/>}
         />
         <Route path="/activate" component={Activate}/>
         <Route path="/access" component={AppContainer}/>

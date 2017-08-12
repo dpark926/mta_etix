@@ -15,15 +15,17 @@ function Destination (props) {
 
   for (var i = 0; i < locations.length; i++) {
     let location = locations[i]
-      if (location.slice(0, destination.length).toLowerCase() === destination.toLowerCase() && !newArray.includes(location)) {
-        newArray.push(location)
-      }
+    if (props.clickedOrigin === location) {
+      continue
+    } else if(location.slice(0, destination.length).toLowerCase() === destination.toLowerCase() && !newArray.includes(location)) {
+      newArray.push(location)
+    }
   }
 
   let loc = newArray.map( location =>
     <div className="location-list-blah">
       <Link to="/activate">
-        <div className="location-each">{location}</div>
+        <div className="location-each" id={location}>{location}</div>
       </Link>
     </div>
   )
@@ -35,6 +37,11 @@ function Destination (props) {
       </div>
       <div className="animated slideInRight">
         <input className="location-search" type='text' onChange={props.handleDestination} placeholder="Search for Destinations"></input>
+        <div className="origin-destination">
+          <div className="origin-destination-third">{props.clickedOrigin.toUpperCase()}</div>
+          <div className="origin-destination-middle fa fa-long-arrow-right" id="arrow-right"></div>
+          <div className="origin-destination-third"></div>
+        </div>
         <div className="location-list">
           {loc}
         </div>
