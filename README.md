@@ -2,6 +2,7 @@
 
 A simple front-end app built with React that's inspired by the MTA LIRR train ticketing app. Users can select an origin and destination. Activating the ticket will display the current time and date that's constantly moving left to right over a three colored boxes that's generated with random colors.
 
+
 ![colorful-timedate](./colorful_timedate.gif)
 ![colorful-timedate](./colorful_timedate2.gif)
 
