@@ -9,7 +9,7 @@
   margin: auto;
   margin-top: 20%;
   text-align: center;
-  background-color: #ffcc5c;
+  background-color: blue;
   width: 300px;
   height: 150px;
 }
@@ -24,7 +24,7 @@
 }
 
 .text h1 {
-  color: #ff6f69;
+  color: white;
   padding-top: 55px;
   margin: auto;
 }

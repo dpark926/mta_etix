@@ -21,7 +21,6 @@ function ColorBlock() {
 
   return (
     <div className="colorblock-main">
-      {/* <h1>Color Block 1</h1> */}
       {blocks}
     </div>
   )

@@ -46,7 +46,6 @@ class TimeContainer extends Component {
 
     return (
       <div className='timeclock-main'>
-        {/* <h1>TimeContainer</h1> */}
         <h3 className='timeclock-text'>{days[this.state.day]}, {months[this.state.month]} {this.state.date}, {this.state.year} {this.state.time}</h3>
       </div>
     )
