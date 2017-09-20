@@ -30,7 +30,7 @@ function Origin (props) {
 
   return (
     <div>
-      <div className="location-header">
+      <div className="location-header nav justify-content-center">
         <h2 className="location-header-text">Select Origin Station</h2>
       </div>
       <div className="animated slideInRight">

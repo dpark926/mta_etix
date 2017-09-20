@@ -20,7 +20,7 @@
 }
 
 
-@-webkit-keyframes block {
+/*@-webkit-keyframes block {
     0%  {opacity: 1}
     5%  {opacity: 0.7}
     10% {opacity: 1}
@@ -42,7 +42,7 @@
     90% {opacity: 1}
     95% {opacity: 0.7}
     100% {opacity: 1}
-}
+}*/
 
 .block1 {
   /*margin: 10px;*/

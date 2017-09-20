@@ -52,7 +52,7 @@ class App extends Component {
 
   render () {
     return (
-      <div className="App">
+      <div className="App container-fluid">
         <Redirect to='/origin' />
         <Route path="/origin" render={() => <Origin
           handleOrigin={this.handleOrigin}
