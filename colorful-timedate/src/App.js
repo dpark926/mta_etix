@@ -6,6 +6,12 @@ import Origin from './components/Origin.js'
 import Destination from './components/Destination.js'
 import AppContainer from './containers/AppContainer.js'
 import Activate from './components/Activate.js'
+import BuyTickets from './components/BuyTickets.js'
+import TicketType from './components/TicketType.js'
+import TicketCost from './components/TicketCost.js'
+import Accept from './components/Accept.js'
+import PaymentMethod from './components/PaymentMethod.js'
+
 import './styles/Activate.css'
 
 class App extends Component {
