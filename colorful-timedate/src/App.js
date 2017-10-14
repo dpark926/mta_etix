@@ -11,6 +11,7 @@ import TicketType from './components/TicketType.js'
 import TicketCost from './components/TicketCost.js'
 import Accept from './components/Accept.js'
 import PaymentMethod from './components/PaymentMethod.js'
+import CardInfo from './components/CardInfo.js'
 
 import './styles/Activate.css'
 
@@ -59,7 +60,8 @@ class App extends Component {
   render () {
     return (
       <div className="App container-fluid">
-        <Redirect to='/origin' />
+        <Redirect to='/buytickets' />
+        <Route path="/buytickets" component={BuyTickets}/>
         <Route path="/origin" render={() => <Origin
           handleOrigin={this.handleOrigin}
           origin={this.state.origin}
@@ -70,6 +72,10 @@ class App extends Component {
           destination={this.state.destination}
           clickedOrigin={this.state.clickedOrigin}/>}
         />
+        <Route path="/ticket-type" component={TicketType}/>
+        <Route path="/ticket-cost" component={TicketCost}/>
+        <Route path="/payment-method" component={PaymentMethod}/>
+        <Route path="/card-info" component={CardInfo}/>
         <Route path="/activate" component={Activate}/>
         <Route path="/access" component={AppContainer}/>
       </div>

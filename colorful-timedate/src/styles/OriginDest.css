@@ -66,14 +66,15 @@
 
 .origin-destination-third {
   display: inline-block;
+  color: gray;
   /*border: 1px solid red;*/
   width: 40%;
+  height: 40px;
   vertical-align: middle;
 }
 
 .origin-destination-middle {
   width: 15%;
-  vertical-align: middle;
   /*border: 1px solid red;*/
 }
 
