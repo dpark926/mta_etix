@@ -24,7 +24,7 @@ function Destination (props) {
 
   let loc = newArray.map( location =>
     <div className="location-list-blah">
-      <Link to="/activate">
+      <Link to="/ticket-type">
         <div className="location-each" id={location}>{location}</div>
       </Link>
     </div>

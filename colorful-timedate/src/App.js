@@ -8,7 +8,7 @@ import AppContainer from './containers/AppContainer.js'
 import Activate from './components/Activate.js'
 import BuyTickets from './components/BuyTickets.js'
 import TicketType from './components/TicketType.js'
-import TicketCost from './components/TicketCost.js'
+import TicketCost from './components/OneWay.js'
 import Accept from './components/Accept.js'
 import PaymentMethod from './components/PaymentMethod.js'
 import CardInfo from './components/CardInfo.js'
@@ -73,7 +73,11 @@ class App extends Component {
           clickedOrigin={this.state.clickedOrigin}/>}
         />
         <Route path="/ticket-type" component={TicketType}/>
-        <Route path="/ticket-cost" component={TicketCost}/>
+        <Route path="/ten-trip" component={TicketCost}/>
+        <Route path="/one-way" component={TicketCost}/>
+        <Route path="/round-trip" component={TicketCost}/>
+        <Route path="/weekly" component={TicketCost}/>
+        <Route path="/accept" component={Accept}/>
         <Route path="/payment-method" component={PaymentMethod}/>
         <Route path="/card-info" component={CardInfo}/>
         <Route path="/activate" component={Activate}/>

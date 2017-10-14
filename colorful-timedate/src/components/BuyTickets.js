@@ -13,8 +13,12 @@ function BuyTickets () {
         <Link to='/origin'>
           <div className="button">Buy Tickets</div>
         </Link>
-        <div className="button">Ticket Wallet</div>
-        <div className="button">Train Time</div>
+        {/* <Link to='/origin'> */}
+          <div className="button">Ticket Wallet</div>
+        {/* </Link> */}
+        {/* <Link to='/origin'> */}
+          <div className="button">Train Time</div>
+        {/* </Link> */}
       </div>
     </div>
   )
