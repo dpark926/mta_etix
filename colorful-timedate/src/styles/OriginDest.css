@@ -56,6 +56,18 @@
   text-align: center;
 }
 
+.alpha {
+  background-color: blue;
+  color: white;
+  text-align: left;
+}
+
+.letter {
+  margin: 0 30px;
+  padding: 5px;
+  font-size: 16px;
+}
+
 .origin-destination {
   /*border: 1px solid green;*/
   margin: auto;
