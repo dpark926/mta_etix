@@ -4,7 +4,7 @@
   height: 200px;
   position: fixed;
   text-align: center;
-  /*border: 1px solid green;*/
+  border: 1px solid green;
 }
 
 .timeclock-text {
@@ -21,10 +21,12 @@
   animation-name: example;
   animation-duration: 40s;
   animation-iteration-count: 100;
+  border: 1px solid red;
+  width: 50%;
 }
 
 
-@-webkit-keyframes example {
+/*@-webkit-keyframes example {
     0%  {top:0px;}
     5%  {top:120px;}
     10% {top:0px;}
@@ -46,4 +48,28 @@
     90% {top:0px;}
     95% {top:120px;}
     100% {top:0px;}
+}*/
+
+@-webkit-keyframes example {
+    0%  {left:-50px;}
+    5%  {left:50px;}
+    10% {left:-50px;}
+    15% {left:50px;}
+    20% {left:-50px;}
+    25% {left:50px;}
+    30% {left:-50px;}
+    35% {left:50px;}
+    40% {left:-50px;}
+    45% {left:50px;}
+    50% {left:-50px;}
+    55% {left:50px;}
+    60% {left:-50px;}
+    65% {left:50px;}
+    70% {left:-50px;}
+    75% {left:50px;}
+    80% {left:-50px;}
+    85% {left:50px;}
+    90% {left:-50px;}
+    95% {left:50px;}
+    100% {left:-50px;}
 }

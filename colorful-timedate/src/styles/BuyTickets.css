@@ -1,3 +1,7 @@
+.buytickets {
+  background-color: #3b5998;
+}
+
 .button {
   margin: 10px auto;
   font-size: 20px;
@@ -8,7 +12,7 @@
   padding: 15px;
   color: black;
   text-decoration: none;
-
+  background-color: white;
 }
 
 .button:hover {

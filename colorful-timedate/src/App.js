@@ -60,7 +60,7 @@ class App extends Component {
   render () {
     return (
       <div className="App">
-        <Redirect to='/buytickets' />
+        {/* <Redirect to='/buytickets' />
         <Route path="/buytickets" component={BuyTickets}/>
         <Route path="/origin" render={() => <Origin
           handleOrigin={this.handleOrigin}
@@ -81,7 +81,8 @@ class App extends Component {
         <Route path="/payment-method" component={PaymentMethod}/>
         <Route path="/card-info" component={CardInfo}/>
         <Route path="/activate" component={Activate}/>
-        <Route path="/access" component={AppContainer}/>
+        <Route path="/access" component={AppContainer}/> */}
+        <AppContainer/>
       </div>
     );
   }
