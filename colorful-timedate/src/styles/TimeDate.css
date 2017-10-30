@@ -51,7 +51,7 @@
 }*/
 
 @-webkit-keyframes example {
-    0%  {left:-50px;}
+    /*0%  {left:-50px;}
     5%  {left:50px;}
     10% {left:-50px;}
     15% {left:50px;}
@@ -71,5 +71,5 @@
     85% {left:50px;}
     90% {left:-50px;}
     95% {left:50px;}
-    100% {left:-50px;}
+    100% {left:-50px;}*/
 }

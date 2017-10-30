@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/OriginDest.css'
 
-let locations = ['A', 'Albertson', 'Amagansett', 'Amityville', 'Ansonia', 'Appalachian Trail',
+let locations = ['Grand Central', 'Penn Station', 'A', 'Albertson', 'Amagansett', 'Amityville', 'Ansonia', 'Appalachian Trail',
   'Ardsley on Hudson', 'Atlantic Terminal', 'Auburndale', 'B', 'Babylon', 'Baldwin',
   'Bay Shore', 'Bayside', 'Beacon', 'Beacon-Falls', 'Beadford Hills',
   'Bellrose', 'Bellmore', 'Bellport', 'Bethel', 'Bethpage',
@@ -63,9 +63,9 @@ function Origin (props) {
         <h2 className="location-header-text">Select Origin Station</h2>
       </div>
       <div className="animated slideInRight">
-        <input className="location-search" type='text' onChange={props.handleOrigin} placeholder="Search for Origins"></input>
+        <input className="location-search" type='text' onChange={props.handleOrigin} placeholder="Search"></input>
         <div className="location-list">
-          <div className="location-list-blah" onClick={props.handleClickedOrigin}>
+          {/* <div className="location-list-blah" onClick={props.handleClickedOrigin}>
             <Link to="/destination">
               <div className="location-each" id='Grand Central Station'>Grand Central Station</div>
             </Link>
@@ -74,7 +74,7 @@ function Origin (props) {
             <Link to="/destination">
               <div className="location-each" id='Penn Station'>Penn Station</div>
             </Link>
-          </div>
+          </div> */}
           {loc}
         </div>
       </div>

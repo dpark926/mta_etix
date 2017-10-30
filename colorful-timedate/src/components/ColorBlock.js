@@ -33,7 +33,7 @@
 
 import React, {Component} from 'react'
 import { SketchPicker } from 'react-color';
-import '../styles/TimeDate.css';
+import '../styles/ColorBlock.css';
 
 class ColorBlock extends Component {
 
@@ -46,8 +46,12 @@ class ColorBlock extends Component {
       block2: '',
       block3: '',
     }
-
   }
+
+  handleChangeComplete = (color) => {
+    this.setState({ block1: color.hex });
+    console.log(this.state.block1)
+  };
 
   render() {
     let blocks = []
@@ -69,8 +73,14 @@ class ColorBlock extends Component {
 
     return (
       <div className="colorblock-main">
-        {blocks}
-        <SketchPicker />
+        {/* {blocks} */}
+        <div className='each-block block1' style={{backgroundColor: this.state.block1}}></div>
+        <div className='each-block block2' style={{backgroundColor: 'rgba(222, 222, 222, 1)'}}></div>
+        <div className='each-block block2' style={{backgroundColor: 'rgba(222, 222, 222, 1)'}}></div>
+        <SketchPicker
+          color={ this.state.background }
+          onChangeComplete={ this.handleChangeComplete }
+        />
       </div>
     )
   }

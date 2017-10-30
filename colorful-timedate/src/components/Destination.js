@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/OriginDest.css'
 
-let locations = ['A', 'Albertson', 'Amagansett', 'Amityville', 'Ansonia', 'Appalachian Trail',
+let locations = ['Grand Central', 'Penn Station', 'A', 'Albertson', 'Amagansett', 'Amityville', 'Ansonia', 'Appalachian Trail',
   'Ardsley on Hudson', 'Atlantic Terminal', 'Auburndale', 'B', 'Babylon', 'Baldwin',
   'Bay Shore', 'Bayside', 'Beacon', 'Beacon-Falls', 'Beadford Hills',
   'Bellrose', 'Bellmore', 'Bellport', 'Bethel', 'Bethpage',
@@ -24,7 +24,11 @@ function Destination (props) {
 
   for (var i = 0; i < locations.length; i++) {
     let location = locations[i]
-    if (props.clickedOrigin === location) {
+    if (props.clickedOrigin === 'Grand Central' && location === 'Penn Station') {
+      continue
+    } else if (props.clickedOrigin === 'Penn Station' && location === 'Grand Central') {
+      continue
+    }else if (props.clickedOrigin === location) {
       continue
     } else if(location.slice(0, destination.length).toLowerCase() === destination.toLowerCase() && !newArray.includes(location)) {
       newArray.push(location)
@@ -42,7 +46,7 @@ function Destination (props) {
       )
     } else {
       return (
-        <div className="location-list-blah">
+        <div className="location-list-blah" onClick={props.handleClickedDestination}>
           <Link to="/ticket-type">
             <div className="location-each" id={location}>{location}</div>
           </Link>
@@ -57,23 +61,23 @@ function Destination (props) {
         <h2 className="location-header-text">Select Destination Station</h2>
       </div>
       <div className="animated slideInRight">
-        <input className="location-search" type='text' onChange={props.handleDestination} placeholder="Search for Destinations"></input>
         <div className="origin-destination">
           <div className="origin-destination-third">{props.clickedOrigin.toUpperCase()}</div>
           <div className="origin-destination-middle fa fa-long-arrow-right" id="arrow-right"></div>
           <div className="origin-destination-third"></div>
         </div>
+        <input className="location-search" type='text' onChange={props.handleDestination} placeholder="Search"></input>
         <div className="location-list">
-          <div className="location-list-blah">
+          {/* <div className="location-list-blah" onClick={props.handleClickedDestination}>
             <Link to="/ticket-type">
               <div className="location-each" id='Grand Central Station'>Grand Central Station</div>
             </Link>
           </div>
-          <div className="location-list-blah">
+          <div className="location-list-blah" onClick={props.handleClickedDestination}>
             <Link to="/ticket-type">
               <div className="location-each" id='Penn Station'>Penn Station</div>
             </Link>
-          </div>
+          </div> */}
           {loc}
         </div>
       </div>

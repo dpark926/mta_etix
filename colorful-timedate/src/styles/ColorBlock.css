@@ -10,7 +10,7 @@
 
 .each-block {
   display: inline-block;
-  width: 110px;
+  width: 30%;
   height: 110px;
   background-color: yellow;
   border: 1px solid black;
