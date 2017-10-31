@@ -5,7 +5,7 @@ import '../styles/BuyTickets.css'
 function BuyTickets () {
 
   return (
-    <div>
+    <div className='buytickets'>
       <div className="location-header nav justify-content-center">
         <h2 className="location-header-text">MTA eTix</h2>
       </div>
