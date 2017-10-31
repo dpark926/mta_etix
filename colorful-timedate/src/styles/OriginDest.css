@@ -49,10 +49,10 @@
 }
 
 .location-each {
-  margin: 0 30px;
+  margin: 0 15px;
   /*border-top: 1px solid gray;*/
   border-bottom: 1px solid gray;
-  padding: 15px;
+  padding: 15px 0;
 }
 
 .location-each:hover {
@@ -100,32 +100,42 @@
   text-align: left;
 }
 
+.blank {
+  background-color: #3b5998;
+  height: 25px;
+}
+
 .letter {
-  margin: 0 30px;
+  margin: 0 10px;
   padding: 3px;
   font-size: 16px;
 }
 
 .origin-destination {
   /*border: 1px solid green;*/
-  margin: auto;
-  width: 40%;
+  background-color: #3b5998;
+  color: white;
+  text-align: left;
+  padding: 5px 15px;
+  /*width: 40%;*/
   /*text-align: !important center;*/
-  vertical-align: middle;
+  /*vertical-align: middle;*/
 }
 
 .origin-destination-third {
   display: inline-block;
-  color: gray;
   /*border: 1px solid red;*/
-  width: 40%;
-  height: 40px;
+  /*width: 40%;
+  height: 40px;*/
   vertical-align: middle;
+  font-weight: 300;
+  font-size: .9em;
 }
 
 .origin-destination-middle {
-  width: 15%;
+  /*width: 15%;*/
   /*border: 1px solid red;*/
+  padding: 0 10px;
 }
 
 #arrow-right {

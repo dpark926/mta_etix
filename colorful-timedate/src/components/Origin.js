@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/OriginDest.css'
 
-let locations = ['GRAND CENTRAL TERMINAL', 'PENN STATION', 'A', 'Albertson', 'Amagansett', 'Amityville', 'Ansonia', 'Appalachian Trail',
+let locations = ['GRAND CENTRAL TERMINAL', 'PENN STATION', '.', 'A', 'Albertson', 'Amagansett', 'Amityville', 'Ansonia', 'Appalachian Trail',
   'Ardsley on Hudson', 'Atlantic Terminal', 'Auburndale', 'B', 'Babylon', 'Baldwin',
   'Bay Shore', 'Bayside', 'Beacon', 'Beacon-Falls', 'Beadford Hills',
   'Bellrose', 'Bellmore', 'Bellport', 'Bethel', 'Bethpage',
@@ -44,6 +44,12 @@ function Origin (props) {
       return (
         <div className='alpha'>
           <div className='letter'>{location}</div>
+        </div>
+      )
+    } else if (location === '.') {
+      return (
+        <div className='blank'>
+          {/* <div className='letter'></div> */}
         </div>
       )
     } else {
