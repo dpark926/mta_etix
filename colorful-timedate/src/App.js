@@ -27,6 +27,7 @@ class App extends Component {
       clickedDestination: '',
       ticketType: '',
       ticket: '',
+      cost: '',
     }
   }
 
@@ -69,8 +70,11 @@ class App extends Component {
   }
 
   handleTicket = (event) => {
+    let id = event.currentTarget.id.split(", ")
+
     this.setState({
-      ticket: event.target.id
+      ticket: id[0],
+      cost: id[1],
     })
   }
 
@@ -110,9 +114,16 @@ class App extends Component {
           clickedOrigin={this.state.clickedOrigin}
           clickedDestination={this.state.clickedDestination}
           ticketType={this.state.ticketType}
+          cost={this.state.cost}
           ticket={this.state.ticket}/>}
         />
-        <Route path="/card-info" component={CardInfo}/>
+        {/* <Route path="/card-info" component={CardInfo}/> */}
+        <Route path="/card-info" render={() => <CardInfo
+          clickedOrigin={this.state.clickedOrigin}
+          clickedDestination={this.state.clickedDestination}
+          ticketType={this.state.ticketType}
+          ticket={this.state.ticket}/>}
+        />
         <Route path="/activate" component={Activate}/>
         <Route path="/access" component={AppContainer}/>
       </div>

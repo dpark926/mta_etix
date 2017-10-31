@@ -16,6 +16,7 @@ function PaymentMethod (props) {
           <div className="origin-destination-third">{props.ticketType.toUpperCase()}</div>
           <div className="origin-destination-third">{props.ticket.toUpperCase()}</div>
         </div>
+        <div>Total: {props.cost}</div>
         <div>Payment methods</div>
         <Link to='/card-info'>
           <div className="button">American Express</div>
