@@ -11,13 +11,22 @@ function BuyTickets () {
       </div>
       <div className="animated slideInRight">
         <Link to='/origin'>
-          <div className="button">Buy Tickets</div>
+          <div className="button">
+            <div className="buy-ticket-text">Buy Tickets</div>
+            <div className="buy-ticket-arrow fa fa-arrow-right"></div>
+          </div>
         </Link>
         {/* <Link to='/origin'> */}
-          <div className="button">Ticket Wallet</div>
+          <div className="button">
+            <div className="buy-ticket-text">Ticket Wallet</div>
+            <div className="buy-ticket-arrow fa fa-arrow-right"></div>
+          </div>
         {/* </Link> */}
         {/* <Link to='/origin'> */}
-          <div className="button">Train Time</div>
+          <div className="button">
+            <div className="buy-ticket-text">Train Time</div>
+            <div className="buy-ticket-arrow fa fa-arrow-right"></div>
+          </div>
         {/* </Link> */}
       </div>
     </div>

@@ -10,11 +10,11 @@ function PaymentMethod (props) {
       </div>
       <div className="animated slideInRight">
         <div className="origin-destination">
-          <div className="origin-destination-third">{props.clickedOrigin.toUpperCase()}</div>
+          <div className="origin-destination-third">{props.clickedOrigin}</div>
           <div className="origin-destination-middle fa fa-long-arrow-right" id="arrow-right"></div>
-          <div className="origin-destination-third">{props.clickedDestination.toUpperCase()}</div>
-          <div className="origin-destination-third">{props.ticketType.toUpperCase()}</div>
-          <div className="origin-destination-third">{props.ticket.toUpperCase()}</div>
+          <div className="origin-destination-third">{props.clickedDestination}</div>
+          <div className="origin-destination-third">{props.ticketType}</div>
+          <div className="origin-destination-third">{props.ticket}</div>
         </div>
         <div>Total: {props.cost}</div>
         <div>Payment methods</div>

@@ -2,6 +2,20 @@
   background-color: #3b5998;
 }
 
+.buy-ticket-text {
+  display: inline-block;
+  text-align: left;
+  width: 50%;
+}
+
+.buy-ticket-arrow {
+  color: #3b5998;
+  display: inline-block;
+  text-align: right;
+  width: 50%;
+  font-size: 1em;
+}
+
 .button {
   margin: 10px auto;
   font-size: 20px;

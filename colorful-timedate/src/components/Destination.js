@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/OriginDest.css'
 
-let locations = ['Grand Central', 'Penn Station', 'A', 'Albertson', 'Amagansett', 'Amityville', 'Ansonia', 'Appalachian Trail',
+let locations = ['GRAND CENTRAL TERMINAL', 'PENN STATION', 'A', 'Albertson', 'Amagansett', 'Amityville', 'Ansonia', 'Appalachian Trail',
   'Ardsley on Hudson', 'Atlantic Terminal', 'Auburndale', 'B', 'Babylon', 'Baldwin',
   'Bay Shore', 'Bayside', 'Beacon', 'Beacon-Falls', 'Beadford Hills',
   'Bellrose', 'Bellmore', 'Bellport', 'Bethel', 'Bethpage',
@@ -62,7 +62,7 @@ function Destination (props) {
       </div>
       <div className="animated slideInRight">
         <div className="origin-destination">
-          <div className="origin-destination-third">{props.clickedOrigin.toUpperCase()}</div>
+          <div className="origin-destination-third">{props.clickedOrigin}</div>
           <div className="origin-destination-middle fa fa-long-arrow-right" id="arrow-right"></div>
           <div className="origin-destination-third"></div>
         </div>

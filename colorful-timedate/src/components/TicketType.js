@@ -10,9 +10,9 @@ function TicketType (props) {
       </div>
       <div className="animated slideInRight">
         <div className="origin-destination">
-          <div className="origin-destination-third">{props.clickedOrigin.toUpperCase()}</div>
+          <div className="origin-destination-third">{props.clickedOrigin}</div>
           <div className="origin-destination-middle fa fa-long-arrow-right" id="arrow-right"></div>
-          <div className="origin-destination-third">{props.clickedDestination.toUpperCase()}</div>
+          <div className="origin-destination-third">{props.clickedDestination}</div>
         </div>
         <Link to='/ten-trip'>
           <div className="button" onClick={props.handleTicketType} id="Ten Trip">Ten Trip</div>

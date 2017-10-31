@@ -5,7 +5,6 @@
 
 .colorblock-main {
   margin: 10px;
-  /*border: 1px solid blue;*/
 }
 
 .each-block {
@@ -13,7 +12,7 @@
   width: 30%;
   height: 110px;
   background-color: yellow;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   animation-name: block;
   animation-duration: 30s;
   animation-iteration-count: 100;

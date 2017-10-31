@@ -1,0 +1,19 @@
+.ticket-type {
+  display: inline-block;
+  /*border: 1px solid red;*/
+  width: 50%;
+  text-align: left;
+}
+
+.ticket-price {
+  display: inline-block;
+  /*border: 1px solid red;*/
+  width: 50%;
+  text-align: right;
+}
+
+.ticket-arrow {
+  padding: 0 10px;
+  color: orange;
+  font-size: 1.5em;
+}

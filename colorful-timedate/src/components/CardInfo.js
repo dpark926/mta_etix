@@ -22,7 +22,7 @@ function CardInfo (props) {
         <div>Please enter a security code at least 3 digits long</div>
         <div>Enter the email address below that you would like your receipt sent to.</div>
         <div>Your E-mail</div>
-        <input type='text' onChange={props.handleSecurityCode}></input>
+        <input type='text' onChange={props.handleSecurityCode} placeholder='dpeace926@yahoo.com'></input>
         <div>This ticket purchase is subject to accepting the terms and conditions</div>
         <Link to='/access'><div>Accept & Pay </div></Link>
       </div>

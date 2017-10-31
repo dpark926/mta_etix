@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/OriginDest.css'
 
-let locations = ['Grand Central', 'Penn Station', 'A', 'Albertson', 'Amagansett', 'Amityville', 'Ansonia', 'Appalachian Trail',
+let locations = ['GRAND CENTRAL TERMINAL', 'PENN STATION', 'A', 'Albertson', 'Amagansett', 'Amityville', 'Ansonia', 'Appalachian Trail',
   'Ardsley on Hudson', 'Atlantic Terminal', 'Auburndale', 'B', 'Babylon', 'Baldwin',
   'Bay Shore', 'Bayside', 'Beacon', 'Beacon-Falls', 'Beadford Hills',
   'Bellrose', 'Bellmore', 'Bellport', 'Bethel', 'Bethpage',
@@ -50,7 +50,7 @@ function Origin (props) {
       return (
         <div className="location-list-blah" onClick={props.handleClickedOrigin}>
           <Link to="/destination">
-            <div className="location-each" id={location}>{location}</div>
+            <div className="location-each" id={location}>{location}<span className="location-arrow fa fa-angle-right" style={{color: "orange", fontSize: "1.8em"}}></span></div>
           </Link>
         </div>
       )
@@ -60,10 +60,18 @@ function Origin (props) {
   return (
     <div className='test'>
       <div className="location-header nav justify-content-center">
+        <Link to="/buytickets">
+          <div className="location-header-arrow fa fa-arrow-left" style={{fontSize: "1.5em", position: "fixed", margin: "20px 10px"}}></div>
+        </Link>
         <h2 className="location-header-text">Select Origin Station</h2>
       </div>
       <div className="animated slideInRight">
-        <input className="location-search" type='text' onChange={props.handleOrigin} placeholder="Search"></input>
+        <div className='search-wrapper'>
+          <div className='search-wrapper2'>
+            <div className="location-search-icon fa fa-search" style={{color: "white", fontSize: "1em"}}></div>
+            <input className="location-search-box" type='text' onChange={props.handleOrigin} placeholder="Search"></input>
+          </div>
+        </div>
         <div className="location-list">
           {/* <div className="location-list-blah" onClick={props.handleClickedOrigin}>
             <Link to="/destination">

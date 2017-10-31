@@ -9,11 +9,18 @@
   border-bottom: 2px solid black;
 }
 
+.location-heaer-arrow {
+  color: white;
+  position: fixed;
+  border: 1px solid red;
+}
+
 .location-header h2 {
   margin: auto;
   padding: 20px;
   /*border: 1px solid red;*/
   vertical-align: middle;
+  font-size: 1.1em;
   /*width: 50%;*/
 }
 
@@ -21,6 +28,8 @@
   /*margin: 0 30%;*/
   width: 100%;
   border: 1px solid blue;
+  text-align: left;
+  font-size: .8em;
 }
 
 .location-list-blah {
@@ -50,21 +59,44 @@
   color: white;
 }
 
-.location-search {
-  /*margin: 30px;*/
-  width: 100%;
-  height: 40px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  /*border-radius: 20px;*/
+.search-wrapper {
+  background-color: #3b5998;
+  padding: 5px;
+}
+
+.search-wrapper2 {
+  border-radius: 10px;
+  background-color: #8b9dc3;
+  margin: 4px;
+  /*border: 2px solid #ccc;*/
+  text-align: left;
+}
+
+.location-search-icon {
+  /*display: inline-block;*/
+  /*border: 1px solid red;*/
+  margin: 0 10px 0 10px;
+  /*color: red;*/
+  /*text-align: left;*/
+
+}
+
+.location-search-box {
+  height: 30px;
+  width: 80%;
+  background-color: transparent;
+  border: 0px solid;
   font-size: 14px;
-  background-color: white;
-  text-align: center;
+  text-align: left;
+}
+
+.location-search-box::-webkit-input-placeholder {
+  color: #dfe3ee !important;
 }
 
 .alpha {
-  background-color: #3b5998;
-  color: white;
+  background-color: #c0c5ce;
+  color: #3b5998;
   text-align: left;
 }
 
@@ -98,4 +130,11 @@
 
 #arrow-right {
   color: #3b5998;
+}
+
+.location-arrow {
+  /*border: 1px solid red;*/
+  float: right;
+  color: orange;
+  font-size: 1.5em;
 }
