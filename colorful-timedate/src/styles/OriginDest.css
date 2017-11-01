@@ -1,5 +1,5 @@
 .test {
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 }
 
 .location-header {
@@ -9,10 +9,10 @@
   border-bottom: 2px solid black;
 }
 
-.location-heaer-arrow {
+.location-header-arrow {
   color: white;
   position: fixed;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 }
 
 .location-header h2 {
@@ -27,9 +27,9 @@
 .location-list {
   /*margin: 0 30%;*/
   width: 100%;
-  border: 1px solid blue;
+  /*border: 1px solid blue;*/
   text-align: left;
-  font-size: .8em;
+  font-size: .9em;
 }
 
 .location-list-blah {
@@ -52,7 +52,7 @@
   margin: 0 15px;
   /*border-top: 1px solid gray;*/
   border-bottom: 1px solid gray;
-  padding: 15px 0;
+  padding: 15px 0 15px 5px;
 }
 
 .location-each:hover {
@@ -88,6 +88,7 @@
   border: 0px solid;
   font-size: 14px;
   text-align: left;
+  color: white;
 }
 
 .location-search-box::-webkit-input-placeholder {
@@ -109,6 +110,17 @@
   margin: 0 10px;
   padding: 3px;
   font-size: 16px;
+}
+
+.black-bar {
+  background-color: #011f4b;
+  height: 6px;
+}
+
+.yellow-progress {
+  height: 100%;
+  /*border: 1px solid red;*/
+  background-color: orange;
 }
 
 .origin-destination {

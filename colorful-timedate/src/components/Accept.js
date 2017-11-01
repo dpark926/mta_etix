@@ -9,8 +9,12 @@ function Accept () {
       <div className="location-header nav justify-content-center">
         <h2 className="location-header-text">Select Ticket Type</h2>
       </div>
-      <div className='animated slideInUp'>
+      <div className='accept-wrapper animated slideInUp'>
         <div className='disclaimer'>
+          <div className="accept-header-wrapper">
+            <div className="accept-header">Ticket regulations</div>
+            <div className="accept-header fa fa-times" style={{float: "right", fontSize: "1.2em"}}></div>
+          </div>
           <ul>
             <li>Good for one ride between the zones or stations indicated on the ticket durring off-peak hours only and is subject to step-up on Peak trains.</li>
             <li>Charged on any train NOT scheduled to arrive in NYC terminals between 6am and 10am or departing NYC terminals between 4pm and 8pm weekdays and select holidays.</li>
@@ -23,7 +27,7 @@ function Accept () {
           </ul>
         </div>
         <Link to='/payment-method'>
-          <div className='button'>Accept & Continue</div>
+          <div className='accept-button'>Accept & Continue</div>
         </Link>
       </div>
     </div>

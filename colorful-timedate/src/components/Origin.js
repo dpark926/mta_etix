@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/OriginDest.css'
 
-let locations = ['GRAND CENTRAL TERMINAL', 'PENN STATION', '.', 'A', 'Albertson', 'Amagansett', 'Amityville', 'Ansonia', 'Appalachian Trail',
+let locations = ['Grand Central Terminal', 'Penn Station', '.', 'A', 'Albertson', 'Amagansett', 'Amityville', 'Ansonia', 'Appalachian Trail',
   'Ardsley on Hudson', 'Atlantic Terminal', 'Auburndale', 'B', 'Babylon', 'Baldwin',
   'Bay Shore', 'Bayside', 'Beacon', 'Beacon-Falls', 'Beadford Hills',
   'Bellrose', 'Bellmore', 'Bellport', 'Bethel', 'Bethpage',
@@ -52,6 +52,14 @@ function Origin (props) {
           {/* <div className='letter'></div> */}
         </div>
       )
+    }  else if (location === 'Grand Central Terminal' || location === 'Penn Station') {
+      return (
+        <div className="location-list-blah" onClick={props.handleClickedOrigin}>
+          <Link to="/destination">
+            <div className="location-each" id={location}>{location.toUpperCase()}<span className="location-arrow fa fa-angle-right" style={{color: "orange", fontSize: "1.8em"}}></span></div>
+          </Link>
+        </div>
+      )
     } else {
       return (
         <div className="location-list-blah" onClick={props.handleClickedOrigin}>
@@ -72,6 +80,9 @@ function Origin (props) {
         <h2 className="location-header-text">Select Origin Station</h2>
       </div>
       <div className="animated slideInRight">
+        <div className="black-bar">
+          <div className="yellow-progress" style={{width: "10%"}}></div>
+        </div>
         <div className='search-wrapper'>
           <div className='search-wrapper2'>
             <div className="location-search-icon fa fa-search" style={{color: "white", fontSize: "1em"}}></div>

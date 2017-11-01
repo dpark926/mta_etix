@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/OriginDest.css'
 
-let locations = ['GRAND CENTRAL TERMINAL', 'PENN STATION', '', 'A', 'Albertson', 'Amagansett', 'Amityville', 'Ansonia', 'Appalachian Trail',
+let locations = ['Grand Central Terminal', 'Penn Station', '', 'A', 'Albertson', 'Amagansett', 'Amityville', 'Ansonia', 'Appalachian Trail',
   'Ardsley on Hudson', 'Atlantic Terminal', 'Auburndale', 'B', 'Babylon', 'Baldwin',
   'Bay Shore', 'Bayside', 'Beacon', 'Beacon-Falls', 'Beadford Hills',
   'Bellrose', 'Bellmore', 'Bellport', 'Bethel', 'Bethpage',
@@ -24,9 +24,9 @@ function Destination (props) {
 
   for (var i = 0; i < locations.length; i++) {
     let location = locations[i]
-    if (props.clickedOrigin === 'GRAND CENTRAL TERMINAL' && location === 'PENN STATION') {
+    if (props.clickedOrigin === 'Grand Central Terminal' && location === 'Penn Station') {
       continue
-    } else if (props.clickedOrigin === 'PENN STATION' && location === 'GRAND CENTRAL TERMINAL') {
+    } else if (props.clickedOrigin === 'Penn Station' && location === 'Grand Central Terminal') {
       continue
     } else if (props.clickedOrigin === location) {
       continue
@@ -44,11 +44,19 @@ function Destination (props) {
           <div className='letter'>{location}</div>
         </div>
       )
+    } else if (location === 'Grand Central Terminal' || location === 'Penn Station') {
+      return (
+        <div className="location-list-blah" onClick={props.handleClickedDestination}>
+          <Link to="/ticket-type">
+            <div className="location-each" id={location}>{location.toUpperCase()}<span className="location-arrow fa fa-angle-right" style={{color: "orange", fontSize: "1.8em"}}></span></div>
+          </Link>
+        </div>
+      )
     } else {
       return (
         <div className="location-list-blah" onClick={props.handleClickedDestination}>
           <Link to="/ticket-type">
-            <div className="location-each" id={location}>{location}</div>
+            <div className="location-each" id={location}>{location}<span className="location-arrow fa fa-angle-right" style={{color: "orange", fontSize: "1.8em"}}></span></div>
           </Link>
         </div>
       )
@@ -64,6 +72,9 @@ function Destination (props) {
         <h2 className="location-header-text">Select Destination Station</h2>
       </div>
       <div className="animated slideInRight">
+        <div className="black-bar">
+          <div className="yellow-progress" style={{width: "20%"}}></div>
+        </div>
         <div className="origin-destination">
           <div className="origin-destination-third">{props.clickedOrigin}</div>
           <div className="origin-destination-middle fa fa-arrow-right" id="arrow-right" style={{fontSize: "1em", color: "white", fontWeight: "300"}}></div>
@@ -72,7 +83,7 @@ function Destination (props) {
         <div className='search-wrapper'>
           <div className='search-wrapper2'>
             <div className="location-search-icon fa fa-search" style={{color: "white", fontSize: "1em"}}></div>
-            <input className="location-search-box" type='text' onChange={props.handleOrigin} placeholder="Search"></input>
+            <input className="location-search-box" type='text' onChange={props.handleDestination} placeholder="Search"></input>
           </div>
         </div>
         {/* <input className="location-search" type='text' onChange={props.handleDestination} placeholder="Search"></input> */}
