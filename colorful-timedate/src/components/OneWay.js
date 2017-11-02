@@ -19,7 +19,7 @@ function OneWay (props) {
         <div className="origin-destination">
           <div className="origin-destination-third">{props.clickedOrigin}</div>
           <div className="origin-destination-middle fa fa-arrow-right" id="arrow-right" style={{fontSize: "1em", color: "white", fontWeight: "300"}}></div>
-          <div className="origin-destination-third">{props.clickedDestination}</div>
+          <div className="origin-destination-third">{props.clickedDestination}</div><br/>
           <div className="origin-destination-next">{props.ticketType}</div>
         </div>
 

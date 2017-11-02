@@ -150,6 +150,11 @@
   padding: 0 10px;
 }
 
+.origin-destination-next {
+  display: inline-block;
+  margin-right: 5px;
+}
+
 #arrow-right {
   color: #3b5998;
 }
