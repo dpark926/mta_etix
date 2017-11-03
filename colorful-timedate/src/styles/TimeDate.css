@@ -8,23 +8,41 @@
 }
 
 .timeclock-text {
-  /*padding-top: 75px;*/
-  font-size: 2em;
+  padding-top: 10px;
+  /*text-align: justify;*/
+  font-size: 1.8em;
   color: white;
   text-shadow:
-    3px 3px 0 #000,
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
+    3px 3px 0 rgba(50, 50, 50, 0.8),
+    -2px -2px 0 rgba(50, 50, 50, 0.8),
+    2px -2px 0 rgba(50, 50, 50, 0.8),
+    -2px 2px 0 rgba(50, 50, 50, 0.8),
+    2px 2px 0 rgba(50, 50, 50, 0.8);
   position: relative;
   animation-name: example;
   animation-duration: 40s;
   animation-iteration-count: 100;
-  /*border: 1px solid red;*/
+  /*border: 1px solid green;*/
   width: 100%;
 }
 
+.timeclock-time {
+  /*border: 1px solid red;*/
+  /*width: 50%;*/
+  letter-spacing: 1px;
+  line-height: 90%;
+  margin: 0;
+  padding: 0;
+}
+
+.timeclock-date {
+  /*border: 1px solid red;*/
+  /*width: 50%;*/
+  line-height: 90%;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 0;
+}
 
 /*@-webkit-keyframes example {
     0%  {top:0px;}
@@ -51,25 +69,25 @@
 }*/
 
 @-webkit-keyframes example {
-    /*0%  {left:-10%;}
-    5%  {left:10%;}
-    10% {left:-10%;}
-    15% {left:10%;}
-    20% {left:-10%;}
-    25% {left:10%;}
-    30% {left:-10%;}
-    35% {left:10%;}
-    40% {left:-10%;}
-    45% {left:10%;}
-    50% {left:-10%;}
-    55% {left:10%;}
-    60% {left:-10%;}
-    65% {left:10%;}
-    70% {left:-10%;}
-    75% {left:10%;}
-    80% {left:-10%;}
-    85% {left:10%;}
-    90% {left:-10%;}
-    95% {left:10%;}
-    100% {left:-10%;}*/
+    0%  {left:-20%;}
+    5%  {left:20%;}
+    10% {left:-20%;}
+    15% {left:20%;}
+    20% {left:-20%;}
+    25% {left:20%;}
+    30% {left:-20%;}
+    35% {left:20%;}
+    40% {left:-20%;}
+    45% {left:20%;}
+    50% {left:-20%;}
+    55% {left:20%;}
+    60% {left:-20%;}
+    65% {left:20%;}
+    70% {left:-20%;}
+    75% {left:20%;}
+    80% {left:-20%;}
+    85% {left:20%;}
+    90% {left:-20%;}
+    95% {left:20%;}
+    100% {left:-20%;}
 }

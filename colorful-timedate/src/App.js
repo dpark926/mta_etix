@@ -28,6 +28,7 @@ class App extends Component {
       ticketType: '',
       ticket: '',
       cost: '',
+      secCode: ''
     }
   }
 
@@ -78,10 +79,17 @@ class App extends Component {
     })
   }
 
+  handleSecCode = (event) => {
+    this.setState({
+      secCode: event.target.value
+    })
+  }
+
+
   render () {
     return (
       <div className="App">
-        <Redirect to='/buytickets' />
+        <Redirect to='/access' />
         <Route path="/buytickets" component={BuyTickets}/>
         <Route path="/origin" render={() => <Origin
           handleOrigin={this.handleOrigin}
@@ -122,6 +130,9 @@ class App extends Component {
           clickedOrigin={this.state.clickedOrigin}
           clickedDestination={this.state.clickedDestination}
           ticketType={this.state.ticketType}
+          cost={this.state.cost}
+          handleSecCode={this.handleSecCode}
+          secCode={this.state.secCode}
           ticket={this.state.ticket}/>}
         />
         <Route path="/activate" component={Activate}/>
