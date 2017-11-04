@@ -1,0 +1,22 @@
+.tap-button {
+  font-size: .8em;
+  font-weight: 700;
+  /*border: 1px solid blue;*/
+  margin-bottom: 10px;
+}
+
+.ticket-activated-at {
+  background-color: red;
+  border-radius: 5px;
+  color: white;
+  margin: 10px;
+  padding: 7px;
+}
+
+.button-wrapper {
+  background-color: blue;
+
+}
+
+.time-block-button-wrapper {
+}
