@@ -8,7 +8,11 @@ import AppContainer from './containers/AppContainer.js'
 import Activate from './components/Activate.js'
 import BuyTickets from './components/BuyTickets.js'
 import TicketType from './components/TicketType.js'
-import TicketCost from './components/OneWay.js'
+import TenTrip from './components/ticketTypes/TenTrip.js'
+import Monthly from './components/ticketTypes/Monthly.js'
+import OneWay from './components/ticketTypes/OneWay.js'
+import RoundTrip from './components/ticketTypes/RoundTrip.js'
+import Weekly from './components/ticketTypes/Weekly.js'
 import Accept from './components/Accept.js'
 import PaymentMethod from './components/PaymentMethod.js'
 import CardInfo from './components/CardInfo.js'
@@ -89,7 +93,7 @@ class App extends Component {
   render () {
     return (
       <div className="App">
-        <Redirect to='/access' />
+        <Redirect to='/buytickets' />
         <Route path="/buytickets" component={BuyTickets}/>
         <Route path="/origin" render={() => <Origin
           handleOrigin={this.handleOrigin}
@@ -107,15 +111,39 @@ class App extends Component {
           clickedDestination={this.state.clickedDestination}
           handleTicketType={this.handleTicketType}/>}
         />
-        <Route path="/ten-trip" component={TicketCost}/>
-        <Route path="/one-way" render={() => <TicketCost
+        {/* <Route path="/ten-trip" component={TicketCost}/> */}
+        <Route path="/ten-trip" render={() => <TenTrip
           clickedOrigin={this.state.clickedOrigin}
           clickedDestination={this.state.clickedDestination}
           handleTicket={this.handleTicket}
           ticketType={this.state.ticketType}/>}
         />
-        <Route path="/round-trip" component={TicketCost}/>
-        <Route path="/weekly" component={TicketCost}/>
+        <Route path="/monthly" render={() => <Monthly
+          clickedOrigin={this.state.clickedOrigin}
+          clickedDestination={this.state.clickedDestination}
+          handleTicket={this.handleTicket}
+          ticketType={this.state.ticketType}/>}
+        />
+        <Route path="/one-way" render={() => <OneWay
+          clickedOrigin={this.state.clickedOrigin}
+          clickedDestination={this.state.clickedDestination}
+          handleTicket={this.handleTicket}
+          ticketType={this.state.ticketType}/>}
+        />
+        <Route path="/round-trip" render={() => <RoundTrip
+          clickedOrigin={this.state.clickedOrigin}
+          clickedDestination={this.state.clickedDestination}
+          handleTicket={this.handleTicket}
+          ticketType={this.state.ticketType}/>}
+        />
+        <Route path="/weekly" render={() => <Weekly
+          clickedOrigin={this.state.clickedOrigin}
+          clickedDestination={this.state.clickedDestination}
+          handleTicket={this.handleTicket}
+          ticketType={this.state.ticketType}/>}
+        />
+        {/* <Route path="/round-trip" component={TicketCost}/>
+        <Route path="/weekly" component={TicketCost}/> */}
         <Route path="/accept" component={Accept}/>
         {/* <Route path="/payment-method" component={PaymentMethod}/> */}
         <Route path="/payment-method" render={() => <PaymentMethod
@@ -136,7 +164,10 @@ class App extends Component {
           ticket={this.state.ticket}/>}
         />
         <Route path="/activate" component={Activate}/>
-        <Route path="/access" component={AppContainer}/>
+        <Route path="/access" render={() => <AppContainer
+          ticketType={this.state.ticketType}
+          ticket={this.state.ticket}/>}
+        />
       </div>
     );
   }

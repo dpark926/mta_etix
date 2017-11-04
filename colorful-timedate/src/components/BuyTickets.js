@@ -7,7 +7,9 @@ function BuyTickets () {
   return (
     <div className='buytickets'>
       <div className="location-header nav justify-content-center">
+        <div className="location-header-bars fa fa-bars" style={{fontSize: "1.5em", position: "fixed", margin: "20px 20px 0 0", right: "0"}}></div>
         <h2 className="location-header-text">MTA eTix</h2>
+
       </div>
       <div className="animated slideInRight">
         <Link to='/origin'>

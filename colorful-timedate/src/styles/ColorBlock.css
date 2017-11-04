@@ -49,6 +49,8 @@
   height: 200px;*/
   /*background-color: yellow;*/
   /*display: inline-block;*/
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .block2 {
@@ -65,4 +67,6 @@
   height: 200px;*/
   /*background-color: orange;*/
   /*display: inline-block;*/
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }

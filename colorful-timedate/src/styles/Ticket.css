@@ -42,14 +42,14 @@
 .ticket-type {
   display: inline-block;
   /*border: 1px solid red;*/
-  width: 50%;
+  width: 70%;
   text-align: left;
 }
 
 .ticket-price {
   display: inline-block;
   /*border: 1px solid red;*/
-  width: 50%;
+  width: 30%;
   text-align: right;
 }
 

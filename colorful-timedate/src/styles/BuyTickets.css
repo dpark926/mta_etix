@@ -1,5 +1,8 @@
 .buytickets {
   background-color: #3b5998;
+  position: fixed;
+  height: 100%;
+  width: 100%;
 }
 
 .buy-ticket-text {

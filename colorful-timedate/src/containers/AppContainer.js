@@ -13,6 +13,10 @@ class AppContainer extends Component {
     this.state = {
       clicked: false,
       activated: (new Date()).toLocaleTimeString(),
+      block1: 'red',
+      block2: 'orange',
+      block3: 'blue',
+      colorToggle: false,
     }
 
     this.handleClick = this.handleClick.bind(this)
@@ -21,6 +25,24 @@ class AppContainer extends Component {
   handleClick() {
     this.setState({
       clicked: !this.state.clicked
+    })
+  }
+
+  handleChangeComplete1 = (color) => {
+    this.setState({ block1: color.hex });
+  }
+
+  handleChangeComplete2 = (color) => {
+    this.setState({ block2: color.hex });
+  }
+
+  handleChangeComplete3 = (color) => {
+    this.setState({ block3: color.hex });
+  }
+
+  toggleColor = () => {
+    this.setState({
+      colorToggle: !this.state.colorToggle
     })
   }
 
@@ -37,13 +59,25 @@ class AppContainer extends Component {
           <div className='time-block-button-wrapper animated slideInDown'>
             <div className='time-block-wrapper'>
               <TimeContainer handleClick={this.handleClick}/>
-              <ColorBlock handleClick={this.handleClick}/>
-              <div>Tap to reveal barcode</div>
+              <ColorBlock
+                handleClick={this.handleClick}
+                block1={this.state.block1}
+                block2={this.state.block2}
+                block3={this.state.block3}
+                colorToggle={this.state.colorToggle}
+                handleChangeComplete1={this.handleChangeComplete1}
+                handleChangeComplete2={this.handleChangeComplete2}
+                handleChangeComplete3={this.handleChangeComplete3}
+                toggleColor={this.toggleColor}
+              />
+              <div className='tap-button'>Tap to reveal barcode</div>
             </div>
             <a href='#'><Button handleClick={this.handleClick} clicked={this.state.clicked}/></a>
           </div>
-          <div>Ticket activated at {this.state.activated.slice(0, 5)} {this.state.activated.slice(-2)}</div>
-          <div>Activated at: </div>
+          <div>
+            <div className='ticket-activated-at'>Ticket activated at {this.state.activated.slice(0, 5)} {this.state.activated.slice(-2)}</div>
+            <div>{this.props.ticketType} {this.props.ticket}</div>
+          </div>
         </div>
       );
     } else {
@@ -52,12 +86,13 @@ class AppContainer extends Component {
           <div className='time-block-button-wrapper animated slideInUp'>
             <div className='time-block-wrapper'>
               <Barcode/>
-              <div>Tap to reveal barcode</div>
+              <div className='tap-button'>Tap to reveal color bar</div>
             </div>
             <a href='#'><Button handleClick={this.handleClick} clicked={this.state.clicked}/></a>
           </div>
-          <div>Ticket activated at {this.state.activated.slice(0, 5)} {this.state.activated.slice(-2)}</div>
-          <div>Activated at: {this.state.activated}</div>
+          <div>
+            <div>Activated at: {this.state.activated}</div>
+          </div>
         </div>
       );
     }
