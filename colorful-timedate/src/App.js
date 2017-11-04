@@ -5,7 +5,6 @@ import './App.css';
 import Origin from './components/Origin.js'
 import Destination from './components/Destination.js'
 import AppContainer from './containers/AppContainer.js'
-import Activate from './components/Activate.js'
 import BuyTickets from './components/BuyTickets.js'
 import TicketType from './components/TicketType.js'
 import TenTrip from './components/ticketTypes/TenTrip.js'
@@ -14,6 +13,7 @@ import OneWay from './components/ticketTypes/OneWay.js'
 import RoundTrip from './components/ticketTypes/RoundTrip.js'
 import Weekly from './components/ticketTypes/Weekly.js'
 import Accept from './components/Accept.js'
+import Wallet from './components/Wallet.js'
 import PaymentMethod from './components/PaymentMethod.js'
 import CardInfo from './components/CardInfo.js'
 
@@ -163,7 +163,7 @@ class App extends Component {
           secCode={this.state.secCode}
           ticket={this.state.ticket}/>}
         />
-        <Route path="/activate" component={Activate}/>
+        <Route path="/wallet" component={Wallet}/>
         <Route path="/access" render={() => <AppContainer
           ticketType={this.state.ticketType}
           ticket={this.state.ticket}/>}

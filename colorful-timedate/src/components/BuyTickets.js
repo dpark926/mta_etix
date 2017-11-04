@@ -18,12 +18,12 @@ function BuyTickets () {
             <div className="buy-ticket-arrow fa fa-arrow-right"></div>
           </div>
         </Link>
-        {/* <Link to='/origin'> */}
+        <Link to='/wallet'>
           <div className="button">
             <div className="buy-ticket-text">Ticket Wallet</div>
             <div className="buy-ticket-arrow fa fa-arrow-right"></div>
           </div>
-        {/* </Link> */}
+        </Link>
         {/* <Link to='/origin'> */}
           <div className="button">
             <div className="buy-ticket-text">Train Time</div>

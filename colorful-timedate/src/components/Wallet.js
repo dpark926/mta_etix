@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function Activate (props) {
+function Wallet (props) {
   return (
     <div className='activate-box animated jello' onClick={props.handleActivate}>
       <Link to='/access'><div className='text'><h1>Activate!</h1></div></Link>
@@ -9,4 +9,4 @@ function Activate (props) {
   )
 }
 
-export default Activate
+export default Wallet

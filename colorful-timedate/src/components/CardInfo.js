@@ -38,7 +38,7 @@ function CardInfo (props) {
           <div className='card-info-disclaimer'>This ticket purchase is subject to accepting the terms and conditions</div>
         </div>
         {props.secCode.length >= 3 ?
-        <Link to='/access'>
+        <Link to='/wallet'>
           <div className='accept-pay-button'>
             <span className="lock-icon fa fa-lock" style={{fontSize: "1.2em"}}></span>
             Accept & Pay
