@@ -1,10 +1,11 @@
 .time-block-wrapper {
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid #c0c5ce;
   /*margin: 10px;*/
 }
 
 .colorblock-main {
-  margin: 10px;
+  margin: 10px 10px 0 10px;
+  /*border: 1px solid green;*/
 }
 
 .each-block {
@@ -69,6 +70,12 @@
   /*display: inline-block;*/
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+
+.sketch-picker-wrapper {
+  height: 0px;
+  position: fixed;
+  top: -80px
 }
 
 .sketch-picker {

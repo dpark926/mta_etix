@@ -9,7 +9,7 @@ function ColorBlock(props) {
       <div className='each-block block1' onClick={props.toggleColor} style={{backgroundColor: props.block1}}></div>
       <div className='each-block block2' onClick={props.toggleColor} style={{backgroundColor: props.block2}}></div>
       <div className='each-block block3' onClick={props.toggleColor} style={{backgroundColor: props.block3}}></div>
-      <div>
+      <div className="sketch-picker-wrapper">
         <div className='sketch-picker'>
           {props.colorToggle ?
             <SketchPicker

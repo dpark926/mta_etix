@@ -82,11 +82,11 @@ class AppContainer extends Component {
               />
               <div className='tap-button'>Tap to reveal barcode</div>
             </div>
-            <a href='#'><Button handleClick={this.handleClick} clicked={this.state.clicked}/></a>
           </div>
-          <div>
+          <div className="app-container-lower">
+            <a href='#'><Button handleClick={this.handleClick} clicked={this.state.clicked}/></a>
             <div className='ticket-activated-at'>Ticket activated at {this.state.activated.slice(0, 5)} {this.state.activated.slice(-2)}</div>
-            <div>{this.props.ticketType} {this.props.ticket}</div>
+            <div className='ticket-type-info'>{this.props.ticketType} {this.props.ticket}</div>
           </div>
         </div>
       );

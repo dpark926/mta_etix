@@ -8,10 +8,10 @@
 }
 
 .timeclock-text {
-  padding-top: 22px;
+  padding-top: 20px;
   /*margin: auto;*/
   /*text-align: justify;*/
-  font-size: 1.8em;
+  font-size: 2.2em;
   color: white;
   text-shadow:
     3px 3px 0 rgba(50, 50, 50, 0.8),
@@ -32,7 +32,7 @@
   /*width: 50%;*/
   letter-spacing: 1px;
   line-height: 90%;
-  margin: 0;
+  margin: 0 0 2px 0;
   padding: 0;
 }
 
@@ -70,25 +70,25 @@
 }*/
 
 @-webkit-keyframes example {
-    0%  {left:-18%;}
-    5%  {left:18%;}
-    10% {left:-18%;}
-    15% {left:18%;}
-    20% {left:-18%;}
-    25% {left:18%;}
-    30% {left:-18%;}
-    35% {left:18%;}
-    40% {left:-18%;}
-    45% {left:18%;}
-    50% {left:-18%;}
-    55% {left:18%;}
-    60% {left:-18%;}
-    65% {left:18%;}
-    70% {left:-18%;}
-    75% {left:18%;}
-    80% {left:-18%;}
-    85% {left:18%;}
-    90% {left:-18%;}
-    95% {left:18%;}
-    100% {left:-18%;}
+    0%  {left:-14%;}
+    5%  {left:14%;}
+    10% {left:-14%;}
+    15% {left:14%;}
+    20% {left:-14%;}
+    25% {left:14%;}
+    30% {left:-14%;}
+    35% {left:14%;}
+    40% {left:-14%;}
+    45% {left:14%;}
+    50% {left:-14%;}
+    55% {left:14%;}
+    60% {left:-14%;}
+    65% {left:14%;}
+    70% {left:-14%;}
+    75% {left:14%;}
+    80% {left:-14%;}
+    85% {left:14%;}
+    90% {left:-14%;}
+    95% {left:14%;}
+    100% {left:-14%;}
 }

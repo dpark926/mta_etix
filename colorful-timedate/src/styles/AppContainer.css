@@ -1,15 +1,24 @@
 .tap-button {
-  font-size: .8em;
+  font-size: .7em;
   font-weight: 700;
   /*border: 1px solid blue;*/
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .ticket-activated-at {
-  background-color: red;
+  background-color: #d62d20;
   border-radius: 5px;
   color: white;
-  margin: 10px;
+  margin: 10px 15px;
+  padding: 7px;
+}
+
+.ticket-type-info {
+  background-color: white;
+  border-bottom: 1px solid #a7adba;
+  border-radius: 5px;
+  color: black;
+  margin: 10px 15px;
   padding: 7px;
 }
 
@@ -19,4 +28,9 @@
 }
 
 .time-block-button-wrapper {
+
+}
+
+.app-container-lower {
+  background-color: #f1f1f1;
 }
