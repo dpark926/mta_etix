@@ -166,7 +166,9 @@ class App extends Component {
         <Route path="/wallet" component={Wallet}/>
         <Route path="/access" render={() => <AppContainer
           ticketType={this.state.ticketType}
-          ticket={this.state.ticket}/>}
+          ticket={this.state.ticket}
+          clickedOrigin={this.state.clickedOrigin}
+          clickedDestination={this.state.clickedDestination}/>}
         />
       </div>
     );

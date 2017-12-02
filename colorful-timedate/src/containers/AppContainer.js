@@ -87,7 +87,17 @@ class AppContainer extends Component {
             <a href='#'><Button handleClick={this.handleClick} clicked={this.state.clicked}/></a>
             <div className='ticket-activated-at'>Ticket activated at {this.state.activated.slice(0, 5)} {this.state.activated.slice(-2)}</div>
             <div className='ticket-type-info'>{this.props.ticketType} {this.props.ticket}</div>
-            <div className='ticket-area-code'></div>
+            <div className='ticket-area-code'>
+              <div className='ticket-area-code-wrapper1'>
+                <div className='ticket-area-code-origindest'>{this.props.clickedOrigin}</div>
+                {this.props.clickedOrigin === "Penn Station" ? <div className='ticket-area-code-areanum'>1</div> : <div className='ticket-area-code-areanum'>3</div>}
+                <div className='ticket-area-code-origindest'>{this.props.clickedDestination}</div>
+                {this.props.clickedDestination === "Penn Station" ? <div className='ticket-area-code-areanum'>1</div> : <div className='ticket-area-code-areanum'>3</div>}
+              </div>
+              <div className='ticket-area-code-wrapper2'>
+                <div className='ticket-area-code-circle'></div>
+              </div>
+            </div>
             <div className='ticket-type-info'>
               <div className='ticket-train-time'>Train Time</div>
             </div>
