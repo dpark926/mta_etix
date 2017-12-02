@@ -12,7 +12,7 @@
 }
 
 .buy-ticket-arrow {
-  color: #3b5998;
+  color: #05377b;
   display: inline-block;
   text-align: right;
   width: 50%;
@@ -33,7 +33,7 @@
 }
 
 .button:hover {
-  background-color: #3b5998;
+  background-color: #05377b;
   color: white;
   text-decoration: none;
 }
