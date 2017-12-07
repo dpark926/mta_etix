@@ -2,14 +2,18 @@
   /*border: 1px solid red;*/
 }
 
-.location-header {
-  height: 70px;
-  background-color: #3b5998;
-  color: white;
-  border-bottom: 2px solid black;
+.header-container {
   position: sticky;
   top: 0;
   z-index: 2;
+}
+
+.location-header {
+  height: 70px;
+  /*background-color: #3b5998;*/
+  background-color: #05377b;
+  color: white;
+  border-bottom: 2px solid black;
 }
 
 .location-header-arrow {
@@ -63,13 +67,15 @@
 }
 
 .search-wrapper {
-  background-color: #3b5998;
+  /*background-color: #3b5998;*/
+  background-color: #05377b;
   padding: 5px;
 }
 
 .search-wrapper2 {
   border-radius: 10px;
-  background-color: #8b9dc3;
+  /*background-color: #8b9dc3;*/
+  background-color: #3b5998;
   margin: 4px;
   /*border: 2px solid #ccc;*/
   text-align: left;
@@ -105,7 +111,8 @@
 }
 
 .blank {
-  background-color: #3b5998;
+  /*background-color: #3b5998;*/
+  background-color: #05377b;
   height: 25px;
 }
 
@@ -128,7 +135,8 @@
 
 .origin-destination {
   /*border: 1px solid green;*/
-  background-color: #3b5998;
+  /*background-color: #3b5998;*/
+  background-color: #05377b;
   color: white;
   text-align: left;
   padding: 5px 15px;

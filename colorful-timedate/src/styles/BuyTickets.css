@@ -1,9 +1,17 @@
 .buytickets {
-  background-color: #3b5998;
+  /*background-color: #3b5998;*/
+  background-color: #05377b;
   position: fixed;
   height: 100%;
+  /*width: 50%;*/
   width: 100%;
 }
+
+/*@media(max-width: 648px) {
+  .buytickets {
+    width: 100%;
+  }
+}*/
 
 .buy-ticket-text {
   display: inline-block;

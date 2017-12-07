@@ -73,13 +73,13 @@ function Origin (props) {
 
   return (
     <div className='test'>
-      <div className="location-header nav justify-content-center">
-        <Link to="/buytickets">
-          <div className="location-header-arrow fa fa-arrow-left" style={{fontSize: "1.5em", position: "fixed", margin: "20px 10px"}}></div>
-        </Link>
-        <h2 className="location-header-text">Select Origin Station</h2>
-      </div>
-      <div className="animated slideInRight">
+      <div className="header-container">
+        <div className="location-header nav justify-content-center">
+          <Link to="/buytickets">
+            <div className="location-header-arrow fa fa-arrow-left" style={{fontSize: "1.5em", position: "fixed", margin: "20px 10px"}}></div>
+          </Link>
+          <h2 className="location-header-text">Select Origin Station</h2>
+        </div>
         <div className="black-bar">
           <div className="yellow-progress" style={{width: "10%"}}></div>
         </div>
@@ -89,6 +89,9 @@ function Origin (props) {
             <input className="location-search-box" type='text' onChange={props.handleOrigin} placeholder="Search"></input>
           </div>
         </div>
+      </div>
+      <div className="animated slideInRight">
+
         <div className="location-list">
           {/* <div className="location-list-blah" onClick={props.handleClickedOrigin}>
             <Link to="/destination">
