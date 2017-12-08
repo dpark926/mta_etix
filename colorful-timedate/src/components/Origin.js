@@ -14,8 +14,8 @@ let locations = ['Grand Central Terminal', 'Penn Station', '.', 'A', 'Albertson'
   'Derby-Shelton', 'Dobbs Ferry', 'Douglaston', 'Dover Plains', 'E', 'East Hampton',
   'East New York', 'East Norwalk', 'East Rockaway', 'East Wiliston', 'F', 'Fairfield',
   'Fairfield Metro', 'Far Rockaway', 'Farmingdale', 'Fleetwood', 'Floral Park',
-  'Flushing Main Street', 'Fordham', 'Forest Hills', 'Freeport', 'Garden City',
-  'G', 'Garrison', 'Gibson', 'Glen Cove', 'Glen Head', 'Geln Street', 'Glenbrook',
+  'Flushing Main Street', 'Fordham', 'Forest Hills', 'Freeport', 'G', 'Garden City',
+  'Garrison', 'Gibson', 'Glen Cove', 'Glen Head', 'Geln Street', 'Glenbrook',
   'Glenwood', 'Goldens Bridge', 'Great Neck', 'Great River']
 
 function Origin (props) {
@@ -52,7 +52,7 @@ function Origin (props) {
           {/* <div className='letter'></div> */}
         </div>
       )
-    }  else if (location === 'Grand Central Terminal' || location === 'Penn Station') {
+    } else if (location === 'Grand Central Terminal') {
       return (
         <div className="location-list-blah" onClick={props.handleClickedOrigin}>
           <Link to="/destination">
@@ -60,11 +60,19 @@ function Origin (props) {
           </Link>
         </div>
       )
+    } else if (location === 'Penn Station') {
+      return (
+        <div className="location-list-blah" onClick={props.handleClickedOrigin}>
+          <Link to="/destination">
+            <div className="location-each penn-station" id={location}>{location.toUpperCase()}<span className="location-arrow fa fa-angle-right" style={{color: "orange", fontSize: "1.8em"}}></span></div>
+          </Link>
+        </div>
+      )
     } else {
       return (
         <div className="location-list-blah" onClick={props.handleClickedOrigin}>
           <Link to="/destination">
-            <div className="location-each" id={location}>{location}<span className="location-arrow fa fa-angle-right" style={{color: "orange", fontSize: "1.8em"}}></span></div>
+            <div className={`location-each ${location.split(" ").join("-").toLowerCase()}`} id={location}>{location}<span className="location-arrow fa fa-angle-right" style={{color: "orange", fontSize: "1.8em"}}></span></div>
           </Link>
         </div>
       )

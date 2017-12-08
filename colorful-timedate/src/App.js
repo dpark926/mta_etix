@@ -17,7 +17,7 @@ import Wallet from './components/Wallet.js'
 import PaymentMethod from './components/PaymentMethod.js'
 import CardInfo from './components/CardInfo.js'
 
-import './styles/Activate.css'
+// import './styles/Activate.css'
 
 class App extends Component {
   constructor() {
@@ -163,7 +163,15 @@ class App extends Component {
           secCode={this.state.secCode}
           ticket={this.state.ticket}/>}
         />
-        <Route path="/wallet" component={Wallet}/>
+        {/* <Route path="/wallet" component={Wallet}/> */}
+        <Route path="/wallet" render={() => <Wallet
+          clickedOrigin={this.state.clickedOrigin}
+          clickedDestination={this.state.clickedDestination}
+          ticketType={this.state.ticketType}
+          handleSecCode={this.handleSecCode}
+          secCode={this.state.secCode}
+          ticket={this.state.ticket}/>}
+        />
         <Route path="/access" render={() => <AppContainer
           ticketType={this.state.ticketType}
           ticket={this.state.ticket}

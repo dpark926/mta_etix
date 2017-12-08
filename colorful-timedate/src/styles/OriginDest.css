@@ -57,13 +57,22 @@
 
 .location-each {
   margin: 0 15px;
-  /*border-top: 1px solid gray;*/
   border-bottom: 1px solid gray;
   padding: 15px 0 15px 5px;
 }
 
 .location-each:hover {
   color: white;
+}
+
+.penn-station,
+.auburndale,
+.bronxville,
+.corton-harmon,
+.dover-plains,
+.east-wiliston,
+.freeport {
+  border-bottom: none;
 }
 
 .search-wrapper {
