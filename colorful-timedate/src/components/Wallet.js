@@ -11,20 +11,22 @@ function Wallet (props) {
         </Link>
         <h2 className="location-header-text">Ticket Wallet</h2>
       </div>
-      <div>
-        <div>Tickets</div>
-        <div>History</div>
+      <div className='wallet-toggle-wrapper'>
+        <div className='wallet-toggle-ticket'>Tickets</div>
+        <div className='wallet-toggle-history'>History</div>
       </div>
-      <Link to='/access'>
-        <div>
-          <div>{props.ticketType}</div>
-          <div>{props.ticket}</div>
-        </div>
-        <div className='text'>
-          <div>{props.clickedOrigin}</div>
-          <div>{props.clickedDestination}</div>
-        </div>
-      </Link>
+      <div className='wallet-ticket-wrapper'>
+        <Link to='/access'>
+          <div className='wallet-ticket-top'>
+            <div>{props.ticketType}</div>
+            <div>{props.ticket}</div>
+          </div>
+          <div className='wallet-ticket-bottom'>
+            <div>{props.clickedOrigin}</div>
+            <div><i className='fa fa-long-arrow-right'></i>{props.clickedDestination}</div>
+          </div>
+        </Link>
+      </div>
     </div>
   )
 }
