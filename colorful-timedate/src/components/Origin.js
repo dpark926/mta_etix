@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+// import locations from '../locations'
 import '../styles/OriginDest.css'
 
 let locations = ['Grand Central Terminal', 'Penn Station', '.', 'A', 'Albertson', 'Amagansett', 'Amityville', 'Ansonia', 'Appalachian Trail',
