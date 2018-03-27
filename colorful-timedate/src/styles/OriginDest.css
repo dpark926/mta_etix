@@ -1,17 +1,11 @@
 .test {
-  /*border: 1px solid red;*/
-}
-
-.header-container {
-  position: sticky;
-  top: 0;
-  z-index: 2;
+  /* border: 1px solid red; */
+  background-color: white;
 }
 
 .location-header {
   height: 70px;
-  /*background-color: #3b5998;*/
-  background-color: #05377b;
+  background-color: var(--darker-blue);
   color: white;
   border-bottom: 2px solid black;
 }
@@ -46,6 +40,7 @@
   /*padding: 15px;*/
 }
 
+
 .location-list-blah:hover {
   background-color: #3b5998;
 }
@@ -57,7 +52,8 @@
 
 .location-each {
   margin: 0 15px;
-  border-bottom: 1px solid gray;
+  /*border-top: 1px solid gray;*/
+  border-bottom: 1px solid var(--lighter-gray);
   padding: 15px 0 15px 5px;
 }
 
@@ -65,26 +61,14 @@
   color: white;
 }
 
-.penn-station,
-.auburndale,
-.bronxville,
-.corton-harmon,
-.dover-plains,
-.east-wiliston,
-.freeport {
-  border-bottom: none;
-}
-
 .search-wrapper {
-  /*background-color: #3b5998;*/
-  background-color: #05377b;
+  background-color: var(--darker-blue);
   padding: 5px;
 }
 
 .search-wrapper2 {
   border-radius: 10px;
-  /*background-color: #8b9dc3;*/
-  background-color: #3b5998;
+  background-color: var(--dark-blue);
   margin: 4px;
   /*border: 2px solid #ccc;*/
   text-align: left;
@@ -110,7 +94,7 @@
 }
 
 .location-search-box::-webkit-input-placeholder {
-  color: #dfe3ee !important;
+  color: #8b9dc3 !important;
 }
 
 .alpha {
@@ -120,8 +104,7 @@
 }
 
 .blank {
-  /*background-color: #3b5998;*/
-  background-color: #05377b;
+  background-color: var(--darker-blue);
   height: 25px;
 }
 
@@ -144,8 +127,7 @@
 
 .origin-destination {
   /*border: 1px solid green;*/
-  /*background-color: #3b5998;*/
-  background-color: #05377b;
+  background-color: #3b5998;
   color: white;
   text-align: left;
   padding: 5px 15px;
