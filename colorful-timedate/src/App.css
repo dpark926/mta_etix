@@ -9,10 +9,25 @@
 
 .App {
   text-align: center;
-  position: absolute;
+  /* position: absolute; */
+  margin: auto;
   width: 100%;
+  max-width: 375px;
   height: 100%;
   background-color: var(--darker-blue);
+}
+
+@media only screen and (min-width: 400px) {
+  .App {
+    border: 2px solid white;
+    margin: 20px auto;
+    height: 600px;
+    overflow-y: auto;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .App-logo {

@@ -40,11 +40,6 @@
   /*padding: 15px;*/
 }
 
-
-.location-list-blah:hover {
-  background-color: #3b5998;
-}
-
 .location-list a {
   text-decoration: none;
   color: black;
@@ -55,10 +50,6 @@
   /*border-top: 1px solid gray;*/
   border-bottom: 1px solid var(--lighter-gray);
   padding: 15px 0 15px 5px;
-}
-
-.location-each:hover {
-  color: white;
 }
 
 .search-wrapper {
@@ -166,4 +157,14 @@
   float: right;
   color: orange;
   font-size: 1.5em;
+}
+
+@media only screen and (min-width: 400px) {
+  .location-list-blah:hover {
+    background-color: #3b5998;
+  }
+
+  .location-each:hover {
+    color: white;
+  }
 }
