@@ -89,6 +89,8 @@ function Origin (props) {
           </Link>
           <h2 className="location-header-text">Select Origin Station</h2>
         </div>
+      </div>
+      <div className="animated slideInRight">
         <div className="black-bar">
           <div className="yellow-progress" style={{width: "10%"}}></div>
         </div>
@@ -98,20 +100,7 @@ function Origin (props) {
             <input className="location-search-box" type='text' onChange={props.handleOrigin} placeholder="Search"></input>
           </div>
         </div>
-      </div>
-      <div className="animated slideInRight">
-
         <div className="location-list">
-          {/* <div className="location-list-blah" onClick={props.handleClickedOrigin}>
-            <Link to="/destination">
-              <div className="location-each" id='Grand Central Station'>Grand Central Station</div>
-            </Link>
-          </div>
-          <div className="location-list-blah" onClick={props.handleClickedOrigin}>
-            <Link to="/destination">
-              <div className="location-each" id='Penn Station'>Penn Station</div>
-            </Link>
-          </div> */}
           {loc}
         </div>
       </div>

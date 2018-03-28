@@ -3,6 +3,10 @@
   background-color: white;
 }
 
+.header-container {
+  /* background-color: var(--darker-blue); */
+}
+
 .location-header {
   height: 50px;
   background-color: var(--darker-blue);
@@ -89,7 +93,7 @@
 
 .alpha {
   background-color: var(--lighter-gray);
-  color: #3b5998;
+  color: var(--darker-blue);
   text-align: left;
 }
 
@@ -117,7 +121,7 @@
 
 .origin-destination {
   /*border: 1px solid green;*/
-  background-color: #3b5998;
+  background-color: var(--darker-blue);
   color: white;
   text-align: left;
   padding: 5px 15px;
