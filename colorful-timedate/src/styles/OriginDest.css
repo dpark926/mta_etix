@@ -4,7 +4,7 @@
 }
 
 .location-header {
-  height: 70px;
+  height: 50px;
   background-color: var(--darker-blue);
   color: white;
   border-bottom: 2px solid black;
@@ -13,12 +13,11 @@
 .location-header-arrow {
   color: white;
   position: fixed;
-  /*border: 1px solid red;*/
+  margin: 10px;
 }
 
 .location-header h2 {
   margin: auto;
-  padding: 20px;
   /*border: 1px solid red;*/
   vertical-align: middle;
   font-size: 1.1em;
@@ -48,19 +47,19 @@
 .location-each {
   margin: 0 15px;
   /*border-top: 1px solid gray;*/
-  border-bottom: 1px solid var(--lighter-gray);
-  padding: 15px 0 15px 5px;
+  border-bottom: 1px solid var(--light-gray);
+  padding: 11px 0 11px 5px;
 }
 
 .search-wrapper {
   background-color: var(--darker-blue);
-  padding: 5px;
+  padding: 6px;
 }
 
 .search-wrapper2 {
   border-radius: 10px;
   background-color: var(--dark-blue);
-  margin: 4px;
+  margin: 5px;
   /*border: 2px solid #ccc;*/
   text-align: left;
 }
@@ -75,11 +74,11 @@
 }
 
 .location-search-box {
-  height: 30px;
+  height: 35px;
   width: 80%;
   background-color: transparent;
   border: 0px solid;
-  font-size: 14px;
+  font-size: 15px;
   text-align: left;
   color: white;
 }
@@ -89,19 +88,19 @@
 }
 
 .alpha {
-  background-color: #c0c5ce;
+  background-color: var(--lighter-gray);
   color: #3b5998;
   text-align: left;
 }
 
 .blank {
   background-color: var(--darker-blue);
-  height: 25px;
+  height: 30px;
 }
 
 .letter {
   margin: 0 10px;
-  padding: 3px;
+  padding-top: 2px;
   font-size: 16px;
 }
 

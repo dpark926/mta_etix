@@ -4,7 +4,9 @@
   --darker-blue: #223366;
   --dark-blue: #4e5b84;
   --blue: #9099b2;
-  --lighter-gray: #999999;
+  --gray: #adacac;
+  --light-gray: #c6c4c4;
+  --lighter-gray: #f8f6f6;
 }
 
 .App {
@@ -12,12 +14,12 @@
   /* position: absolute; */
   margin: auto;
   width: 100%;
-  max-width: 375px;
+  max-width: 425px;
   height: 100%;
   background-color: var(--darker-blue);
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 450px) {
   .App {
     border: 2px solid white;
     margin: 20px auto;
