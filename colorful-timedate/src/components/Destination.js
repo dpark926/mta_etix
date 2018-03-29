@@ -72,8 +72,6 @@ function Destination (props) {
           </Link>
           <h2 className="location-header-text">Select Destination Station</h2>
         </div>
-      </div>
-      <div className="animated slideInRight">
         <div className="black-bar">
           <div className="yellow-progress" style={{width: "20%"}}></div>
         </div>
@@ -88,6 +86,8 @@ function Destination (props) {
             <input className="location-search-box" type='text' onChange={props.handleDestination} placeholder="Search"></input>
           </div>
         </div>
+      </div>
+      <div className="animated slideInRight">
         <div className="location-list">
           {loc}
         </div>
