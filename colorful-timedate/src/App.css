@@ -22,13 +22,13 @@
 @media only screen and (min-width: 415px) {
   .App {
     /* border: 2px solid black; */
-    border-top: 50px solid;
+    border-top: 80px solid;
     border-right: 10px solid;
     border-bottom: 80px solid;
     border-left: 10px solid;
-    border-radius: 30px;
+    border-radius: 50px;
     margin: 20px auto;
-    height: 730px;
+    height: 760px;
     max-width: 431px;
     overflow-y: auto;
   }

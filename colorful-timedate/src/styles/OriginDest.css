@@ -21,7 +21,7 @@
 
 .location-header-arrow {
   color: white;
-  position: fixed;
+  position: absolute;
   margin: 10px;
 }
 
