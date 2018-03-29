@@ -7,7 +7,7 @@ function TicketType (props) {
     <div>
       <div className="location-header nav justify-content-center">
         <Link to="/destination">
-          <div className="location-header-arrow fa fa-arrow-left" style={{fontSize: "1.5em", position: "fixed", margin: "20px 10px"}}></div>
+          <div className="location-header-arrow fa fa-arrow-left" style={{fontSize: "1.5em"}}></div>
         </Link>
         <h2 className="location-header-text">Select Ticket Type</h2>
       </div>

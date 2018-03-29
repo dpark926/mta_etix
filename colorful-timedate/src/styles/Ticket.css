@@ -27,6 +27,7 @@
   width: 100%;
   /*border: 1px solid blue;*/
   text-align: left;
+  background-color: white;
   /*font-size: .8em;*/
 }
 
@@ -38,6 +39,12 @@
   /*font-weight: 300;*/
   /*font-size: 1em;*/
   color: black;
+}
+
+@media only screen and (min-width: 415px) {
+  .ticket-each:hover {
+    color: white;
+  }
 }
 
 .ticket-type {
