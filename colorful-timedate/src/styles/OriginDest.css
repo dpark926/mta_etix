@@ -5,6 +5,11 @@
 
 .header-container {
   /* background-color: var(--darker-blue); */
+  position: absolute;
+  width: 100%;
+  max-width: 421px;
+  z-index: 2;
+
 }
 
 .location-header {
@@ -26,6 +31,14 @@
   vertical-align: middle;
   font-size: 1.1em;
   /*width: 50%;*/
+}
+
+.location-list-wrapper {
+  padding-top: 113px;
+}
+
+.location-list-wrapper-destination {
+  padding-top: 147px;
 }
 
 .location-list {
@@ -124,7 +137,9 @@
   background-color: var(--darker-blue);
   color: white;
   text-align: left;
-  padding: 5px 15px;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   /*width: 40%;*/
   /*text-align: !important center;*/
   /*vertical-align: middle;*/

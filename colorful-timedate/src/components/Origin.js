@@ -99,7 +99,7 @@ function Origin (props) {
           </div>
         </div>
       </div>
-      <div className="animated slideInRight">
+      <div className="location-list-wrapper animated slideInRight">
         <div className="location-list">
           {loc}
         </div>

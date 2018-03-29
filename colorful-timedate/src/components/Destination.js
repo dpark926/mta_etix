@@ -87,7 +87,7 @@ function Destination (props) {
           </div>
         </div>
       </div>
-      <div className="animated slideInRight">
+      <div className="location-list-wrapper-destination animated slideInRight">
         <div className="location-list">
           {loc}
         </div>
