@@ -1,22 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import locations from '../locations'
 import '../styles/OriginDest.css'
-
-let locations = ['Grand Central Terminal', 'Penn Station', '', 'A', 'Albertson', 'Amagansett', 'Amityville', 'Ansonia', 'Appalachian Trail',
-  'Ardsley on Hudson', 'Atlantic Terminal', 'Auburndale', 'B', 'Babylon', 'Baldwin',
-  'Bay Shore', 'Bayside', 'Beacon', 'Beacon-Falls', 'Beadford Hills',
-  'Bellrose', 'Bellmore', 'Bellport', 'Bethel', 'Bethpage',
-  'Botanical Garden', 'Branchville', 'Breakneck Ridge', 'Brentwood', 'Brewster',
-  'Bridgehampton', 'Bridgeport', 'Broadway', 'Bronxville', 'C', 'Cannondale', 'Carle Place',
-  'Cedarhurst', 'Central Islip', 'Centre Avenue', 'Chappaqua', 'Cold Spring',
-  'Cold Spring Harbor', 'Copiague', 'Cortlandt', 'Cos Cob', 'Country Life Press',
-  'Crestwood', 'Croton Falls', 'Corton-Harmon', 'D', 'Danbury', 'Darien', 'Deer Park',
-  'Derby-Shelton', 'Dobbs Ferry', 'Douglaston', 'Dover Plains', 'E', 'East Hampton',
-  'East New York', 'East Norwalk', 'East Rockaway', 'East Wiliston', 'F', 'Fairfield',
-  'Fairfield Metro', 'Far Rockaway', 'Farmingdale', 'Fleetwood', 'Floral Park',
-  'Flushing Main Street', 'Fordham', 'Forest Hills', 'Freeport', 'Garden City',
-  'G', 'Garrison', 'Gibson', 'Glen Cove', 'Glen Head', 'Geln Street', 'Glenbrook',
-  'Glenwood', 'Goldens Bridge', 'Great Neck', 'Great River']
 
 function Destination (props) {
   let destination = props.destination
@@ -44,6 +29,8 @@ function Destination (props) {
           <div className='letter'>{location}</div>
         </div>
       )
+    } else if (location === '.') {
+      return
     } else if (location === 'Grand Central Terminal' || location === 'Penn Station') {
       return (
         <div className="location-list-blah" onClick={props.handleClickedDestination}>
