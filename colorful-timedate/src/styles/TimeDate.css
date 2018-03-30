@@ -35,6 +35,11 @@
     font-size: 2.1em;
     margin-top: 20px;
   }
+
+  .timeclock-main { 
+    width: 400px;
+    max-width: 400px;
+  }
 }
 
 .timeclock-time {
@@ -54,60 +59,6 @@
   margin: 0;
   padding: 0;
 }
-
-/*@-webkit-keyframes example {
-    0%  {top:0px;}
-    5%  {top:120px;}
-    10% {top:0px;}
-    15% {top:120px;}
-    20% {top:0px;}
-    25% {top:120px;}
-    30% {top:0px;}
-    35% {top:120px;}
-    40% {top:0px;}
-    45% {top:120px;}
-    50% {top:0px;}
-    55% {top:120px;}
-    60% {top:0px;}
-    65% {top:120px;}
-    70% {top:0px;}
-    75% {top:120px;}
-    80% {top:0px;}
-    85% {top:120px;}
-    90% {top:0px;}
-    95% {top:120px;}
-    100% {top:0px;}
-}*/
-
-/* @-webkit-keyframes example {
-    0%  {left:-17%;}
-    5%  {left:17%;}
-    10% {left:-17%;}
-    15% {left:17%;}
-    20% {left:-17%;}
-    25% {left:17%;}
-    30% {left:-17%;}
-    35% {left:17%;}
-    40% {left:-17%;}
-    45% {left:17%;}
-    50% {left:-17%;}
-    55% {left:17%;}
-    60% {left:-17%;}
-    65% {left:17%;}
-    70% {left:-17%;}
-    75% {left:17%;}
-    80% {left:-17%;}
-    85% {left:17%;}
-    90% {left:-17%;}
-    95% {left:17%;}
-    100% {left:-17%;}
-
-    0%  {left:-17%;}
-    25%  {left:17%;}
-    50% {left:-17%;}
-    75% {left:17%;}
-    100% {left:-17%;}
-} */
 
 @-webkit-keyframes example {
   0%  {left:-70px;}
