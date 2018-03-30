@@ -144,7 +144,14 @@ class App extends Component {
         />
         {/* <Route path="/round-trip" component={TicketCost}/>
         <Route path="/weekly" component={TicketCost}/> */}
-        <Route path="/accept" component={Accept}/>
+
+        {/* <Route path="/accept" component={Accept}/> */}
+        <Route path="/accept" render={() => <Accept
+          clickedOrigin={this.state.clickedOrigin}
+          clickedDestination={this.state.clickedDestination}
+          ticketType={this.state.ticketType}/>}
+        />
+
         {/* <Route path="/payment-method" component={PaymentMethod}/> */}
         <Route path="/payment-method" render={() => <PaymentMethod
           clickedOrigin={this.state.clickedOrigin}
