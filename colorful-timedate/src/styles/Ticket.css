@@ -1,6 +1,6 @@
 .tab-wrapper {
   /*background-color: #8b9dc3;*/
-  background-color: #3b5998;
+  background-color: var(--dark-blue);
 }
 
 .single-tab {
@@ -32,7 +32,9 @@
 }
 
 .ticket-each {
-  margin: 10px 15px;
+  margin: 0 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   /*border-top: 1px solid gray;*/
   border-bottom: 1px solid gray;
   padding: 20px 0;

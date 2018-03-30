@@ -24,6 +24,7 @@ function TicketType (props) {
           <div className="origin-destination-middle fa fa-arrow-right" id="arrow-right" style={{fontSize: "1em", color: "white", fontWeight: "300"}}></div>
           <div className="origin-destination-third">{props.clickedDestination}</div>
         </div>
+        
       </div>
 
       <div className="location-list-wrapper-ticket animated slideInRight">
