@@ -24,7 +24,9 @@
 }
 
 .ticket-list-wrapper {
-  padding-top: 165px
+  background-color: white;
+  padding-top: 165px;
+  /* height: 100vh; */
 }
 
 .ticket-list {
@@ -40,7 +42,7 @@
   padding-top: 10px;
   padding-bottom: 10px;
   /*border-top: 1px solid gray;*/
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid var(--light-gray);
   padding: 20px 0;
   /*font-weight: 300;*/
   /*font-size: 1em;*/

@@ -5,11 +5,16 @@
 
 .header-container {
   /* background-color: var(--darker-blue); */
-  position: absolute;
+  position: fixed;
   width: 100%;
   max-width: 415px;
   z-index: 2;
+}
 
+@media only screen and (min-width: 415px) {
+  .header-container {
+    position: absolute;
+  }
 }
 
 .location-header {
