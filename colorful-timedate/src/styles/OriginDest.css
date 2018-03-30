@@ -100,6 +100,10 @@
   color: white;
 }
 
+.location-search-box:focus {
+  outline: 1px solid var(--dark-blue);
+}
+
 .location-search-box::-webkit-input-placeholder {
   color: #8b9dc3 !important;
 }
@@ -178,11 +182,11 @@
 }
 
 @media only screen and (min-width: 415px) {
-  .location-list-blah:hover {
+  /* .location-list-blah:hover {
     background-color: #3b5998;
   }
 
   .location-each:hover {
     color: white;
-  }
+  } */
 }

@@ -48,9 +48,9 @@
 }
 
 @media only screen and (min-width: 415px) {
-  .ticket-each:hover {
+  /* .ticket-each:hover {
     color: white;
-  }
+  } */
 }
 
 .ticket-type {
