@@ -23,6 +23,10 @@
   /*border: 1px solid blue;*/
 }
 
+.ticket-list-wrapper {
+  padding-top: 165px
+}
+
 .ticket-list {
   width: 100%;
   /*border: 1px solid blue;*/
@@ -71,7 +75,7 @@
 
 .origin-destination-next {
   font-weight: 300;
-  font-size: .8em;
+  font-size: 0.9em;
 }
 
 .info-circle {
