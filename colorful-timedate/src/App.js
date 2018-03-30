@@ -149,7 +149,8 @@ class App extends Component {
         <Route path="/accept" render={() => <Accept
           clickedOrigin={this.state.clickedOrigin}
           clickedDestination={this.state.clickedDestination}
-          ticketType={this.state.ticketType}/>}
+          ticketType={this.state.ticketType}
+          ticket={this.state.ticket}/>}
         />
 
         {/* <Route path="/payment-method" component={PaymentMethod}/> */}

@@ -6,6 +6,13 @@
   padding: 15px 10px;
 }
 
+@media only screen and (min-width: 415px) {
+  .accept-wrapper {
+    position: relative;
+    margin-top: 40px;
+  }
+}
+
 .accept-header-wrapper {
   padding: 5px 0 20px 0;
   font-size: 1.3em;
@@ -22,6 +29,10 @@
 .disclaimer-tickettypes {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.disclaimer-tickettypes span{
+  margin-right: 5px;
 }
 
 .disclaimer {

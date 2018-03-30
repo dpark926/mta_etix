@@ -15,11 +15,12 @@ function Accept (props) {
       <div className="black-bar">
         <div className="yellow-progress" style={{width: "50%"}}></div>
       </div>
-      <div className="origin-destination">
+      <div className="origin-destination" style={{paddingBottom: '5px'}}>
         <div className="origin-destination-third">{props.clickedOrigin}</div>
         <div className="origin-destination-middle fa fa-arrow-right" id="arrow-right" style={{fontSize: "1em", color: "white", fontWeight: "300"}}></div>
         <div className="origin-destination-third">{props.clickedDestination}</div><br/>
         <div className="origin-destination-next">{props.ticketType}</div>
+        <div className="origin-destination-next">{props.ticket}</div>
       </div>
       <div className='tab-wrapper'>
         <div className="single-tab">Single</div>
@@ -35,7 +36,10 @@ function Accept (props) {
         </div>
 
         <div className='disclaimer'>
-          <div className='disclaimer-tickettypes'>{props.ticketType}</div>
+          <div className='disclaimer-tickettypes'>
+            <span>{props.ticketType}</span>
+            <span>{props.ticket}</span>
+          </div>
           <ul>
             <li>Good for one ride between the zones or stations indicated on the ticket durring off-peak hours only and is subject to step-up on Peak trains.</li>
             <li>Charged on any train NOT scheduled to arrive in NYC terminals between 6am and 10am or departing NYC terminals between 4pm and 8pm weekdays and select holidays.</li>
