@@ -62,7 +62,7 @@ class AppContainer extends Component {
         <div className="app-container">
           <div className="location-header nav justify-content-center">
             <Link to="/one-way">
-              <div className="location-header-arrow fa fa-arrow-left" style={{fontSize: "1.5em", position: "fixed", margin: "20px 10px"}}></div>
+              <div className="location-header-arrow fa fa-arrow-left" style={{fontSize: "1.5em"}}></div>
             </Link>
             <h2 className="location-header-text">{this.props.ticketType} {this.props.ticket}</h2>
           </div>

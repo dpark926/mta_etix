@@ -9,11 +9,12 @@
 }
 
 .each-block {
-  display: inline-block;
+  background-color: var(--light-gray);
   width: 30%;
-  height: 110px;
-  background-color: yellow;
-  /*border: 1px solid black;*/
+  padding-top: 30%;
+  position: relative;
+  display: inline-block;
+
   animation-name: block;
   animation-duration: 30s;
   animation-iteration-count: 100;
