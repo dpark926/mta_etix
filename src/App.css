@@ -1,6 +1,42 @@
+:root {
+  /* --darker-blue: #3b5998; */
+  /* --darker-blue: #011f4b; */
+  --darker-blue: #223366;
+  --dark-blue: #4e5b84;
+  --blue: #9099b2;
+  --gray: #adacac;
+  --light-gray: #d6d6d6;
+  --lighter-gray: #f8f6f6;
+}
+
 .App {
   text-align: center;
-  /*border: 1px solid black;*/
+  /* position: absolute; */
+  margin: auto;
+  width: 100%;
+  max-width: 414px;
+  /* height: 100%; */
+  /* background-color: var(--darker-blue); */
+  background-color: white;
+}
+
+@media only screen and (min-width: 415px) {
+  .App {
+    /* border: 2px solid black; */
+    border-top: 80px solid;
+    border-right: 10px solid;
+    border-bottom: 80px solid;
+    border-left: 10px solid;
+    border-radius: 50px;
+    margin: 20px auto;
+    height: 760px;
+    max-width: 431px;
+    overflow-y: auto;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .App-logo {

@@ -2,18 +2,43 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import '../styles/Accept.css'
 
-function Accept () {
+function Accept (props) {
 
   return (
-    <div>
+    <div className='test'>
       <div className="location-header nav justify-content-center">
+        <Link to="/ticket-type">
+          <div className="location-header-arrow fa fa-arrow-left" style={{fontSize: "1.5em"}}></div>
+        </Link>
         <h2 className="location-header-text">Select Ticket Type</h2>
       </div>
+      <div className="black-bar">
+        <div className="yellow-progress" style={{width: "50%"}}></div>
+      </div>
+      <div className="origin-destination" style={{paddingBottom: '5px'}}>
+        <div className="origin-destination-third">{props.clickedOrigin}</div>
+        <div className="origin-destination-middle fa fa-arrow-right" id="arrow-right" style={{fontSize: "1em", color: "white", fontWeight: "300"}}></div>
+        <div className="origin-destination-third">{props.clickedDestination}</div><br/>
+        <div className="origin-destination-next">{props.ticketType}</div>
+        <div className="origin-destination-next">{props.ticket}</div>
+      </div>
+      <div className='tab-wrapper'>
+        <div className="single-tab">Single</div>
+        <div className="multiple-tab">Multiple</div>
+      </div>
+
       <div className='accept-wrapper animated slideInUp'>
-        <div className='disclaimer'>
-          <div className="accept-header-wrapper">
-            <div className="accept-header">Ticket regulations</div>
+        <div className="accept-header-wrapper">
+          <div className="accept-header">Ticket regulations</div>
+          <Link to="/ticket-type">
             <div className="accept-header fa fa-times" style={{float: "right", fontSize: "1.2em"}}></div>
+          </Link>
+        </div>
+
+        <div className='disclaimer'>
+          <div className='disclaimer-tickettypes'>
+            <span>{props.ticketType}</span>
+            <span>{props.ticket}</span>
           </div>
           <ul>
             <li>Good for one ride between the zones or stations indicated on the ticket durring off-peak hours only and is subject to step-up on Peak trains.</li>
@@ -26,9 +51,11 @@ function Accept () {
             <li>Subject to applicable tariff regulations and conditions of use.</li>
           </ul>
         </div>
+
         <Link to='/payment-method'>
           <div className='accept-button'>Accept & Continue</div>
         </Link>
+
       </div>
     </div>
   )

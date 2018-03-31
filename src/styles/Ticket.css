@@ -1,5 +1,6 @@
 .tab-wrapper {
-  background-color: #8b9dc3;
+  /*background-color: #8b9dc3;*/
+  background-color: var(--dark-blue);
 }
 
 .single-tab {
@@ -22,21 +23,36 @@
   /*border: 1px solid blue;*/
 }
 
+.ticket-list-wrapper {
+  background-color: white;
+  padding-top: 165px;
+  /* height: 100vh; */
+}
+
 .ticket-list {
   width: 100%;
   /*border: 1px solid blue;*/
   text-align: left;
+  background-color: white;
   /*font-size: .8em;*/
 }
 
 .ticket-each {
-  margin: 10px 15px;
+  margin: 0 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   /*border-top: 1px solid gray;*/
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid var(--light-gray);
   padding: 20px 0;
   /*font-weight: 300;*/
   /*font-size: 1em;*/
   color: black;
+}
+
+@media only screen and (min-width: 415px) {
+  /* .ticket-each:hover {
+    color: white;
+  } */
 }
 
 .ticket-type {
@@ -61,7 +77,7 @@
 
 .origin-destination-next {
   font-weight: 300;
-  font-size: .8em;
+  font-size: 0.9em;
 }
 
 .info-circle {

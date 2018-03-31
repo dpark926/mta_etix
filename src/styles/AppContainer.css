@@ -1,16 +1,99 @@
 .tap-button {
-  font-size: .8em;
+  font-size: .7em;
   font-weight: 700;
   /*border: 1px solid blue;*/
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .ticket-activated-at {
-  background-color: red;
+  background-color: #d62d20;
   border-radius: 5px;
   color: white;
-  margin: 10px;
+  margin: 5px 15px;
   padding: 7px;
+}
+
+.ticket-type-info {
+  background-color: white;
+  border-bottom: 1px solid #a7adba;
+  border-radius: 5px;
+  color: black;
+  margin: 10px 15px;
+  padding: 7px;
+}
+
+.ticket-train-time {
+  background-color: var(--darker-blue);
+  border-bottom: 1px solid #a7adba;
+  border-radius: 5px;
+  color: white;
+  /*margin: 10px 15px;*/
+  padding: 10px;
+}
+
+.lirr {
+  background-color: white;
+  font-size: 12px;
+  margin: 0 15px;
+  font-weight: 600;
+  text-align: left;
+  padding: 3px 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.ticket-area-code {
+  background-color: #cdecf5;
+  margin: 0 15px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.ticket-area-code-wrapper1 {
+  /*border: 1px solid red;*/
+  display: inline-block;
+  text-align: right;
+  vertical-align: top;
+  width: 70%;
+  height: 100%;
+  padding: 10px 10px;
+}
+
+.ticket-area-code-wrapper2 {
+  /*border: 1px solid green;*/
+  display: inline-block;
+  text-align: right;
+  vertical-align: top;
+  width: 30%;
+  height: 100%;
+  padding: 15px 10px;
+}
+
+.ticket-area-code-origindest {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.ticket-area-code-areanum {
+  font-size: 2.4rem;
+  font-weight: 800;
+  padding-right: 10px
+}
+
+.ticket-area-code-circle {
+  /*background-color: black;
+  font-size: 2rem;
+  color: #cdecf5;
+  vertical-align: top;
+  width: 80px;
+  height: 100px;
+  text-align: center;*/
+  margin: 60% auto 0 auto;
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 100px solid black;
 }
 
 .button-wrapper {
@@ -19,4 +102,9 @@
 }
 
 .time-block-button-wrapper {
+
+}
+
+.app-container-lower {
+  background-color: #f1f1f1;
 }
