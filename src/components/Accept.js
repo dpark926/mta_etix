@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import '../styles/Accept.css'
 
 function Accept (props) {
-
   return (
     <div className='test'>
       <div className="location-header nav justify-content-center">
@@ -26,7 +25,6 @@ function Accept (props) {
         <div className="single-tab">Single</div>
         <div className="multiple-tab">Multiple</div>
       </div>
-
       <div className='accept-wrapper animated slideInUp'>
         <div className="accept-header-wrapper">
           <div className="accept-header">Ticket regulations</div>
@@ -34,7 +32,6 @@ function Accept (props) {
             <div className="accept-header fa fa-times" style={{float: "right", fontSize: "1.2em"}}></div>
           </Link>
         </div>
-
         <div className='disclaimer'>
           <div className='disclaimer-tickettypes'>
             <span>{props.ticketType}</span>
@@ -51,11 +48,9 @@ function Accept (props) {
             <li>Subject to applicable tariff regulations and conditions of use.</li>
           </ul>
         </div>
-
         <Link to='/payment-method'>
           <div className='accept-button'>Accept & Continue</div>
         </Link>
-
       </div>
     </div>
   )

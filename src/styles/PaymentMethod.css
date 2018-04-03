@@ -33,11 +33,8 @@
 
 .payment-each {
   margin: 10px 15px;
-  /*border-top: 1px solid gray;*/
   border-bottom: 1px solid var(--light-gray);
   padding: 20px 0;
-  /*font-weight: 300;*/
-  /*font-size: 1em;*/
   color: black;
   text-align: left;
 }

@@ -1,16 +1,11 @@
 .timeclock-main {
   margin: 5px 0;
   width: 100vw;
-  /*height: 200px;*/
   position: absolute;
-  /*border: 1px solid green;*/
   z-index: 2;
 }
 
 .timeclock-text {
-  /* padding-top: 20px; */
-  /*margin: auto;*/
-  /*text-align: justify;*/
   margin-top: 5vw;
   font-size: 8vw;
   color: white;
@@ -25,9 +20,6 @@
   animation-duration: 8s;
   animation-iteration-count: 100;
   max-width: 400px;
-  /*border: 1px solid green;*/
-  /* width: 100%; */
-  /* left: -70px; */
 }
 
 @media only screen and (min-width: 415px) {
@@ -36,15 +28,13 @@
     margin-top: 20px;
   }
 
-  .timeclock-main { 
+  .timeclock-main {
     width: 400px;
     max-width: 400px;
   }
 }
 
 .timeclock-time {
-  /*border: 1px solid red;*/
-  /*width: 50%;*/
   letter-spacing: 1px;
   line-height: 90%;
   margin: 0 0 2px 0;
@@ -52,8 +42,6 @@
 }
 
 .timeclock-date {
-  /*border: 1px solid red;*/
-  /*width: 50%;*/
   line-height: 90%;
   letter-spacing: 2px;
   margin: 0;

@@ -1,10 +1,8 @@
 .test {
-  /* border: 1px solid red; */
   background-color: white;
 }
 
 .header-container {
-  /* background-color: var(--darker-blue); */
   position: fixed;
   width: 100%;
   max-width: 411px;
@@ -39,10 +37,8 @@
 
 .location-header h2 {
   margin: auto;
-  /*border: 1px solid red;*/
   vertical-align: middle;
   font-size: 1.1em;
-  /*width: 50%;*/
 }
 
 .location-list-wrapper {
@@ -54,18 +50,9 @@
 }
 
 .location-list {
-  /*margin: 0 30%;*/
   width: 100%;
-  /*border: 1px solid blue;*/
   text-align: left;
   font-size: .9em;
-}
-
-.location-list-blah {
-  /*margin: 0 30px;*/
-  /*border-top: 1px solid gray;*/
-  /*border-bottom: 1px solid gray;*/
-  /*padding: 15px;*/
 }
 
 .location-list a {
@@ -75,7 +62,6 @@
 
 .location-each {
   margin: 0 15px;
-  /*border-top: 1px solid gray;*/
   border-bottom: 1px solid var(--light-gray);
   padding: 11px 0 11px 5px;
 }
@@ -89,17 +75,11 @@
   border-radius: 10px;
   background-color: var(--dark-blue);
   margin: 5px;
-  /*border: 2px solid #ccc;*/
   text-align: left;
 }
 
 .location-search-icon {
-  /*display: inline-block;*/
-  /*border: 1px solid red;*/
   margin: 0 10px 0 10px;
-  /*color: red;*/
-  /*text-align: left;*/
-
 }
 
 .location-search-box {
@@ -144,36 +124,26 @@
 
 .yellow-progress {
   height: 100%;
-  /*border: 1px solid red;*/
   background-color: orange;
 }
 
 .origin-destination {
-  /*border: 1px solid green;*/
   background-color: var(--darker-blue);
   color: white;
   text-align: left;
   padding-top: 10px;
   padding-left: 15px;
   padding-right: 15px;
-  /*width: 40%;*/
-  /*text-align: !important center;*/
-  /*vertical-align: middle;*/
 }
 
 .origin-destination-third {
   display: inline-block;
-  /*border: 1px solid red;*/
-  /*width: 40%;
-  height: 40px;*/
   vertical-align: middle;
   font-weight: 300;
   font-size: .9em;
 }
 
 .origin-destination-middle {
-  /*width: 15%;*/
-  /*border: 1px solid red;*/
   padding: 0 10px;
 }
 
@@ -191,14 +161,4 @@
   float: right;
   color: orange;
   font-size: 1.5em;
-}
-
-@media only screen and (min-width: 415px) {
-  /* .location-list-blah:hover {
-    background-color: #3b5998;
-  }
-
-  .location-each:hover {
-    color: white;
-  } */
 }

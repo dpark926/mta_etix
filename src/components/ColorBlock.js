@@ -3,7 +3,6 @@ import { SketchPicker } from 'react-color';
 import '../styles/ColorBlock.css';
 
 function ColorBlock(props) {
-
   return (
     <div className="colorblock-main">
       <div className='each-block block1' onClick={props.toggleColor} style={{backgroundColor: props.block1}}></div>

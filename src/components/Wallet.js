@@ -32,11 +32,5 @@ function Wallet (props) {
     </div>
   )
 }
-// clickedOrigin={this.state.clickedOrigin}
-// clickedDestination={this.state.clickedDestination}
-// ticketType={this.state.ticketType}
-// handleSecCode={this.handleSecCode}
-// secCode={this.state.secCode}
-// ticket={this.state.ticket}/>}
 
-export default Wallet
+export default Wallet;

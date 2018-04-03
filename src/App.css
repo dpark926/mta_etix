@@ -1,6 +1,4 @@
 :root {
-  /* --darker-blue: #3b5998; */
-  /* --darker-blue: #011f4b; */
   --darker-blue: #223366;
   --dark-blue: #4e5b84;
   --blue: #9099b2;
@@ -11,18 +9,14 @@
 
 .App {
   text-align: center;
-  /* position: absolute; */
   margin: auto;
   width: 100%;
   max-width: 414px;
-  /* height: 100%; */
-  /* background-color: var(--darker-blue); */
   background-color: white;
 }
 
 @media only screen and (min-width: 415px) {
   .App {
-    /* border: 2px solid black; */
     border-top: 80px solid;
     border-right: 10px solid;
     border-bottom: 80px solid;
@@ -39,11 +33,6 @@
   }
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
 .App-header {
   background-color: #222;
   height: 150px;
@@ -53,9 +42,4 @@
 
 .App-intro {
   font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }

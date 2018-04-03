@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import '../styles/CardInfo.css'
 
 function CardInfo (props) {
-
   return (
     <div className='test'>
       <div className="header-container">

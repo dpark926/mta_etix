@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Route, Redirect } from 'react-router-dom'
-// import logo from './logo.svg';
 import './App.css';
 import Origin from './components/Origin.js'
 import Destination from './components/Destination.js'
@@ -16,8 +15,6 @@ import Accept from './components/Accept.js'
 import Wallet from './components/Wallet.js'
 import PaymentMethod from './components/PaymentMethod.js'
 import CardInfo from './components/CardInfo.js'
-
-// import './styles/Activate.css'
 
 class App extends Component {
   constructor() {
@@ -111,7 +108,6 @@ class App extends Component {
           clickedDestination={this.state.clickedDestination}
           handleTicketType={this.handleTicketType}/>}
         />
-        {/* <Route path="/ten-trip" component={TicketCost}/> */}
         <Route path="/ten-trip" render={() => <TenTrip
           clickedOrigin={this.state.clickedOrigin}
           clickedDestination={this.state.clickedDestination}
@@ -142,18 +138,12 @@ class App extends Component {
           handleTicket={this.handleTicket}
           ticketType={this.state.ticketType}/>}
         />
-        {/* <Route path="/round-trip" component={TicketCost}/>
-        <Route path="/weekly" component={TicketCost}/> */}
-
-        {/* <Route path="/accept" component={Accept}/> */}
         <Route path="/accept" render={() => <Accept
           clickedOrigin={this.state.clickedOrigin}
           clickedDestination={this.state.clickedDestination}
           ticketType={this.state.ticketType}
           ticket={this.state.ticket}/>}
         />
-
-        {/* <Route path="/payment-method" component={PaymentMethod}/> */}
         <Route path="/payment-method" render={() => <PaymentMethod
           clickedOrigin={this.state.clickedOrigin}
           clickedDestination={this.state.clickedDestination}
@@ -161,7 +151,6 @@ class App extends Component {
           cost={this.state.cost}
           ticket={this.state.ticket}/>}
         />
-        {/* <Route path="/card-info" component={CardInfo}/> */}
         <Route path="/card-info" render={() => <CardInfo
           clickedOrigin={this.state.clickedOrigin}
           clickedDestination={this.state.clickedDestination}
@@ -171,7 +160,6 @@ class App extends Component {
           secCode={this.state.secCode}
           ticket={this.state.ticket}/>}
         />
-        {/* <Route path="/wallet" component={Wallet}/> */}
         <Route path="/wallet" render={() => <Wallet
           clickedOrigin={this.state.clickedOrigin}
           clickedDestination={this.state.clickedDestination}

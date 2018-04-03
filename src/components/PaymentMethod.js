@@ -19,11 +19,6 @@ function PaymentMethod (props) {
         <div className="yellow-progress" style={{width: "60%"}}></div>
       </div>
       <div className="origin-destination" style={{paddingBottom: '5px'}}>
-        {/* <div className="origin-destination-third">{props.clickedOrigin}</div>
-        <div className="origin-destination-middle fa fa-arrow-right" id="arrow-right" style={{fontSize: "1em", color: "white", fontWeight: "300"}}></div>
-        <div className="origin-destination-third">{props.clickedDestination}</div>
-        <div className="origin-destination-next">{props.ticketType}</div> */}
-
         <div className="origin-destination-third">{props.clickedOrigin}</div>
         <div className="origin-destination-middle fa fa-arrow-right" id="arrow-right" style={{fontSize: "1em", color: "white", fontWeight: "300"}}></div>
         <div className="origin-destination-third">{props.clickedDestination}</div><br/>
@@ -38,13 +33,6 @@ function PaymentMethod (props) {
       <div className="payment-method">Payment methods</div>
 
       <div className="animated slideInRight">
-
-        {/* <div className="location-list-blah">
-          <Link to='/ten-trip'>
-            <div className="ticket-each" onClick={props.handleTicketType} id="Ten Trip">Ten Trip<span className="location-arrow fa fa-angle-right" style={{color: "orange", fontSize: "1.8em"}}></span></div>
-          </Link>
-        </div> */}
-
         <Link to='/card-info'>
           <div className="payment-each">
             <span className="payment-icon"><img src={amexLogo}></img></span>
