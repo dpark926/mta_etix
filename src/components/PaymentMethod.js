@@ -18,7 +18,7 @@ function PaymentMethod (props) {
       <div className="black-bar">
         <div className="yellow-progress" style={{width: "60%"}}></div>
       </div>
-      <div className="origin-destination">
+      <div className="origin-destination" style={{paddingBottom: '5px'}}>
         {/* <div className="origin-destination-third">{props.clickedOrigin}</div>
         <div className="origin-destination-middle fa fa-arrow-right" id="arrow-right" style={{fontSize: "1em", color: "white", fontWeight: "300"}}></div>
         <div className="origin-destination-third">{props.clickedDestination}</div>

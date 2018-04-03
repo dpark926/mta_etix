@@ -1,7 +1,23 @@
+.wallet-wrapper {
+  background-color: var(--darker-blue);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (min-width: 415px) {
+  .wallet-wrapper {
+    max-height: 600px;
+    max-width: 411px;
+  }
+}
+
 .wallet-toggle-wrapper {
-  border: 2px solid red;
-  margin: 10px;
+  padding-top: 15px;
+  margin-bottom: 10px;
   border-radius: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .wallet-toggle-ticket {
@@ -9,29 +25,42 @@
   width: 50%;
   color: #05377b;
   background-color: white;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .wallet-toggle-history {
   display: inline-block;
   width: 50%;
   color: white;
-  /*background-color: #3b5998;*/
-  background-color: #8b9dc3;
+  background-color: var(--dark-blue);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .wallet-ticket-wrapper {
-  margin: 10px;
-  border: 2px solid red;
+  margin: 15px;
   text-align: left;
   border-radius: 10px;
+  /* position: absolute;
+  width: 100%; */
   height: 180px;
+  background-color: white;
+}
+
+@media only screen and (min-width: 415px) {
+  .wallet-ticket-wrapper {
+    max-width: 380px;
+  }
 }
 
 .wallet-ticket-top {
   color: black;
   border-bottom: 1px solid gray;
-  margin: 10px 15px 0 15px;
-  padding-bottom: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  height: 50%;
+  padding-top: 20px;
 }
 
 .wallet-ticket-top > div:first-child{
@@ -40,8 +69,10 @@
 
 .wallet-ticket-bottom {
   color: black;
-  /*border: 1px solid green;*/
-  margin: 10px 15px 0 15px;
+  height: 50%;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding-top: 10px;
 }
 
 .wallet-ticket-bottom > div:first-child{
