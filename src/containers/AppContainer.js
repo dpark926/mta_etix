@@ -61,7 +61,7 @@ class AppContainer extends Component {
       return (
         <div className="app-container">
           <div className="location-header nav justify-content-center">
-            <Link to="/one-way">
+            <Link to="/wallet">
               <div className="location-header-arrow fa fa-arrow-left" style={{fontSize: "1.5em"}}></div>
             </Link>
             <h2 className="location-header-text">{this.props.ticketType} {this.props.ticket}</h2>
@@ -82,9 +82,9 @@ class AppContainer extends Component {
               />
               <div className='tap-button'>Tap to reveal barcode</div>
             </div>
+            <a href='#'><Button handleClick={this.handleClick} clicked={this.state.clicked}/></a>
           </div>
           <div className="app-container-lower">
-            <a href='#'><Button handleClick={this.handleClick} clicked={this.state.clicked}/></a>
             <div className='ticket-activated-at'>Ticket activated at {this.state.activated.slice(0, 5)} {this.state.activated.slice(-2)}</div>
             <div className='ticket-type-info'>{this.props.ticketType} {this.props.ticket}</div>
             <div className='lirr'>Long Island Rail Road</div>
