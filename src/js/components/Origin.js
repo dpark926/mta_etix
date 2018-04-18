@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from './Header';
+import BlackBar from './BlackBar';
 import locations from '../data/locations';
 import '../../styles/OriginDest.css';
 
@@ -64,9 +65,9 @@ function Origin (props) {
           headerTitle='Select Origin Station'
           previousLink='/buytickets'
         />
-        <div className="black-bar">
-          <div className="yellow-progress" style={{width: "10%"}}></div>
-        </div>
+        <BlackBar
+          yellowWidth='10%'
+        />
         <div className='search-wrapper'>
           <div className='search-wrapper2'>
             <div className="location-search-icon fa fa-search" style={{color: "white", fontSize: "1em"}}></div>

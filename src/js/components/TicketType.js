@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from './Header';
+import BlackBar from './BlackBar';
 import '../../styles/TicketType.css';
 
 function TicketType (props) {
@@ -12,9 +13,9 @@ function TicketType (props) {
           headerTitle='Select Ticket Type'
           previousLink='/destination'
         />
-        <div className="black-bar">
-          <div className="yellow-progress" style={{width: "30%"}}></div>
-        </div>
+        <BlackBar
+          yellowWidth='30%'
+        />
         <div className="origin-destination" style={{paddingBottom: '5px'}}>
           <div className="origin-destination-third">{props.clickedOrigin}</div>
           <div className="origin-destination-middle fa fa-arrow-right" id="arrow-right" style={{fontSize: "1em", color: "white", fontWeight: "300"}}></div>

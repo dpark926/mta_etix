@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from './Header';
+import BlackBar from './BlackBar';
 import '../../styles/CardInfo.css';
 
 function CardInfo (props) {
@@ -11,9 +12,9 @@ function CardInfo (props) {
           headerTitle='Enter Card Information'
           previousLink='/payment-method'
         />
-        <div className="black-bar">
-          <div className="yellow-progress" style={{width: "100%"}}></div>
-        </div>
+        <BlackBar
+          yellowWidth='100%'
+        />
         <div className="origin-destination" style={{paddingBottom: '5px'}}>
           <div className="origin-destination-third">{props.clickedOrigin}</div>
           <div className="origin-destination-middle fa fa-arrow-right" id="arrow-right" style={{fontSize: "1em", color: "white", fontWeight: "300"}}></div>

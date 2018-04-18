@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from './Header';
+import BlackBar from './BlackBar';
 import '../../styles/PaymentMethod.css';
 import amexLogo from '../../styles/imgs/amex_logo.jpeg';
 import plusAddIcon from '../../styles/imgs/plus_add_icon.png';
@@ -14,9 +15,9 @@ function PaymentMethod (props) {
         headerTitle='Select Payment Method'
         previousLink='/one-way'
       />
-      <div className="black-bar">
-        <div className="yellow-progress" style={{width: "60%"}}></div>
-      </div>
+      <BlackBar
+        yellowWidth='60%'
+      />
       <div className="origin-destination" style={{paddingBottom: '5px'}}>
         <div className="origin-destination-third">{props.clickedOrigin}</div>
         <div className="origin-destination-middle fa fa-arrow-right" id="arrow-right" style={{fontSize: "1em", color: "white", fontWeight: "300"}}></div>

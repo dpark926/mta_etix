@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from './Header';
+import BlackBar from './BlackBar';
 import locations from '../data/locations';
 import '../../styles/OriginDest.css';
 
@@ -58,9 +59,9 @@ function Destination (props) {
           headerTitle='Select Destination Station'
           previousLink='/origin'
         />
-        <div className="black-bar">
-          <div className="yellow-progress" style={{width: "20%"}}></div>
-        </div>
+        <BlackBar
+          yellowWidth='20%'
+        />
         <div className="origin-destination">
           <div className="origin-destination-third">{props.clickedOrigin}</div>
           <div className="origin-destination-middle fa fa-arrow-right" id="arrow-right" style={{fontSize: "1em", color: "white", fontWeight: "300"}}></div>
