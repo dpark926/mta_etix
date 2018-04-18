@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from './Header';
 import BlackBar from './BlackBar';
+import SearchBar from './SearchBar';
 import locations from '../data/locations';
 import '../../styles/OriginDest.css';
 
@@ -68,12 +69,11 @@ function Origin (props) {
         <BlackBar
           yellowWidth='10%'
         />
-        <div className='search-wrapper'>
-          <div className='search-wrapper2'>
-            <div className="location-search-icon fa fa-search" style={{color: "white", fontSize: "1em"}}></div>
-            <input className="location-search-box" type='text' onChange={props.handleOrigin} placeholder="Search"></input>
-          </div>
-        </div>
+        <SearchBar
+          handleLocation={props.handleOrigin}
+          origin={props.origin}
+          handleClickedOrigin={props.handleClickedOrigin}
+        />
       </div>
       <div className="location-list-wrapper animated slideInRight">
         <div className="location-list">
