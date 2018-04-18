@@ -1,5 +1,5 @@
-import React from 'react'
-import '../styles/Button.css'
+import React from 'react';
+import '../../styles/Button.css';
 
 function Button(props) {
   if (props.clicked) {

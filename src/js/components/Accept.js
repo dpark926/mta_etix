@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-import '../styles/Accept.css'
+import { Link } from 'react-router-dom';
+import '../../styles/Accept.css';
 
 function Accept (props) {
   return (

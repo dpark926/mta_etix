@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-import '../styles/CardInfo.css'
+import { Link } from 'react-router-dom';
+import '../../styles/CardInfo.css';
 
 function CardInfo (props) {
   return (

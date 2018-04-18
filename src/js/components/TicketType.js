@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/TicketType.css'
+import '../../styles/TicketType.css';
 
 function TicketType (props) {
 
@@ -24,7 +24,7 @@ function TicketType (props) {
           <div className="origin-destination-middle fa fa-arrow-right" id="arrow-right" style={{fontSize: "1em", color: "white", fontWeight: "300"}}></div>
           <div className="origin-destination-third">{props.clickedDestination}</div>
         </div>
-        
+
       </div>
 
       <div className="location-list-wrapper-ticket animated slideInRight">

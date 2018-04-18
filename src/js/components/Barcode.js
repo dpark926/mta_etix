@@ -1,5 +1,5 @@
-import React from 'react'
-import barcodeImg from '../styles/imgs/2d-barcode.png'
+import React from 'react';
+import barcodeImg from '../../styles/imgs/2d-barcode.png';
 
 function Barcode () {
   return (

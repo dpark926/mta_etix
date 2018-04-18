@@ -1,6 +1,6 @@
 import React from 'react'
 import { SketchPicker } from 'react-color';
-import '../styles/ColorBlock.css';
+import '../../styles/ColorBlock.css';
 
 function ColorBlock(props) {
   return (

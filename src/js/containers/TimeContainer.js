@@ -1,5 +1,5 @@
-import React, {Component} from 'react'
-import '../styles/TimeDate.css';
+import React, { Component } from 'react';
+import '../../styles/TimeDate.css';
 
 class TimeContainer extends Component {
 

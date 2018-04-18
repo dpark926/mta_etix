@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-import '../styles/PaymentMethod.css'
-import amexLogo from '../styles/imgs/amex_logo.jpeg'
-import plusAddIcon from '../styles/imgs/plus_add_icon.png'
-import masterpassIcon from '../styles/imgs/masterpass_icon.png'
+import { Link } from 'react-router-dom';
+import '../../styles/PaymentMethod.css';
+import amexLogo from '../../styles/imgs/amex_logo.jpeg';
+import plusAddIcon from '../../styles/imgs/plus_add_icon.png';
+import masterpassIcon from '../../styles/imgs/masterpass_icon.png';
 
 function PaymentMethod (props) {
 

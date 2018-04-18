@@ -1,7 +1,7 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import locations from '../locations'
-import '../styles/OriginDest.css'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import locations from '../data/locations';
+import '../../styles/OriginDest.css';
 
 function Origin (props) {
   let origin = props.origin

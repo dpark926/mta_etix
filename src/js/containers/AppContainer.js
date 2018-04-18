@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
-import TimeContainer from './TimeContainer.js'
-import ColorBlock from '../components/ColorBlock.js'
-import Button from '../components/Button.js'
-import Barcode from '../components/Barcode.js'
-import '../styles/AppContainer.css'
+import { Link } from 'react-router-dom';
+import TimeContainer from './TimeContainer.js';
+import ColorBlock from '../components/ColorBlock.js';
+import Button from '../components/Button.js';
+import Barcode from '../components/Barcode.js';
+import '../../styles/AppContainer.css';
 
 class AppContainer extends Component {
   constructor() {
