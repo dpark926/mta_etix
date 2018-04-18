@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Header from './Header';
 import '../../styles/TicketType.css';
 
 function TicketType (props) {
@@ -7,18 +8,13 @@ function TicketType (props) {
   return (
     <div className='test'>
       <div className="header-container">
-
-        <div className="location-header nav justify-content-center">
-          <Link to="/destination">
-            <div className="location-header-arrow fa fa-arrow-left" style={{fontSize: "1.5em"}}></div>
-          </Link>
-          <h2 className="location-header-text">Select Ticket Type</h2>
-        </div>
-
+        <Header
+          headerTitle='Select Ticket Type'
+          previousLink='/destination'
+        />
         <div className="black-bar">
           <div className="yellow-progress" style={{width: "30%"}}></div>
         </div>
-
         <div className="origin-destination" style={{paddingBottom: '5px'}}>
           <div className="origin-destination-third">{props.clickedOrigin}</div>
           <div className="origin-destination-middle fa fa-arrow-right" id="arrow-right" style={{fontSize: "1em", color: "white", fontWeight: "300"}}></div>

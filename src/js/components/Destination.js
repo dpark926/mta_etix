@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Header from './Header';
 import locations from '../data/locations';
 import '../../styles/OriginDest.css';
 
@@ -53,12 +54,10 @@ function Destination (props) {
   return (
     <div className='test'>
       <div className="header-container">
-        <div className="location-header nav justify-content-center">
-          <Link to="/origin">
-            <div className="location-header-arrow fa fa-arrow-left" style={{fontSize: "1.5em"}}></div>
-          </Link>
-          <h2 className="location-header-text">Select Destination Station</h2>
-        </div>
+        <Header
+          headerTitle='Select Destination Station'
+          previousLink='/origin'
+        />
         <div className="black-bar">
           <div className="yellow-progress" style={{width: "20%"}}></div>
         </div>

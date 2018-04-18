@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Header from './Header';
 import '../../styles/PaymentMethod.css';
 import amexLogo from '../../styles/imgs/amex_logo.jpeg';
 import plusAddIcon from '../../styles/imgs/plus_add_icon.png';
@@ -9,12 +10,10 @@ function PaymentMethod (props) {
 
   return (
     <div className='test'>
-      <div className="location-header nav justify-content-center">
-        <Link to="/one-way">
-          <div className="location-header-arrow fa fa-arrow-left" style={{fontSize: "1.5em"}}></div>
-        </Link>
-        <h2 className="location-header-text">Select Payment Method</h2>
-      </div>
+      <Header
+        headerTitle='Select Payment Method'
+        previousLink='/one-way'
+      />
       <div className="black-bar">
         <div className="yellow-progress" style={{width: "60%"}}></div>
       </div>

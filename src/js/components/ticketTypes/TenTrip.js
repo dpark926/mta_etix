@@ -1,17 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Header from '../Header';
 import '../../../styles/Ticket.css';
 
 function TenTrip (props) {
   return (
     <div className='test'>
       <div className="header-container">
-        <div className="location-header nav justify-content-center">
-          <Link to="/ticket-type">
-            <div className="location-header-arrow fa fa-arrow-left" style={{fontSize: "1.5em"}}></div>
-          </Link>
-          <h2 className="location-header-text">Select Ticket</h2>
-        </div>
+        <Header
+          headerTitle='Select Ticket'
+          previousLink='/ticket-type'
+        />
         <div className="black-bar">
           <div className="yellow-progress" style={{width: "50%"}}></div>
         </div>

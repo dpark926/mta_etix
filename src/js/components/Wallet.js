@@ -1,16 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Header from './Header';
 import '../../styles/Wallet.css';
 
 function Wallet (props) {
   return (
     <div className='test'>
-      <div className="location-header nav justify-content-center">
-        <Link to="/card-info">
-          <div className="location-header-arrow fa fa-arrow-left" style={{fontSize: "1.5em"}}></div>
-        </Link>
-        <h2 className="location-header-text">Ticket Wallet</h2>
-      </div>
+      <Header
+        headerTitle='Ticket Wallet'
+        previousLink='/card-info'
+      />
       <div className='wallet-wrapper'>
         <div className='wallet-toggle-wrapper'>
           <div className='wallet-toggle-ticket'>Tickets</div>

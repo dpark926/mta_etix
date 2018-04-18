@@ -1,16 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Header from './Header';
 import '../../styles/Accept.css';
 
 function Accept (props) {
   return (
     <div className='test'>
-      <div className="location-header nav justify-content-center">
-        <Link to="/ticket-type">
-          <div className="location-header-arrow fa fa-arrow-left" style={{fontSize: "1.5em"}}></div>
-        </Link>
-        <h2 className="location-header-text">Select Ticket Type</h2>
-      </div>
+      <Header
+        headerTitle='Select Ticket Type'
+        previousLink='/ticket-type'
+      />
       <div className="black-bar">
         <div className="yellow-progress" style={{width: "50%"}}></div>
       </div>

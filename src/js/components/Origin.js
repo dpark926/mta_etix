@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Header from './Header';
 import locations from '../data/locations';
 import '../../styles/OriginDest.css';
 
@@ -59,12 +60,10 @@ function Origin (props) {
   return (
     <div className='test'>
       <div className="header-container">
-        <div className="location-header nav justify-content-center">
-          <Link to="/buytickets">
-            <div className="location-header-arrow fa fa-arrow-left" style={{fontSize: "1.5em"}}></div>
-          </Link>
-          <h2 className="location-header-text">Select Origin Station</h2>
-        </div>
+        <Header
+          headerTitle='Select Origin Station'
+          previousLink='/buytickets'
+        />
         <div className="black-bar">
           <div className="yellow-progress" style={{width: "10%"}}></div>
         </div>
