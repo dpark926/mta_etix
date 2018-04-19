@@ -1,4 +1,4 @@
-let locations = [
+let LOCATIONS = [
   'Grand Central Terminal',
   'Penn Station',
   '.',
@@ -256,4 +256,4 @@ let locations = [
   'Yonkers',
 ]
 
-export default locations
+export default LOCATIONS;
