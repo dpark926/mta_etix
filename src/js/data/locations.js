@@ -1,4 +1,4 @@
-let LOCATIONS = [
+const LOCATIONS = [
   'Grand Central Terminal',
   'Penn Station',
   '.',

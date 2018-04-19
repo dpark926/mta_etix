@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from './Header';
 import BlackBar from './BlackBar';
 import SearchBar from './SearchBar';
-import LOCATIONS from '../data/LOCATIONS';
+import LOCATIONS from '../data/LOCATIONS.js';
 import '../../styles/OriginDest.css';
 
 function Origin (props) {
