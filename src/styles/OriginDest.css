@@ -16,7 +16,7 @@
 }
 
 .location-header {
-  height: 50px;
+  height: 55px;
   background-color: var(--darker-blue);
   color: white;
   border-bottom: 2px solid black;
@@ -33,6 +33,7 @@
   position: absolute;
   margin: 10px;
   right: 10px;
+  top: 5px;
 }
 
 .location-header h2 {
