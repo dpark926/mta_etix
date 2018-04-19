@@ -29,8 +29,8 @@ function Weekly (props) {
         </div>
 
         <Link to='/accept'>
-          <div className="ticket-each" onClick={props.handleTicket} id="Monthly, $226.00">
-            <div className='ticket-type'><i className="info-circle fa fa-info-circle" style={{color: "#3b5998", fontSize: "1.1em"}}></i>Monthly</div>
+          <div className="ticket-each" onClick={props.handleTicket} id="Weekly, $226.00">
+            <div className='ticket-type'><i className="info-circle fa fa-info-circle" style={{color: "#3b5998", fontSize: "1.1em"}}></i>Weekly</div>
             <div className='ticket-price'>$226.00<span className="location-arrow fa fa-angle-right" style={{color: "orange", fontSize: "1.8em", paddingLeft: "10px"}}></span></div>
           </div>
         </Link>
