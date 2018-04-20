@@ -28,7 +28,7 @@ function Disclaimer ( props ) {
     obj.ticketType === props.ticket.replace(/\s+/g, '-').toLowerCase()
   )
 
-  if ( !disclaimerResult || disclaimerResult.length == 0 ) {
+  if ( !disclaimerResult || disclaimerResult.length === 0 ) {
     return defaultMsg;
   } else {
     return (
