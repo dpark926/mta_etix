@@ -3,15 +3,15 @@ import { Link } from 'react-router-dom';
 import Header from './Header';
 import BlackBar from './BlackBar';
 import SearchBar from './SearchBar';
-import LOCATIONS from '../data/LOCATIONS';
+import locations from '../data/locations';
 import '../../styles/OriginDest.css';
 
 function Destination (props) {
   let destination = props.destination
   let newArray = []
 
-  for (var i = 0; i < LOCATIONS.length; i++) {
-    let location = LOCATIONS[i]
+  for (var i = 0; i < locations.length; i++) {
+    let location = locations[i]
     if (props.clickedOrigin === 'Grand Central Terminal' && location === 'Penn Station') {
       continue
     } else if (props.clickedOrigin === 'Penn Station' && location === 'Grand Central Terminal') {

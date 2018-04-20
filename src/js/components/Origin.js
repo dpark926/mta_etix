@@ -3,15 +3,15 @@ import { Link } from 'react-router-dom';
 import Header from './Header';
 import BlackBar from './BlackBar';
 import SearchBar from './SearchBar';
-import LOCATIONS from '../data/LOCATIONS';
+import locations from '../data/locations';
 import '../../styles/OriginDest.css';
 
 function Origin (props) {
   let origin = props.origin
   let newArray = []
 
-  for (var i = 0; i < LOCATIONS.length; i++) {
-    let location = LOCATIONS[i]
+  for (var i = 0; i < locations.length; i++) {
+    let location = locations[i]
       if (location.slice(0, origin.length).toLowerCase() === origin.toLowerCase() && !newArray.includes(location)) {
         newArray.push(location)
       }
