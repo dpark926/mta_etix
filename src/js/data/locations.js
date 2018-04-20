@@ -253,7 +253,7 @@ const LOCATIONS = [
   'Y',
   'Yankees - E. 153rd Street',
   'Yaphank',
-  'Yonkers',
+  'Yonkers'
 ]
 
 export default LOCATIONS;
