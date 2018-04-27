@@ -6,7 +6,8 @@ const allReducers = combineReducers({
   clickedOrigin: clickReducer.clickOriginReducer,
   clickedDestination: clickReducer.clickedDestinationReducer,
   origin: typeReducer.typeOriginReducer,
-  destination: typeReducer.typeDestinationReducer
+  destination: typeReducer.typeDestinationReducer,
+  ticketType: clickReducer.clickedTicketType
 })
 
 const initialState = {

@@ -8,7 +8,6 @@ function handleClickedOrigin(data) {
 }
 
 function handleClickedDestination(data) {
-  console.log('what')
   return {
     type: 'clickedDestination',
     payload: {
@@ -17,7 +16,17 @@ function handleClickedDestination(data) {
   }
 }
 
+function handleTicketType(data) {
+  return {
+    type: 'ticketType',
+    payload: {
+      ticketType: data
+    }
+  }
+}
+
 export default {
   handleClickedOrigin,
-  handleClickedDestination
+  handleClickedDestination,
+  handleTicketType
 };

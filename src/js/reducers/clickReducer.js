@@ -1,8 +1,3 @@
-// const initialState = {
-//   clickedOrigin: '',
-//   clickedDestination: ''
-// }
-
 const clickOriginReducer = ( state = null, { type, payload } ) => {
   switch ( type ) {
     case 'clickedOrigin':
@@ -30,7 +25,17 @@ const clickedDestinationReducer = ( state = null, { type, payload } ) => {
   }
 };
 
+const clickedTicketType = ( state = null, { type, payload } ) => {
+  switch ( type ) {
+    case 'ticketType':
+      return payload.ticketType
+    default:
+      return state;
+  }
+};
+
 export default {
   clickOriginReducer,
-  clickedDestinationReducer
+  clickedDestinationReducer,
+  clickedTicketType
 };
