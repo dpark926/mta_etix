@@ -97,7 +97,12 @@ class App extends Component {
           <Redirect to='/buytickets' />
           <Route path="/buytickets" component={BuyTickets}/>
           <Route path="/origin" render={() => <Origin/>}/>
-          <Route path="/destination" render={() => <Destination/>}/>
+          <Route path="/destination" render={() => <Destination
+            handleDestination={this.handleDestination}
+            destination={this.state.destination}
+            clickedOrigin={this.state.clickedOrigin}
+            handleClickedDestination={this.handleClickedDestination}/>}
+          />
           <Route path="/ticket-type" render={() => <TicketType
             clickedOrigin={this.state.clickedOrigin}
             clickedDestination={this.state.clickedDestination}

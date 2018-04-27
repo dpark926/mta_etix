@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import handleClick from '../actions/clickActions';
+import handleType from '../actions/typeActions';
 import Header from './Header';
 import BlackBar from './BlackBar';
 import SearchBar from './SearchBar';
@@ -11,6 +12,10 @@ import '../../styles/OriginDest.css';
 class Origin extends Component {
   handleClickedOrigin = (event) => {
     this.props.handleClickedOrigin( event.target.id );
+  }
+
+  handleOrigin = (event) => {
+    this.props.handleOrigin( event.target.value );
   }
 
   render() {
@@ -76,7 +81,9 @@ class Origin extends Component {
           <BlackBar
             yellowWidth='10%'
           />
-          <SearchBar/>
+          <SearchBar
+            handleLocation={this.handleOrigin}
+          />
         </div>
         <div className="location-list-wrapper animated slideInRight">
           <div className="location-list">
@@ -93,7 +100,8 @@ const mapStateToProps = state => {
 };
 
 const mapActionsToProps = {
-  handleClickedOrigin: handleClick.handleClickedOrigin
+  handleClickedOrigin: handleClick.handleClickedOrigin,
+  handleOrigin: handleType.handleTypedOrigin
 }
 
 export default connect( mapStateToProps, mapActionsToProps )( Origin );
