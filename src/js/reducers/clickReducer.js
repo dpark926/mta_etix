@@ -1,10 +1,11 @@
 const clickReducer = ( state = null, { type, payload } ) => {
   switch ( type ) {
     case 'handleClickedOrigin':
-      return {
-        ...state,
-        clickedOrigin: payload.originClicked
-      };
+      // return {
+      //   ...state,
+      //   clickedOrigin: payload.originClicked
+      // };
+      return payload.originClicked
     default:
       return state;
   }

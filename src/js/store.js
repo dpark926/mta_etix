@@ -3,8 +3,8 @@ import clickReducer from './reducers/clickReducer';
 import typeReducer from './reducers/typeReducer';
 
 const allReducers = combineReducers({
-  clickReducer: clickReducer,
-  typeReducer: typeReducer
+  originClicked: clickReducer,
+  origin: typeReducer
 })
 
 const initialState = {

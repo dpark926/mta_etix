@@ -9,15 +9,6 @@ import locations from '../data/locations';
 import '../../styles/OriginDest.css';
 
 class Origin extends Component {
-  // searchbar
-  handleOrigin = (event) => {
-    // this.setState({
-    //   origin: event.target.value
-    // })
-    this.props.handleOrigin( event.target.id );
-  }
-
-  // onClick
   handleClickedOrigin = (event) => {
     this.props.handleClickedOrigin( event.target.id );
   }
@@ -85,11 +76,7 @@ class Origin extends Component {
           <BlackBar
             yellowWidth='10%'
           />
-          <SearchBar
-            handleLocation={this.props.handleOrigin}
-            origin={this.props.origin}
-            handleClickedOrigin={this.props.handleClickedOrigin}
-          />
+          <SearchBar/>
         </div>
         <div className="location-list-wrapper animated slideInRight">
           <div className="location-list">
