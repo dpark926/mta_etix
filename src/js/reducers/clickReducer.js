@@ -1,14 +1,9 @@
-const clickReducer = ( state, { type, payload } ) => {
+const clickReducer = ( state = null, { type, payload } ) => {
   switch ( type ) {
-    case 'handleNavClick':
+    case 'handleClickedOrigin':
       return {
         ...state,
-        clickedNav: payload.clickedNav
-      }
-    case 'handleSubNavClick':
-      return {
-        ...state,
-        clickedSubNav: payload.clickedSubNav
+        clickedOrigin: payload.originClicked
       };
     default:
       return state;

@@ -1,5 +1,11 @@
 import { combineReducers, createStore } from 'redux';
 import clickReducer from './reducers/clickReducer';
+import typeReducer from './reducers/typeReducer';
+
+const allReducers = combineReducers({
+  clickReducer: clickReducer,
+  typeReducer: typeReducer
+})
 
 const initialState = {
   activate: false,
@@ -14,7 +20,7 @@ const initialState = {
 }
 
 const store = createStore(
-  clickReducer,
+  allReducers,
   initialState,
   window.devToolsExtension && window.devToolsExtension()
 );
