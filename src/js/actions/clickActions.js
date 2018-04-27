@@ -1,12 +1,23 @@
 function handleClickedOrigin(data) {
   return {
-    type: 'handleClickedOrigin',
+    type: 'clickedOrigin',
     payload: {
       originClicked: data
     }
   }
 }
 
+function handleClickedDestination(data) {
+  console.log('what')
+  return {
+    type: 'clickedDestination',
+    payload: {
+      destinationClicked: data
+    }
+  }
+}
+
 export default {
-  handleClickedOrigin
+  handleClickedOrigin,
+  handleClickedDestination
 };

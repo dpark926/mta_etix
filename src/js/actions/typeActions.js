@@ -1,12 +1,22 @@
-function handleOrigin(data) {
+function handleTypedOrigin(data) {
   return {
-    type: 'handleOrigin',
+    type: 'typedOrigin',
     payload: {
-      originSearch: data
+      destinationSearch: data
+    }
+  }
+}
+
+function handleTypedDestination(data) {
+  return {
+    type: 'typedDestination',
+    payload: {
+      destinationClicked: data
     }
   }
 }
 
 export default {
-  handleOrigin
+  handleTypedOrigin,
+  handleTypedDestination
 };

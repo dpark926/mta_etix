@@ -90,22 +90,14 @@ class App extends Component {
 
 
   render () {
+    console.log(store.getState());
     return (
       <Provider store={ store }>
         <div className="App">
           <Redirect to='/buytickets' />
           <Route path="/buytickets" component={BuyTickets}/>
-          <Route path="/origin" render={() => <Origin
-            handleOrigin={this.handleOrigin}
-            origin={this.state.origin}
-            handleClickedOrigin={this.handleClickedOrigin}/>}
-          />
-          <Route path="/destination" render={() => <Destination
-            handleDestination={this.handleDestination}
-            destination={this.state.destination}
-            clickedOrigin={this.state.clickedOrigin}
-            handleClickedDestination={this.handleClickedDestination}/>}
-          />
+          <Route path="/origin" render={() => <Origin/>}/>
+          <Route path="/destination" render={() => <Destination/>}/>
           <Route path="/ticket-type" render={() => <TicketType
             clickedOrigin={this.state.clickedOrigin}
             clickedDestination={this.state.clickedDestination}

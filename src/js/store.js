@@ -3,16 +3,18 @@ import clickReducer from './reducers/clickReducer';
 import typeReducer from './reducers/typeReducer';
 
 const allReducers = combineReducers({
-  originClicked: clickReducer,
-  origin: typeReducer
+  clickedOrigin: clickReducer.clickOriginReducer,
+  clickedDestination: clickReducer.clickedDestinationReducer,
+  origin: typeReducer.typeOriginReducer,
+  destination: typeReducer.typeDestinationReducer
 })
 
 const initialState = {
   activate: false,
-  origin: '',
-  destination: '',
   clickedOrigin: '',
   clickedDestination: '',
+  origin: '',
+  destination: '',
   ticketType: '',
   ticket: '',
   cost: '',

@@ -1,14 +1,22 @@
-const typeReducer = ( state = null, { type, payload } ) => {
+const typeOriginReducer = ( state = null, { type, payload } ) => {
   switch ( type ) {
-    case 'handleOrigin':
-      // return {
-      //   ...state,
-      //   origin: payload.originSearch
-      // }
-      return payload.originSearch
+    case 'typedOrigin':
+      return payload.destinationSearch
     default:
       return state;
   }
 };
 
-export default typeReducer;
+const typeDestinationReducer = ( state = null, { type, payload } ) => {
+  switch ( type ) {
+    case 'typedDestination':
+      return payload.destinationClicked
+    default:
+      return state;
+  }
+};
+
+export default {
+  typeOriginReducer,
+  typeDestinationReducer
+};

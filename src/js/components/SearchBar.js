@@ -25,7 +25,7 @@ const mapStateToProps = state => {
 };
 
 const mapActionsToProps = {
-  handleOrigin: handleType.handleOrigin
+  handleOrigin: handleType.handleTypedOrigin
 }
 
 export default connect( mapStateToProps, mapActionsToProps )( SearchBar );
