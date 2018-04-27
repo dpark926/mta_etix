@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Redirect } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './store';
 import '../styles/App.css';
 import Origin from './components/Origin.js';
 import Destination from './components/Destination.js';
@@ -89,92 +91,94 @@ class App extends Component {
 
   render () {
     return (
-      <div className="App">
-        <Redirect to='/buytickets' />
-        <Route path="/buytickets" component={BuyTickets}/>
-        <Route path="/origin" render={() => <Origin
-          handleOrigin={this.handleOrigin}
-          origin={this.state.origin}
-          handleClickedOrigin={this.handleClickedOrigin}/>}
-        />
-        <Route path="/destination" render={() => <Destination
-          handleDestination={this.handleDestination}
-          destination={this.state.destination}
-          clickedOrigin={this.state.clickedOrigin}
-          handleClickedDestination={this.handleClickedDestination}/>}
-        />
-        <Route path="/ticket-type" render={() => <TicketType
-          clickedOrigin={this.state.clickedOrigin}
-          clickedDestination={this.state.clickedDestination}
-          handleTicketType={this.handleTicketType}/>}
-        />
-        <Route path="/ten-trip" render={() => <TenTrip
-          clickedOrigin={this.state.clickedOrigin}
-          clickedDestination={this.state.clickedDestination}
-          handleTicket={this.handleTicket}
-          ticketType={this.state.ticketType}/>}
-        />
-        <Route path="/monthly" render={() => <Monthly
-          clickedOrigin={this.state.clickedOrigin}
-          clickedDestination={this.state.clickedDestination}
-          handleTicket={this.handleTicket}
-          ticketType={this.state.ticketType}/>}
-        />
-        <Route path="/one-way" render={() => <OneWay
-          clickedOrigin={this.state.clickedOrigin}
-          clickedDestination={this.state.clickedDestination}
-          handleTicket={this.handleTicket}
-          ticketType={this.state.ticketType}/>}
-        />
-        <Route path="/round-trip" render={() => <RoundTrip
-          clickedOrigin={this.state.clickedOrigin}
-          clickedDestination={this.state.clickedDestination}
-          handleTicket={this.handleTicket}
-          ticketType={this.state.ticketType}/>}
-        />
-        <Route path="/weekly" render={() => <Weekly
-          clickedOrigin={this.state.clickedOrigin}
-          clickedDestination={this.state.clickedDestination}
-          handleTicket={this.handleTicket}
-          ticketType={this.state.ticketType}/>}
-        />
-        <Route path="/accept" render={() => <Accept
-          clickedOrigin={this.state.clickedOrigin}
-          clickedDestination={this.state.clickedDestination}
-          ticketType={this.state.ticketType}
-          ticket={this.state.ticket}/>}
-        />
-        <Route path="/payment-method" render={() => <PaymentMethod
-          clickedOrigin={this.state.clickedOrigin}
-          clickedDestination={this.state.clickedDestination}
-          ticketType={this.state.ticketType}
-          cost={this.state.cost}
-          ticket={this.state.ticket}/>}
-        />
-        <Route path="/card-info" render={() => <CardInfo
-          clickedOrigin={this.state.clickedOrigin}
-          clickedDestination={this.state.clickedDestination}
-          ticketType={this.state.ticketType}
-          cost={this.state.cost}
-          handleSecCode={this.handleSecCode}
-          secCode={this.state.secCode}
-          ticket={this.state.ticket}/>}
-        />
-        <Route path="/wallet" render={() => <Wallet
-          clickedOrigin={this.state.clickedOrigin}
-          clickedDestination={this.state.clickedDestination}
-          ticketType={this.state.ticketType}
-          handleSecCode={this.handleSecCode}
-          secCode={this.state.secCode}
-          ticket={this.state.ticket}/>}
-        />
-        <Route path="/access" render={() => <AppContainer
-          ticketType={this.state.ticketType}
-          ticket={this.state.ticket}
-          clickedOrigin={this.state.clickedOrigin}
-          clickedDestination={this.state.clickedDestination}/>}
-        />
-      </div>
+      <Provider store={ store }>
+        <div className="App">
+          <Redirect to='/buytickets' />
+          <Route path="/buytickets" component={BuyTickets}/>
+          <Route path="/origin" render={() => <Origin
+            handleOrigin={this.handleOrigin}
+            origin={this.state.origin}
+            handleClickedOrigin={this.handleClickedOrigin}/>}
+          />
+          <Route path="/destination" render={() => <Destination
+            handleDestination={this.handleDestination}
+            destination={this.state.destination}
+            clickedOrigin={this.state.clickedOrigin}
+            handleClickedDestination={this.handleClickedDestination}/>}
+          />
+          <Route path="/ticket-type" render={() => <TicketType
+            clickedOrigin={this.state.clickedOrigin}
+            clickedDestination={this.state.clickedDestination}
+            handleTicketType={this.handleTicketType}/>}
+          />
+          <Route path="/ten-trip" render={() => <TenTrip
+            clickedOrigin={this.state.clickedOrigin}
+            clickedDestination={this.state.clickedDestination}
+            handleTicket={this.handleTicket}
+            ticketType={this.state.ticketType}/>}
+          />
+          <Route path="/monthly" render={() => <Monthly
+            clickedOrigin={this.state.clickedOrigin}
+            clickedDestination={this.state.clickedDestination}
+            handleTicket={this.handleTicket}
+            ticketType={this.state.ticketType}/>}
+          />
+          <Route path="/one-way" render={() => <OneWay
+            clickedOrigin={this.state.clickedOrigin}
+            clickedDestination={this.state.clickedDestination}
+            handleTicket={this.handleTicket}
+            ticketType={this.state.ticketType}/>}
+          />
+          <Route path="/round-trip" render={() => <RoundTrip
+            clickedOrigin={this.state.clickedOrigin}
+            clickedDestination={this.state.clickedDestination}
+            handleTicket={this.handleTicket}
+            ticketType={this.state.ticketType}/>}
+          />
+          <Route path="/weekly" render={() => <Weekly
+            clickedOrigin={this.state.clickedOrigin}
+            clickedDestination={this.state.clickedDestination}
+            handleTicket={this.handleTicket}
+            ticketType={this.state.ticketType}/>}
+          />
+          <Route path="/accept" render={() => <Accept
+            clickedOrigin={this.state.clickedOrigin}
+            clickedDestination={this.state.clickedDestination}
+            ticketType={this.state.ticketType}
+            ticket={this.state.ticket}/>}
+          />
+          <Route path="/payment-method" render={() => <PaymentMethod
+            clickedOrigin={this.state.clickedOrigin}
+            clickedDestination={this.state.clickedDestination}
+            ticketType={this.state.ticketType}
+            cost={this.state.cost}
+            ticket={this.state.ticket}/>}
+          />
+          <Route path="/card-info" render={() => <CardInfo
+            clickedOrigin={this.state.clickedOrigin}
+            clickedDestination={this.state.clickedDestination}
+            ticketType={this.state.ticketType}
+            cost={this.state.cost}
+            handleSecCode={this.handleSecCode}
+            secCode={this.state.secCode}
+            ticket={this.state.ticket}/>}
+          />
+          <Route path="/wallet" render={() => <Wallet
+            clickedOrigin={this.state.clickedOrigin}
+            clickedDestination={this.state.clickedDestination}
+            ticketType={this.state.ticketType}
+            handleSecCode={this.handleSecCode}
+            secCode={this.state.secCode}
+            ticket={this.state.ticket}/>}
+          />
+          <Route path="/access" render={() => <AppContainer
+            ticketType={this.state.ticketType}
+            ticket={this.state.ticket}
+            clickedOrigin={this.state.clickedOrigin}
+            clickedDestination={this.state.clickedDestination}/>}
+          />
+        </div>
+      </Provider>
     );
   }
 }
