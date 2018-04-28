@@ -73,14 +73,14 @@ class App extends Component {
     })
   }
 
-  handleTicket = (event) => {
-    let id = event.currentTarget.id.split(", ")
-
-    this.setState({
-      ticket: id[0],
-      cost: id[1],
-    })
-  }
+  // handleTicket = (event) => {
+  //   let id = event.currentTarget.id.split(", ")
+  //
+  //   this.setState({
+  //     ticket: id[0],
+  //     cost: id[1],
+  //   })
+  // }
 
   handleSecCode = (event) => {
     this.setState({
@@ -97,17 +97,8 @@ class App extends Component {
           <Redirect to='/buytickets' />
           <Route path="/buytickets" component={BuyTickets}/>
           <Route path="/origin" render={() => <Origin/>}/>
-          <Route path="/destination" render={() => <Destination
-            handleDestination={this.handleDestination}
-            destination={this.state.destination}
-            clickedOrigin={this.state.clickedOrigin}
-            handleClickedDestination={this.handleClickedDestination}/>}
-          />
-          <Route path="/ticket-type" render={() => <TicketType
-            clickedOrigin={this.state.clickedOrigin}
-            clickedDestination={this.state.clickedDestination}
-            handleTicketType={this.handleTicketType}/>}
-          />
+          <Route path="/destination" render={() => <Destination/>}/>
+          <Route path="/ticket-type" render={() => <TicketType/>}/>
           <Route path="/ten-trip" render={() => <TenTrip
             clickedOrigin={this.state.clickedOrigin}
             clickedDestination={this.state.clickedDestination}

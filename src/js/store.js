@@ -2,12 +2,9 @@ import { combineReducers, createStore } from 'redux';
 import clickReducer from './reducers/clickReducer';
 import typeReducer from './reducers/typeReducer';
 
-const allReducers = combineReducers({
-  clickedOrigin: clickReducer.clickOriginReducer,
-  clickedDestination: clickReducer.clickedDestinationReducer,
-  origin: typeReducer.typeOriginReducer,
-  destination: typeReducer.typeDestinationReducer,
-  ticketType: clickReducer.clickedTicketType
+const rootReducers = combineReducers({
+  clickReducer,
+  typeReducer
 })
 
 const initialState = {
@@ -23,7 +20,7 @@ const initialState = {
 }
 
 const store = createStore(
-  allReducers,
+  rootReducers,
   initialState,
   window.devToolsExtension && window.devToolsExtension()
 );

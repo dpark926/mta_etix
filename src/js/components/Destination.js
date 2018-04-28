@@ -19,16 +19,16 @@ class Destination extends Component {
   }
 
   render() {
-    let destination = this.props.destination
+    let destination = this.props.typeReducer.destination
     let newArray = []
 
     for (var i = 0; i < locations.length; i++) {
       let location = locations[i]
-      if (this.props.clickedOrigin === 'Grand Central Terminal' && location === 'Penn Station') {
+      if (this.props.clickReducer.clickedOrigin === 'Grand Central Terminal' && location === 'Penn Station') {
         continue
-      } else if (this.props.clickedOrigin === 'Penn Station' && location === 'Grand Central Terminal') {
+      } else if (this.props.clickReducer.clickedOrigin === 'Penn Station' && location === 'Grand Central Terminal') {
         continue
-      } else if (this.props.clickedOrigin === location) {
+      } else if (this.props.clickReducer.clickedOrigin === location) {
         continue
       } else if(location.slice(0, destination.length).toLowerCase() === destination.toLowerCase() && !newArray.includes(location)) {
         newArray.push(location)
@@ -76,7 +76,7 @@ class Destination extends Component {
             yellowWidth='20%'
           />
           <div className="origin-destination">
-            <div className="origin-destination-third">{this.props.clickedOrigin}</div>
+            <div className="origin-destination-third">{this.props.clickReducer.clickedOrigin}</div>
             <div className="origin-destination-middle fa fa-arrow-right" id="arrow-right" style={{fontSize: "1em", color: "white", fontWeight: "300"}}></div>
             <div className="origin-destination-third"></div>
           </div>

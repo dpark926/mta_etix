@@ -23,9 +23,9 @@ class TicketType extends Component {
             yellowWidth='30%'
           />
           <div className="origin-destination" style={{paddingBottom: '5px'}}>
-            <div className="origin-destination-third">{this.props.clickedOrigin}</div>
+            <div className="origin-destination-third">{this.props.clickReducer.clickedOrigin}</div>
             <div className="origin-destination-middle fa fa-arrow-right" id="arrow-right" style={{fontSize: "1em", color: "white", fontWeight: "300"}}></div>
-            <div className="origin-destination-third">{this.props.clickedDestination}</div>
+            <div className="origin-destination-third">{this.props.clickReducer.clickedDestination}</div>
           </div>
         </div>
 

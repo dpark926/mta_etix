@@ -17,7 +17,17 @@ function handleTypedDestination(data) {
   }
 }
 
+function handleSecCode(data) {
+  return {
+    type: 'secCode',
+    payload: {
+      secCode: data
+    }
+  }
+}
+
 export default {
   handleTypedOrigin,
-  handleTypedDestination
+  handleTypedDestination,
+  handleSecCode
 };
