@@ -19,152 +19,25 @@ import PaymentMethod from './components/PaymentMethod.js';
 import CardInfo from './components/CardInfo.js';
 
 class App extends Component {
-  constructor() {
-    super()
-
-    this.state = {
-      activate: false,
-      origin: '',
-      destination: '',
-      clickedOrigin: '',
-      clickedDestination: '',
-      ticketType: '',
-      ticket: '',
-      cost: '',
-      secCode: ''
-    }
-  }
-
-  handleActivate = () => {
-    this.setState({
-      activate: true
-    })
-  }
-
-  // search
-  handleOrigin = (event) => {
-    this.setState({
-      origin: event.target.value
-    })
-  }
-
-  // search
-  handleDestination = (event) => {
-    this.setState({
-      destination: event.target.value
-    })
-  }
-
-  handleClickedOrigin = (event) => {
-    this.setState({
-      clickedOrigin: event.target.id
-    })
-  }
-
-  handleClickedDestination = (event) => {
-    this.setState({
-      clickedDestination: event.target.id
-    })
-  }
-
-  handleTicketType = (event) => {
-    this.setState({
-      ticketType: event.target.id
-    })
-  }
-
-  // handleTicket = (event) => {
-  //   let id = event.currentTarget.id.split(", ")
-  //
-  //   this.setState({
-  //     ticket: id[0],
-  //     cost: id[1],
-  //   })
-  // }
-
-  handleSecCode = (event) => {
-    this.setState({
-      secCode: event.target.value
-    })
-  }
-
-
   render () {
-    console.log(store.getState());
     return (
       <Provider store={ store }>
         <div className="App">
-          <Redirect to='/buytickets' />
-          <Route path="/buytickets" component={BuyTickets}/>
-          <Route path="/origin" render={() => <Origin/>}/>
-          <Route path="/destination" render={() => <Destination/>}/>
-          <Route path="/ticket-type" render={() => <TicketType/>}/>
-          <Route path="/ten-trip" render={() => <TenTrip
-            clickedOrigin={this.state.clickedOrigin}
-            clickedDestination={this.state.clickedDestination}
-            handleTicket={this.handleTicket}
-            ticketType={this.state.ticketType}/>}
-          />
-          <Route path="/monthly" render={() => <Monthly
-            clickedOrigin={this.state.clickedOrigin}
-            clickedDestination={this.state.clickedDestination}
-            handleTicket={this.handleTicket}
-            ticketType={this.state.ticketType}/>}
-          />
-          <Route path="/one-way" render={() => <OneWay
-            clickedOrigin={this.state.clickedOrigin}
-            clickedDestination={this.state.clickedDestination}
-            handleTicket={this.handleTicket}
-            ticketType={this.state.ticketType}/>}
-          />
-          <Route path="/round-trip" render={() => <RoundTrip
-            clickedOrigin={this.state.clickedOrigin}
-            clickedDestination={this.state.clickedDestination}
-            handleTicket={this.handleTicket}
-            ticketType={this.state.ticketType}/>}
-          />
-          <Route path="/weekly" render={() => <Weekly
-            clickedOrigin={this.state.clickedOrigin}
-            clickedDestination={this.state.clickedDestination}
-            handleTicket={this.handleTicket}
-            ticketType={this.state.ticketType}/>}
-          />
-          <Route path="/accept" render={() => <Accept
-            clickedOrigin={this.state.clickedOrigin}
-            clickedDestination={this.state.clickedDestination}
-            ticketType={this.state.ticketType}
-            ticket={this.state.ticket}/>}
-          />
-          <Route path="/payment-method" render={() => <PaymentMethod
-            clickedOrigin={this.state.clickedOrigin}
-            clickedDestination={this.state.clickedDestination}
-            ticketType={this.state.ticketType}
-            cost={this.state.cost}
-            ticket={this.state.ticket}/>}
-          />
-          <Route path="/card-info" render={() => <CardInfo
-            clickedOrigin={this.state.clickedOrigin}
-            clickedDestination={this.state.clickedDestination}
-            ticketType={this.state.ticketType}
-            cost={this.state.cost}
-            handleSecCode={this.handleSecCode}
-            secCode={this.state.secCode}
-            ticket={this.state.ticket}/>}
-          />
-          <Route path="/wallet" render={() => <Wallet
-            clickedOrigin={this.state.clickedOrigin}
-            clickedDestination={this.state.clickedDestination}
-            ticketType={this.state.ticketType}
-            handleSecCode={this.handleSecCode}
-            secCode={this.state.secCode}
-            ticket={this.state.ticket}/>}
-          />
-          <Route path="/access" render={() => <AppContainer
-            ticketType={this.state.ticketType}
-            ticket={this.state.ticket}
-            clickedOrigin={this.state.clickedOrigin}
-            clickedDestination={this.state.clickedDestination}/>}
-          />
+          <Redirect to='/' />
+          <Route exact path="/" component={BuyTickets}/>
+          <Route exact path="/origin" render={() => <Origin/>}/>
+          <Route exact path="/destination" render={() => <Destination/>}/>
+          <Route exact path="/ticket-type" render={() => <TicketType/>}/>
+          <Route exact path="/ten-trip" render={() => <TenTrip/>}/>
+          <Route exact path="/monthly" render={() => <Monthly/>}/>
+          <Route exact path="/one-way" render={() => <OneWay/>}/>
+          <Route exact path="/round-trip" render={() => <RoundTrip/>}/>
+          <Route exact path="/weekly" render={() => <Weekly/>}/>
+          <Route exact path="/accept" render={() => <Accept/>}/>
+          <Route exact path="/payment-method" render={() => <PaymentMethod/>}/>
+          <Route exact path="/card-info" render={() => <CardInfo/>}/>
+          <Route exact path="/wallet" render={() => <Wallet/>}/>
+          <Route exact path="/access" render={() => <AppContainer/>}/>
         </div>
       </Provider>
     );

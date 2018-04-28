@@ -19,7 +19,6 @@ class Origin extends Component {
   }
 
   render() {
-    // debugger;
     let origin = this.props.typeReducer.origin
     let newArray = []
 
