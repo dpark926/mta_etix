@@ -7,17 +7,7 @@ const rootReducers = combineReducers({
   typeReducer
 })
 
-const initialState = {
-  activate: false,
-  clickedOrigin: '',
-  clickedDestination: '',
-  origin: '',
-  destination: '',
-  ticketType: '',
-  ticket: '',
-  cost: '',
-  secCode: ''
-}
+const initialState = {}
 
 const store = createStore(
   rootReducers,
