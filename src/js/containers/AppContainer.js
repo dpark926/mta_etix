@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import TimeContainer from './TimeContainer.js';
 import ColorBlock from '../components/ColorBlock.js';
 import Button from '../components/Button.js';
@@ -64,7 +65,7 @@ class AppContainer extends Component {
             <Link to="/wallet">
               <div className="location-header-arrow fa fa-arrow-left" style={{fontSize: "1.5em"}}></div>
             </Link>
-            <h2 className="location-header-text">{this.props.ticketType} {this.props.ticket}</h2>
+            <h2 className="location-header-text">{ this.props.clickReducer.ticketType} { this.props.clickReducer.ticket}</h2>
           </div>
           <div className='time-block-button-wrapper animated slideInDown'>
             <div className='time-block-wrapper'>
@@ -82,18 +83,18 @@ class AppContainer extends Component {
               />
               <div className='tap-button'>Tap to reveal barcode</div>
             </div>
-            <a href='#'><Button handleClick={this.handleClick} clicked={this.state.clicked}/></a>
+            <a href='#'><Button handleClick={ this.handleClick } clicked={ this.state.clicked }/></a>
           </div>
           <div className="app-container-lower">
-            <div className='ticket-activated-at'>Ticket activated at {this.state.activated.slice(0, 5)} {this.state.activated.slice(-2)}</div>
-            <div className='ticket-type-info'>{this.props.ticketType} {this.props.ticket}</div>
+            <div className='ticket-activated-at'>Ticket activated at { this.state.activated.slice(0, 5) } { this.state.activated.slice(-2) }</div>
+            <div className='ticket-type-info'>{ this.props.clickReducer.ticketType } { this.props.clickReducer.ticket }</div>
             <div className='lirr'>Long Island Rail Road</div>
             <div className='ticket-area-code'>
               <div className='ticket-area-code-wrapper1'>
-                <div className='ticket-area-code-origindest'>{this.props.clickedOrigin}</div>
-                {this.props.clickedOrigin === "Penn Station" ? <div className='ticket-area-code-areanum'>1</div> : <div className='ticket-area-code-areanum'>3</div>}
-                <div className='ticket-area-code-origindest'>{this.props.clickedDestination}</div>
-                {this.props.clickedDestination === "Penn Station" ? <div className='ticket-area-code-areanum'>1</div> : <div className='ticket-area-code-areanum'>3</div>}
+                <div className='ticket-area-code-origindest'>{ this.props.clickReducer.clickedOrigin }</div>
+                { this.props.clickReducer.clickedOrigin === "Penn Station" ? <div className='ticket-area-code-areanum'>1</div> : <div className='ticket-area-code-areanum'>3</div>}
+                <div className='ticket-area-code-origindest'>{ this.props.clickReducer.clickedDestination }</div>
+                { this.props.clickReducer.clickedDestination === "Penn Station" ? <div className='ticket-area-code-areanum'>1</div> : <div className='ticket-area-code-areanum'>3</div>}
               </div>
               <div className='ticket-area-code-wrapper2'>
                 <div className='ticket-area-code-circle'></div>
@@ -112,17 +113,17 @@ class AppContainer extends Component {
             <Link to="/one-way">
               <div className="location-header-arrow fa fa-arrow-left" style={{fontSize: "1.5em", position: "fixed", margin: "20px 10px"}}></div>
             </Link>
-            <h2 className="location-header-text">{this.props.ticketType} {this.props.ticket}</h2>
+            <h2 className="location-header-text"> {this.props.clickReducer.ticketType } {this.props.clickReducer.ticket}</h2>
           </div>
           <div className='time-block-button-wrapper animated slideInUp'>
             <div className='time-block-wrapper'>
               <Barcode/>
               <div className='tap-button'>Tap to reveal color bar</div>
             </div>
-            <a href='#'><Button handleClick={this.handleClick} clicked={this.state.clicked}/></a>
+            <a href='#'><Button handleClick={ this.handleClick} clicked={ this.state.clicked }/></a>
           </div>
           <div>
-            <div>{this.props.ticketType} {this.props.ticket}</div>
+            <div>{ this.props.clickReducer.ticketType } { this.props.clickReducer.ticket }</div>
           </div>
         </div>
       );
@@ -130,4 +131,8 @@ class AppContainer extends Component {
   }
 }
 
-export default AppContainer;
+const mapStateToProps = state => {
+  return state;
+};
+
+export default connect( mapStateToProps )( AppContainer );
