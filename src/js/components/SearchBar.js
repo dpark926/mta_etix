@@ -1,7 +1,8 @@
-import React from 'react';
+import React,{ Component } from 'react';
+import { connect } from 'react-redux';
 import '../../styles/OriginDest.css';
 
-function SearchBar (props) {
+const SearchBar = ( props ) => {
   return (
     <div className='search-wrapper'>
       <div className='search-wrapper2'>
