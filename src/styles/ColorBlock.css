@@ -3,7 +3,7 @@
 }
 
 .colorblock-main {
-  margin: 10px 10px 0 10px;
+  margin: 10px 0 0 0;
 }
 
 .each-block {
@@ -18,9 +18,34 @@
   animation-iteration-count: 100;
 }
 
+@-webkit-keyframes block {
+    0%  {opacity: 1}
+    5%  {opacity: 0.5}
+    10% {opacity: 1}
+    15% {opacity: 0.5}
+    20% {opacity: 1}
+    25% {opacity: 0.5}
+    30% {opacity: 1}
+    35% {opacity: 0.5}
+    40% {opacity: 1}
+    45% {opacity: 0.5}
+    50% {opacity: 1}
+    55% {opacity: 0.5}
+    60% {opacity: 1}
+    65% {opacity: 0.5}
+    70% {opacity: 1}
+    75% {opacity: 0.5}
+    80% {opacity: 1}
+    85% {opacity: 0.5}
+    90% {opacity: 1}
+    95% {opacity: 0.5}
+    100% {opacity: 1}
+}
+
 .block1 {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
+  /* opacity: 0.5; */
 }
 
 .block3 {
@@ -29,9 +54,10 @@
 }
 
 .sketch-picker-wrapper {
-  height: 0px;
+  /* height: 0px;
   position: fixed;
-  top: -80px
+  top: -80px */
+  height: 0;
 }
 
 .sketch-picker {

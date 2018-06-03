@@ -1,6 +1,6 @@
 .timeclock-main {
   margin: 5px 0;
-  width: 100vw;
+  width: 100%;
   position: absolute;
   z-index: 2;
 }
@@ -10,16 +10,16 @@
   font-size: 8vw;
   color: white;
   text-shadow:
-    3px 3px 5px rgba(50, 50, 50, 0.8),
-    -2px -2px 5px rgba(50, 50, 50, 0.8),
-    2px -2px 5px rgba(50, 50, 50, 0.8),
-    -2px 2px 5px rgba(50, 50, 50, 0.8),
-    2px 2px 5px rgba(50, 50, 50, 0.8);
+    3px 3px 5px rgba(25, 25, 25, 1),
+    -2px -2px 5px rgba(25, 25, 25, 1),
+    2px -2px 5px rgba(25, 25, 25, 1),
+    -2px 2px 5px rgba(25, 25, 25, 1),
+    2px 2px 5px rgba(25, 25, 25, 1);
   position: relative;
   animation-name: example;
   animation-duration: 8s;
   animation-iteration-count: 100;
-  max-width: 400px;
+  max-width: 250px;
 }
 
 @media only screen and (min-width: 415px) {
@@ -49,9 +49,9 @@
 }
 
 @-webkit-keyframes example {
-  0%  {left:-70px;}
-  25% {left:70px;}
-  50% {left:-70px;}
-  75% {left:70px;}
-  100% {left:-70px;}
+  0%  {left:-10px;}
+  25% {left:140px;}
+  50% {left:-10px;}
+  75% {left:140px;}
+  100% {left:-10px;}
 }

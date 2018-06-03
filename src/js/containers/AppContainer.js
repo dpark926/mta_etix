@@ -26,10 +26,14 @@ class AppContainer extends Component {
     this.state = {
       clicked: false,
       activated: (new Date()).toLocaleTimeString(),
+      month: (new Date()).getMonth(),
+      hour: (new Date()).getHours(),
       block1: divStyle[0],
       block2: divStyle[1],
       block3: divStyle[2],
-      colorToggle: false,
+      colorToggle1: false,
+      colorToggle2: false,
+      colorToggle3: false,
     }
   }
 
@@ -51,13 +55,28 @@ class AppContainer extends Component {
     this.setState({ block3: color.hex });
   }
 
-  toggleColor = () => {
+  toggleColor1 = () => {
     this.setState({
-      colorToggle: !this.state.colorToggle
+      colorToggle1: !this.state.colorToggle1
+    })
+  }
+
+  toggleColor2 = () => {
+    this.setState({
+      colorToggle2: !this.state.colorToggle2
+    })
+  }
+
+  toggleColor3 = () => {
+    this.setState({
+      colorToggle3: !this.state.colorToggle3
     })
   }
 
   render() {
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "November", "December"];
+    const thisMonth = months[this.state.month];
+
     if (this.state.clicked === false) {
       return (
         <div className="app-container">
@@ -67,7 +86,7 @@ class AppContainer extends Component {
             </Link>
             <h2 className="location-header-text">{ this.props.clickReducer.ticketType} { this.props.clickReducer.ticket}</h2>
           </div>
-          <div className='time-block-button-wrapper animated slideInDown'>
+          <div className='time-block-button-wrapper'>
             <div className='time-block-wrapper'>
               <TimeContainer handleClick={this.handleClick}/>
               <ColorBlock
@@ -75,18 +94,24 @@ class AppContainer extends Component {
                 block1={this.state.block1}
                 block2={this.state.block2}
                 block3={this.state.block3}
-                colorToggle={this.state.colorToggle}
+                colorToggle1={this.state.colorToggle1}
+                colorToggle2={this.state.colorToggle2}
+                colorToggle3={this.state.colorToggle3}
                 handleChangeComplete1={this.handleChangeComplete1}
                 handleChangeComplete2={this.handleChangeComplete2}
                 handleChangeComplete3={this.handleChangeComplete3}
-                toggleColor={this.toggleColor}
+                toggleColor1={this.toggleColor1}
+                toggleColor2={this.toggleColor2}
+                toggleColor3={this.toggleColor3}
               />
               <div className='tap-button'>Tap to reveal barcode</div>
             </div>
-            <a href='#'><Button handleClick={ this.handleClick } clicked={ this.state.clicked }/></a>
+            <div style={{paddingBottom: 5, backgroundColor: '#f1f1f1'}}>
+              <a href='#'><Button handleClick={ this.handleClick } clicked={ this.state.clicked }/></a>
+            </div>
           </div>
           <div className="app-container-lower">
-            <div className='ticket-activated-at'>Ticket activated at { this.state.activated.slice(0, 5) } { this.state.activated.slice(-2) }</div>
+            <div className='ticket-activated-at'>Ticket activated at { this.state.hour < 10 ? this.state.activated.slice(0, 4) : this.state.activated.slice(0, 5) } { this.state.activated.slice(-2) }</div>
             <div className='ticket-type-info'>{ this.props.clickReducer.ticketType } { this.props.clickReducer.ticket }</div>
             <div className='lirr'>Long Island Rail Road</div>
             <div className='ticket-area-code'>
@@ -96,8 +121,16 @@ class AppContainer extends Component {
                 <div className='ticket-area-code-origindest'>{ this.props.clickReducer.clickedDestination }</div>
                 { this.props.clickReducer.clickedDestination === "Penn Station" ? <div className='ticket-area-code-areanum'>1</div> : <div className='ticket-area-code-areanum'>3</div>}
               </div>
-              <div className='ticket-area-code-wrapper2'>
+              {/* <div className='ticket-area-code-wrapper2'>
                 <div className='ticket-area-code-circle'></div>
+              </div> */}
+              <div className='ticket-area-code-month'>
+                <div className='ticket-area-code-month-wrapper'>
+                  { thisMonth.split("").map( letter => <div className='ticket-area-code-letter'>{letter.toUpperCase()}</div>) }
+                  {/* <div className='ticket-area-code-letter'>M</div>
+                  <div className='ticket-area-code-letter'>A</div>
+                  <div className='ticket-area-code-letter'>Y</div> */}
+                </div>
               </div>
             </div>
             <div className='ticket-type-info'>

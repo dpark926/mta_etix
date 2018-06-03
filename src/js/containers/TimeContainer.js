@@ -43,12 +43,15 @@ class TimeContainer extends Component {
   render() {
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "November", "December"]
     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    const { time, month, date, year } = this.state;
 
     return (
       <div className='timeclock-main'>
         <div className='timeclock-text'>
-          <div className='timeclock-time'>{this.state.time}</div>
-          <div className='timeclock-date'>{this.state.month + 1}/{this.state.date < 10 ? '0' + this.state.date : this.state.date}/{this.state.year}</div>
+          <div className='timeclock-time'>{time}</div>
+          <div className='timeclock-date'>
+            {month >= 10 ? month + 1 : '0' + month}/{date < 10 ? '0' + date : date}/{year}
+          </div>
         </div>
       </div>
     )

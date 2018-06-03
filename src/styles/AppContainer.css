@@ -6,10 +6,10 @@
 }
 
 .ticket-activated-at {
-  background-color: #d62d20;
+  background-color: #ED203E;
   border-radius: 5px;
   color: white;
-  margin: 5px 15px;
+  margin: 0 15px 5px 15px;
   padding: 7px;
 }
 
@@ -42,10 +42,13 @@
 }
 
 .ticket-area-code {
-  background-color: #cdecf5;
+  /* background-color: #cdecf5; */
+  background-color: #D9EBEF;
   margin: 0 15px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  display: flex;
+  flex-direction: row;
 }
 
 .ticket-area-code-wrapper1 {
@@ -66,6 +69,24 @@
   padding: 15px 10px;
 }
 
+.ticket-area-code-month {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+
+.ticket-area-code-month-wrapper {
+  border: 2px solid black;
+  padding: 5px 15px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.ticket-area-code-letter {
+  line-height: 1.125
+}
+
 .ticket-area-code-origindest {
   font-size: 1.5rem;
   font-weight: 800;
@@ -74,7 +95,7 @@
 .ticket-area-code-areanum {
   font-size: 2.4rem;
   font-weight: 800;
-  padding-right: 10px
+  padding-right: 10px;
 }
 
 .ticket-area-code-circle {
@@ -92,4 +113,6 @@
 
 .app-container-lower {
   background-color: #f1f1f1;
+  height: 100%;
+  padding-bottom: 50px;
 }
