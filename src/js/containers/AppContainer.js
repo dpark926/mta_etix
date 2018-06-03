@@ -114,24 +114,30 @@ class AppContainer extends Component {
             <div className='ticket-activated-at'>Ticket activated at { this.state.hour < 10 ? this.state.activated.slice(0, 4) : this.state.activated.slice(0, 5) } { this.state.activated.slice(-2) }</div>
             <div className='ticket-type-info'>{ this.props.clickReducer.ticketType } { this.props.clickReducer.ticket }</div>
             <div className='lirr'>Long Island Rail Road</div>
-            <div className='ticket-area-code'>
+            <div className='ticket-area-code' style={{backgroundColor: this.props.clickReducer.ticketType === "Monthly" ? '#F5EFCF' : '#D9EBEF'}}>
+              <div></div>
               <div className='ticket-area-code-wrapper1'>
                 <div className='ticket-area-code-origindest'>{ this.props.clickReducer.clickedOrigin }</div>
                 { this.props.clickReducer.clickedOrigin === "Penn Station" ? <div className='ticket-area-code-areanum'>1</div> : <div className='ticket-area-code-areanum'>3</div>}
                 <div className='ticket-area-code-origindest'>{ this.props.clickReducer.clickedDestination }</div>
                 { this.props.clickReducer.clickedDestination === "Penn Station" ? <div className='ticket-area-code-areanum'>1</div> : <div className='ticket-area-code-areanum'>3</div>}
               </div>
-              {/* <div className='ticket-area-code-wrapper2'>
-                <div className='ticket-area-code-circle'></div>
-              </div> */}
-              <div className='ticket-area-code-month'>
-                <div className='ticket-area-code-month-wrapper'>
-                  { thisMonth.split("").map( letter => <div className='ticket-area-code-letter'>{letter.toUpperCase()}</div>) }
-                  {/* <div className='ticket-area-code-letter'>M</div>
-                  <div className='ticket-area-code-letter'>A</div>
-                  <div className='ticket-area-code-letter'>Y</div> */}
+
+              { this.props.clickReducer.ticketType === "Monthly" ?
+                <div className='ticket-area-code-month'>
+                  <div className='ticket-area-code-month-wrapper'>
+                    { thisMonth.split("").map( letter => <div className='ticket-area-code-letter'>{letter.toUpperCase()}</div>) }
+                  </div>
+                </div> :
+                // <div className='ticket-area-code-month'>
+                //   <div className='ticket-area-code-month-wrapper'>
+                //     { "city".split("").map( letter => <div className='ticket-area-code-letter'>{letter.toUpperCase()}</div>) }
+                //   </div>
+                // </div>
+                <div className='ticket-area-code-wrapper2'>
+                  <div className='ticket-area-code-circle'></div>
                 </div>
-              </div>
+              }
             </div>
             <div className='ticket-type-info'>
               <div className='ticket-train-time'>Train Time</div>
