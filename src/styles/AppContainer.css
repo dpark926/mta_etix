@@ -49,6 +49,8 @@
   border-bottom-right-radius: 5px;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .ticket-area-code-wrapper1 {
@@ -61,12 +63,11 @@
 }
 
 .ticket-area-code-wrapper2 {
-  display: inline-block;
-  text-align: right;
-  vertical-align: top;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 30%;
   height: 100%;
-  padding: 15px 10px;
 }
 
 .ticket-area-code-month {
@@ -90,6 +91,7 @@
 .ticket-area-code-origindest {
   font-size: 1.5rem;
   font-weight: 800;
+  line-height: 2.5;
 }
 
 .ticket-area-code-areanum {
@@ -98,13 +100,38 @@
   padding-right: 10px;
 }
 
-.ticket-area-code-circle {
-  margin: 60% auto 0 auto;
+.ticket-area-code-circle-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 100px solid black;
+}
+
+.ticket-area-code-circle-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 0;
   height: 0;
   border-left: 30px solid transparent;
   border-right: 30px solid transparent;
   border-top: 100px solid black;
+}
+
+.ticket-area-code-circle-inner-top {
+  color: white;
+  font-size: 24px;
+  margin-top: 160px;
+}
+
+.ticket-area-code-circle-inner-bottom {
+  color: white;
+  font-size: 24px;
+  margin-top: -160px;
 }
 
 .button-wrapper {

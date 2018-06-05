@@ -123,19 +123,21 @@ class AppContainer extends Component {
                 { this.props.clickReducer.clickedDestination === "Penn Station" ? <div className='ticket-area-code-areanum'>1</div> : <div className='ticket-area-code-areanum'>3</div>}
               </div>
 
-              { this.props.clickReducer.ticketType === "Monthly" ?
-                <div className='ticket-area-code-month'>
-                  <div className='ticket-area-code-month-wrapper'>
-                    { thisMonth.split("").map( letter => <div className='ticket-area-code-letter'>{letter.toUpperCase()}</div>) }
-                  </div>
-                </div> :
+              { this.props.clickReducer.clickedOrigin !== "Penn Station" ?
                 // <div className='ticket-area-code-month'>
                 //   <div className='ticket-area-code-month-wrapper'>
-                //     { "city".split("").map( letter => <div className='ticket-area-code-letter'>{letter.toUpperCase()}</div>) }
+                //     { thisMonth.split("").map( letter => <div className='ticket-area-code-letter'>{letter.toUpperCase()}</div>) }
                 //   </div>
-                // </div>
+                // </div> :
                 <div className='ticket-area-code-wrapper2'>
-                  <div className='ticket-area-code-circle'></div>
+                  <div className='ticket-area-code-circle-top'>
+                    <div className='ticket-area-code-circle-inner-top'>P</div>
+                  </div>
+                </div> :
+                <div className='ticket-area-code-wrapper2'>
+                  <div className='ticket-area-code-circle-bottom'>
+                    <div className='ticket-area-code-circle-inner-bottom'>P</div>
+                  </div>
                 </div>
               }
             </div>

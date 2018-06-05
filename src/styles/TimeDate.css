@@ -50,8 +50,8 @@
 
 @-webkit-keyframes example {
   0%  {left:-10px;}
-  25% {left:140px;}
+  25% {left:130px;}
   50% {left:-10px;}
-  75% {left:140px;}
+  75% {left:130px;}
   100% {left:-10px;}
 }
