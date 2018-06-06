@@ -10,7 +10,8 @@
   border-radius: 5px;
   color: white;
   margin: 0 15px 5px 15px;
-  padding: 7px;
+  padding: 5px;
+  border-bottom: 2px solid #CC3333;
 }
 
 .ticket-type-info {
@@ -20,6 +21,7 @@
   color: black;
   margin: 10px 15px;
   padding: 7px;
+  font-weight: 600;
 }
 
 .ticket-train-time {
@@ -43,6 +45,7 @@
 
 .ticket-area-code {
   /* background-color: #cdecf5; */
+  /* background-image: url("./imgs/mta-01.png"); */
   background-color: #D9EBEF;
   margin: 0 15px;
   border-bottom-left-radius: 5px;
@@ -53,13 +56,23 @@
   align-items: center;
 }
 
+.mtaLogo-bg {
+  position: absolute;
+  width: 100%;
+  opacity: 0.2;
+}
+
+.mtaLogo-bg img {
+  width: 130px;
+}
+
 .ticket-area-code-wrapper1 {
   display: inline-block;
   text-align: right;
   vertical-align: top;
   width: 70%;
   height: 100%;
-  padding: 10px 10px;
+  padding: 0 10px 20px 10px;
 }
 
 .ticket-area-code-wrapper2 {
@@ -95,7 +108,7 @@
 }
 
 .ticket-area-code-areanum {
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   font-weight: 800;
   padding-right: 10px;
 }

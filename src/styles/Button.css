@@ -1,7 +1,7 @@
 .half-circle {
   background-color: var(--dark-blue);
-  width: 90px;
-  height: 45px;
+  width: 80px;
+  height: 40px;
   border-bottom-left-radius: 60px;
   border-bottom-right-radius: 60px;
   margin: auto;

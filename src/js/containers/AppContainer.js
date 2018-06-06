@@ -6,6 +6,7 @@ import ColorBlock from '../components/ColorBlock.js';
 import Button from '../components/Button.js';
 import Barcode from '../components/Barcode.js';
 import '../../styles/AppContainer.css';
+import mtaLogo1 from '../../styles/imgs/mtaLogo.svg';
 
 class AppContainer extends Component {
   constructor() {
@@ -115,7 +116,7 @@ class AppContainer extends Component {
             <div className='ticket-type-info'>{ this.props.clickReducer.ticketType } { this.props.clickReducer.ticket }</div>
             <div className='lirr'>Long Island Rail Road</div>
             <div className='ticket-area-code' style={{backgroundColor: this.props.clickReducer.ticketType === "Monthly" ? '#F5EFCF' : '#D9EBEF'}}>
-              <div></div>
+              <div className='mtaLogo-bg'><img src={ mtaLogo1 }></img></div>
               <div className='ticket-area-code-wrapper1'>
                 <div className='ticket-area-code-origindest'>{ this.props.clickReducer.clickedOrigin }</div>
                 { this.props.clickReducer.clickedOrigin === "Penn Station" ? <div className='ticket-area-code-areanum'>1</div> : <div className='ticket-area-code-areanum'>3</div>}

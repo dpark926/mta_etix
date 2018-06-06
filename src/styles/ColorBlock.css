@@ -20,25 +20,25 @@
 
 @-webkit-keyframes block {
     0%  {opacity: 1}
-    5%  {opacity: 0.5}
+    5%  {opacity: 0.7}
     10% {opacity: 1}
-    15% {opacity: 0.5}
+    15% {opacity: 0.7}
     20% {opacity: 1}
-    25% {opacity: 0.5}
+    25% {opacity: 0.7}
     30% {opacity: 1}
-    35% {opacity: 0.5}
+    35% {opacity: 0.7}
     40% {opacity: 1}
-    45% {opacity: 0.5}
+    45% {opacity: 0.7}
     50% {opacity: 1}
-    55% {opacity: 0.5}
+    55% {opacity: 0.7}
     60% {opacity: 1}
-    65% {opacity: 0.5}
+    65% {opacity: 0.7}
     70% {opacity: 1}
-    75% {opacity: 0.5}
+    75% {opacity: 0.7}
     80% {opacity: 1}
-    85% {opacity: 0.5}
+    85% {opacity: 0.7}
     90% {opacity: 1}
-    95% {opacity: 0.5}
+    95% {opacity: 0.7}
     100% {opacity: 1}
 }
 
@@ -60,6 +60,14 @@
   height: 0;
 }
 
+.sketch-picker-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .sketch-picker {
-  display: inline-block;
+  z-index: 10;
+  position: relative;
 }

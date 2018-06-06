@@ -9,21 +9,21 @@ function ColorBlock(props) {
       <div className='each-block block2' onClick={props.toggleColor2} style={{backgroundColor: props.block2}}></div>
       <div className='each-block block3' onClick={props.toggleColor3} style={{backgroundColor: props.block3}}></div>
       <div className="sketch-picker-wrapper">
-        <div className='sketch-picker'>
+        <div className='sketch-picker-box'>
           {props.colorToggle1 ?
             <SketchPicker
               color={ props.block1 }
               onChangeComplete={ props.handleChangeComplete1 }
             /> : null}
         </div>
-        <div className='sketch-picker'>
+        <div className='sketch-picker-box'>
           {props.colorToggle2 ?
             <SketchPicker
               color={ props.block2 }
               onChangeComplete={ props.handleChangeComplete2 }
             /> : null}
         </div>
-        <div className='sketch-picker'>
+        <div className='sketch-picker-box'>
           {props.colorToggle3 ?
             <SketchPicker
               color={ props.block3 }
