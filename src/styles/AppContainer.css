@@ -155,6 +155,8 @@
 
 .app-container-lower {
   background-color: #f1f1f1;
-  height: 100%;
+  /* height: 100%; */
+  height: 410px;
+  overflow: hidden;
   padding-bottom: 50px;
 }
