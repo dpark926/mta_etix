@@ -77,6 +77,7 @@ class AppContainer extends Component {
   render() {
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "November", "December"];
     const thisMonth = months[this.state.month];
+    const excludeHour = [0, 10, 11, 12, 22, 23];
 
     if (this.state.clicked === false) {
       return (
@@ -112,7 +113,7 @@ class AppContainer extends Component {
             </div>
           </div>
           <div className="app-container-lower">
-            <div className='ticket-activated-at'>Ticket activated at { this.state.hour < 10 ? this.state.activated.slice(0, 4) : this.state.activated.slice(0, 5) } { this.state.activated.slice(-2) }</div>
+            <div className='ticket-activated-at'>Ticket activated at { excludeHour.includes(this.state.hour) ? this.state.activated.slice(0, 5) : this.state.activated.slice(0, 4) } { this.state.activated.slice(-2) }</div>
             <div className='ticket-type-info'>{ this.props.clickReducer.ticketType } { this.props.clickReducer.ticket }</div>
             <div className='lirr'>Long Island Rail Road</div>
             <div className='ticket-area-code' style={{backgroundColor: this.props.clickReducer.ticketType === "Monthly" ? '#F5EFCF' : '#D9EBEF'}}>

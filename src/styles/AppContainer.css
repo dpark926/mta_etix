@@ -10,8 +10,9 @@
   border-radius: 5px;
   color: white;
   margin: 0 15px 5px 15px;
-  padding: 5px;
+  padding: 7px;
   border-bottom: 2px solid #CC3333;
+  font-weight: 600;
 }
 
 .ticket-type-info {
@@ -21,6 +22,7 @@
   color: black;
   margin: 10px 15px;
   padding: 7px;
+  border-bottom: 2px solid light-gray;
   font-weight: 600;
 }
 
@@ -137,7 +139,7 @@
 
 .ticket-area-code-circle-inner-top {
   color: white;
-  font-size: 24px;
+  font-size: 30px;
   margin-top: 160px;
 }
 

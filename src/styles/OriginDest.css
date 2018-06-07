@@ -16,10 +16,18 @@
 }
 
 .location-header {
-  height: 55px;
+  height: 70px;
   background-color: var(--darker-blue);
+  padding-top: 10px;
   color: white;
   border-bottom: 2px solid black;
+}
+
+.location-header-text {
+  margin: auto;
+  vertical-align: middle;
+  font-size: 1.15em;
+  font-weight: 600;
 }
 
 .location-header-arrow {
@@ -36,18 +44,12 @@
   top: 5px;
 }
 
-.location-header h2 {
-  margin: auto;
-  vertical-align: middle;
-  font-size: 1.1em;
-}
-
 .location-list-wrapper {
-  padding-top: 117px;
+  padding-top: 132px;
 }
 
 .location-list-wrapper-destination {
-  padding-top: 151px;
+  padding-top: 167px;
 }
 
 .location-list {
