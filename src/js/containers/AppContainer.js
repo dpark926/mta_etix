@@ -82,7 +82,7 @@ class AppContainer extends Component {
     if (this.state.clicked === false) {
       return (
         <div className="app-container">
-          <div className="location-header nav justify-content-center">
+          <div className="location-header nav justify-content-center" style={{paddingTop: '20px'}}>
             <Link to="/wallet">
               <div className="location-header-arrow fa fa-arrow-left" style={{fontSize: "1.5em"}}></div>
             </Link>

@@ -18,7 +18,7 @@
 .location-header {
   height: 70px;
   background-color: var(--darker-blue);
-  padding-top: 20px;
+  padding-top: 10px;
   color: white;
   border-bottom: 2px solid black;
 }
