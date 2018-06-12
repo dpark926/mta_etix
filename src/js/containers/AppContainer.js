@@ -6,7 +6,8 @@ import ColorBlock from '../components/ColorBlock.js';
 import Button from '../components/Button.js';
 import Barcode from '../components/Barcode.js';
 import '../../styles/AppContainer.css';
-import mtaLogo1 from '../../styles/imgs/mtaLogo.svg';
+import mtaLogoBlue from '../../styles/imgs/mtaLogo.svg';
+import mtaLogoWht from '../../styles/imgs/mta-02.png';
 
 class AppContainer extends Component {
   constructor() {
@@ -117,28 +118,31 @@ class AppContainer extends Component {
             <div className='ticket-type-info'>{ this.props.clickReducer.ticketType } { this.props.clickReducer.ticket }</div>
             <div className='lirr'>Long Island Rail Road</div>
             <div className='ticket-area-code' style={{backgroundColor: this.props.clickReducer.ticketType === "Monthly" ? '#F5EFCF' : '#D9EBEF'}}>
-              <div className='mtaLogo-bg'><img src={ mtaLogo1 }></img></div>
+              <div className={`mtaLogo-bg ${this.props.clickReducer.ticketType === "Monthly" ? 'wht-logo' : ''}`}><img src={this.props.clickReducer.ticketType === "Monthly" ? mtaLogoWht : mtaLogoBlue }></img></div>
               <div className='ticket-area-code-wrapper1'>
                 <div className='ticket-area-code-origindest'>{ this.props.clickReducer.clickedOrigin }</div>
                 { this.props.clickReducer.clickedOrigin === "Penn Station" ? <div className='ticket-area-code-areanum'>1</div> : <div className='ticket-area-code-areanum'>3</div>}
                 <div className='ticket-area-code-origindest'>{ this.props.clickReducer.clickedDestination }</div>
                 { this.props.clickReducer.clickedDestination === "Penn Station" ? <div className='ticket-area-code-areanum'>1</div> : <div className='ticket-area-code-areanum'>3</div>}
               </div>
-
-              { this.props.clickReducer.clickedOrigin !== "Penn Station" ?
-                // <div className='ticket-area-code-month'>
-                //   <div className='ticket-area-code-month-wrapper'>
-                //     { thisMonth.split("").map( letter => <div className='ticket-area-code-letter'>{letter.toUpperCase()}</div>) }
-                //   </div>
-                // </div> :
-                <div className='ticket-area-code-wrapper2'>
-                  <div className='ticket-area-code-circle-top'>
-                    <div className='ticket-area-code-circle-inner-top'>P</div>
+              { this.props.clickReducer.ticketType === "Monthly" &&
+                <div className='ticket-area-code-month'>
+                  <div className='ticket-area-code-month-wrapper'>
+                    { thisMonth.split("").map( letter => <div className='ticket-area-code-letter'>{letter.toUpperCase()}</div>) }
                   </div>
-                </div> :
+                </div>
+              }
+              { this.props.clickReducer.clickedOrigin === "Penn Station" &&
                 <div className='ticket-area-code-wrapper2'>
                   <div className='ticket-area-code-circle-bottom'>
-                    <div className='ticket-area-code-circle-inner-bottom'>P</div>
+                    <div className='ticket-area-code-circle-inner-bottom'>{ this.props.clickReducer.ticketType.split("").slice(0, 1) }</div>
+                  </div>
+                </div>
+              }
+              { this.props.clickReducer.clickedOrigin !== "Penn Station" &&
+                <div className='ticket-area-code-wrapper2'>
+                  <div className='ticket-area-code-circle-top'>
+                    <div className='ticket-area-code-circle-inner-top'>{ this.props.clickReducer.ticketType.split("").slice(0, 1) }</div>
                   </div>
                 </div>
               }

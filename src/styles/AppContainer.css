@@ -64,6 +64,10 @@
   opacity: 0.2;
 }
 
+.wht-logo {
+  opacity: 0.7;
+}
+
 .mtaLogo-bg img {
   width: 130px;
 }
@@ -75,6 +79,7 @@
   width: 70%;
   height: 100%;
   padding: 0 10px 20px 10px;
+  z-index: 2;
 }
 
 .ticket-area-code-wrapper2 {
@@ -148,6 +153,7 @@
   color: white;
   font-size: 24px;
   margin-top: -160px;
+  font-weight: 600;
 }
 
 .button-wrapper {
