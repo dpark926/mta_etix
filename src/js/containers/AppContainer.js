@@ -76,11 +76,34 @@ class AppContainer extends Component {
   }
 
   render() {
-    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "November", "December"];
+    const {
+      block1,
+      block2,
+      block3,
+      colorToggle1,
+      colorToggle2,
+      colorToggle3,
+      clicked,
+      hour,
+      activated
+    } = this.state;
+    const months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "November",
+      "December"
+    ];
     const thisMonth = months[this.state.month];
     const excludeHour = [0, 10, 11, 12, 22, 23];
 
-    if (this.state.clicked === false) {
+    if (clicked === false) {
       return (
         <div className="app-container">
           <div className="location-header nav justify-content-center" style={{paddingTop: '20px'}}>
@@ -94,12 +117,12 @@ class AppContainer extends Component {
               <TimeContainer handleClick={this.handleClick}/>
               <ColorBlock
                 handleClick={this.handleClick}
-                block1={this.state.block1}
-                block2={this.state.block2}
-                block3={this.state.block3}
-                colorToggle1={this.state.colorToggle1}
-                colorToggle2={this.state.colorToggle2}
-                colorToggle3={this.state.colorToggle3}
+                block1={block1}
+                block2={block2}
+                block3={block3}
+                colorToggle1={colorToggle1}
+                colorToggle2={colorToggle2}
+                colorToggle3={colorToggle3}
                 handleChangeComplete1={this.handleChangeComplete1}
                 handleChangeComplete2={this.handleChangeComplete2}
                 handleChangeComplete3={this.handleChangeComplete3}
@@ -110,15 +133,21 @@ class AppContainer extends Component {
               <div className='tap-button'>Tap to reveal barcode</div>
             </div>
             <div style={{paddingBottom: 5, backgroundColor: '#f1f1f1'}}>
-              <a href='#'><Button handleClick={ this.handleClick } clicked={ this.state.clicked }/></a>
+              <a href='#'><Button handleClick={ this.handleClick } clicked={ clicked }/></a>
             </div>
           </div>
           <div className="app-container-lower">
-            <div className='ticket-activated-at'>Ticket activated at { excludeHour.includes(this.state.hour) ? this.state.activated.slice(0, 5) : this.state.activated.slice(0, 4) } { this.state.activated.slice(-2) }</div>
-            <div className='ticket-type-info'>{ this.props.clickReducer.ticketType } { this.props.clickReducer.ticket }</div>
+            <div className='ticket-activated-at'>
+              Ticket activated at { excludeHour.includes(hour) ? activated.slice(0, 5) : activated.slice(0, 4) } { activated.slice(-2) }
+            </div>
+            <div className='ticket-type-info'>
+              { this.props.clickReducer.ticketType } { this.props.clickReducer.ticket }
+            </div>
             <div className='lirr'>Long Island Rail Road</div>
             <div className='ticket-area-code' style={{backgroundColor: this.props.clickReducer.ticketType === "Monthly" ? '#F5EFCF' : '#D9EBEF'}}>
-              <div className={`mtaLogo-bg ${this.props.clickReducer.ticketType === "Monthly" ? 'wht-logo' : ''}`}><img src={this.props.clickReducer.ticketType === "Monthly" ? mtaLogoWht : mtaLogoBlue }></img></div>
+              <div className={`mtaLogo-bg ${this.props.clickReducer.ticketType === "Monthly" ? 'wht-logo' : ''}`}>
+                <img src={this.props.clickReducer.ticketType === "Monthly" ? mtaLogoWht : mtaLogoBlue }></img>
+              </div>
               <div className='ticket-area-code-wrapper1'>
                 <div className='ticket-area-code-origindest'>{ this.props.clickReducer.clickedOrigin }</div>
                 { this.props.clickReducer.clickedOrigin === "Penn Station" ? <div className='ticket-area-code-areanum'>1</div> : <div className='ticket-area-code-areanum'>3</div>}
@@ -128,21 +157,22 @@ class AppContainer extends Component {
               { this.props.clickReducer.ticketType === "Monthly" &&
                 <div className='ticket-area-code-month'>
                   <div className='ticket-area-code-month-wrapper'>
-                    { thisMonth.split("").map( letter => <div className='ticket-area-code-letter'>{letter.toUpperCase()}</div>) }
+                    { thisMonth.slice(0, 3).split("").map( letter => <div className='ticket-area-code-letter'>{letter.toUpperCase()}</div>) }
                   </div>
                 </div>
               }
               { this.props.clickReducer.clickedOrigin === "Penn Station" &&
+                this.props.clickReducer.ticketType !== "Monthly" &&
                 <div className='ticket-area-code-wrapper2'>
                   <div className='ticket-area-code-circle-bottom'>
-                    <div className='ticket-area-code-circle-inner-bottom'>{ this.props.clickReducer.ticketType.split("").slice(0, 1) }</div>
+                    <div className='ticket-area-code-circle-inner-bottom'>{ this.props.clickReducer.ticket.split("").slice(0, 1) }</div>
                   </div>
                 </div>
               }
               { this.props.clickReducer.clickedOrigin !== "Penn Station" &&
                 <div className='ticket-area-code-wrapper2'>
                   <div className='ticket-area-code-circle-top'>
-                    <div className='ticket-area-code-circle-inner-top'>{ this.props.clickReducer.ticketType.split("").slice(0, 1) }</div>
+                    <div className='ticket-area-code-circle-inner-top'>{ this.props.clickReducer.ticket.split("").slice(0, 1) }</div>
                   </div>
                 </div>
               }
@@ -167,7 +197,7 @@ class AppContainer extends Component {
               <Barcode/>
               <div className='tap-button'>Tap to reveal color bar</div>
             </div>
-            <a href='#'><Button handleClick={ this.handleClick} clicked={ this.state.clicked }/></a>
+            <a href='#'><Button handleClick={ this.handleClick} clicked={ clicked }/></a>
           </div>
           <div>
             <div>{ this.props.clickReducer.ticketType } { this.props.clickReducer.ticket }</div>

@@ -105,7 +105,8 @@
 }
 
 .ticket-area-code-letter {
-  line-height: 1.125
+  line-height: 1.25;
+  font-weight: 600;
 }
 
 .ticket-area-code-origindest {
