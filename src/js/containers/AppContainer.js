@@ -123,7 +123,7 @@ class AppContainer extends Component {
             <Link to="/wallet">
               <div className="location-header-arrow fa fa-arrow-left" style={{fontSize: "1.5em"}}></div>
             </Link>
-            <h2 className="location-header-text">{ this.props.clickReducer.ticketType} { this.props.clickReducer.ticket}</h2>
+            <h2 className="location-header-text">{ this.props.clickReducer.ticketType} { this.props.clickReducer.ticketType === 'Monthly' ? null : this.props.clickReducer.ticket}</h2>
           </div>
           <div className='time-block-button-wrapper'>
             <div className='time-block-wrapper'>
