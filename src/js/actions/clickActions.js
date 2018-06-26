@@ -39,9 +39,41 @@ function handleTicket(data) {
   }
 }
 
+function handleNextTicketType(data) {
+  return {
+    type: 'nextTicketType',
+    payload: {
+      ticketType: data
+    }
+  }
+}
+
+function switchDestinations(origin, destination) {
+  console.log('switched')
+  return {
+    type: 'switchDestinations',
+    payload: {
+      clickedOrigin: destination,
+      clickedDestination: origin,
+    }
+  }
+}
+
+function switchPeak(data) {
+  return {
+    type: 'switchPeak',
+    payload: {
+      ticket: data === 'Peak' ? 'Off-Peak' : 'Peak'
+    }
+  }
+}
+
 export default {
   handleClickedOrigin,
   handleClickedDestination,
   handleTicketType,
-  handleTicket
+  handleTicket,
+  handleNextTicketType,
+  switchDestinations,
+  switchPeak
 };

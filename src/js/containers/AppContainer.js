@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import handleClick from '../actions/clickActions';
 import TimeContainer from './TimeContainer.js';
 import ColorBlock from '../components/ColorBlock.js';
 import Button from '../components/Button.js';
@@ -75,6 +76,18 @@ class AppContainer extends Component {
     })
   }
 
+  nextTicketType = (ticketType) => {
+    this.props.handleNextTicketType(ticketType);
+  }
+
+  switchDestinations = () => {
+    this.props.switchDestinations(this.props.clickReducer.clickedOrigin, this.props.clickReducer.clickedDestination);
+  }
+
+  switchPeak = () => {
+    this.props.switchPeak(this.props.clickReducer.ticket);
+  }
+
   render() {
     const {
       block1,
@@ -140,15 +153,15 @@ class AppContainer extends Component {
             <div className='ticket-activated-at'>
               Ticket activated at { excludeHour.includes(hour) ? activated.slice(0, 5) : activated.slice(0, 4) } { activated.slice(-2) }
             </div>
-            <div className='ticket-type-info'>
-              { this.props.clickReducer.ticketType } { this.props.clickReducer.ticket }
+            <div className='ticket-type-info' onClick={this.switchPeak}>
+              { this.props.clickReducer.ticketType } { this.props.clickReducer.ticketType === 'Monthly' ? null : this.props.clickReducer.ticket }
             </div>
             <div className='lirr'>Long Island Rail Road</div>
             <div className='ticket-area-code' style={{backgroundColor: this.props.clickReducer.ticketType === "Monthly" ? '#F5EFCF' : '#D9EBEF'}}>
               <div className={`mtaLogo-bg ${this.props.clickReducer.ticketType === "Monthly" ? 'wht-logo' : ''}`}>
                 <img src={this.props.clickReducer.ticketType === "Monthly" ? mtaLogoWht : mtaLogoBlue }></img>
               </div>
-              <div className='ticket-area-code-wrapper1'>
+              <div className='ticket-area-code-wrapper1' onClick={this.switchDestinations}>
                 <div className='ticket-area-code-origindest'>{ this.props.clickReducer.clickedOrigin }</div>
                 { this.props.clickReducer.clickedOrigin === "Penn Station" ? <div className='ticket-area-code-areanum'>1</div> : <div className='ticket-area-code-areanum'>3</div>}
                 <div className='ticket-area-code-origindest'>{ this.props.clickReducer.clickedDestination }</div>
@@ -156,7 +169,7 @@ class AppContainer extends Component {
               </div>
               { this.props.clickReducer.ticketType === "Monthly" &&
                 <div className='ticket-area-code-month'>
-                  <div className='ticket-area-code-month-wrapper'>
+                  <div className='ticket-area-code-month-wrapper' onClick={() => {this.nextTicketType('One-Way')}}>
                     { thisMonth.slice(0, 3).split("").map( letter => <div className='ticket-area-code-letter'>{letter.toUpperCase()}</div>) }
                   </div>
                 </div>
@@ -164,14 +177,15 @@ class AppContainer extends Component {
               { this.props.clickReducer.clickedOrigin === "Penn Station" &&
                 this.props.clickReducer.ticketType !== "Monthly" &&
                 <div className='ticket-area-code-wrapper2'>
-                  <div className='ticket-area-code-circle-bottom'>
+                  <div className='ticket-area-code-circle-bottom' onClick={() => {this.nextTicketType('Monthly')}}>
                     <div className='ticket-area-code-circle-inner-bottom'>{ this.props.clickReducer.ticket.split("").slice(0, 1) }</div>
                   </div>
                 </div>
               }
               { this.props.clickReducer.clickedOrigin !== "Penn Station" &&
+                this.props.clickReducer.ticketType !== "Monthly" &&
                 <div className='ticket-area-code-wrapper2'>
-                  <div className='ticket-area-code-circle-top'>
+                  <div className='ticket-area-code-circle-top' onClick={() => {this.nextTicketType('Monthly')}}>
                     <div className='ticket-area-code-circle-inner-top'>{ this.props.clickReducer.ticket.split("").slice(0, 1) }</div>
                   </div>
                 </div>
@@ -212,4 +226,10 @@ const mapStateToProps = state => {
   return state;
 };
 
-export default connect( mapStateToProps )( AppContainer );
+const mapActionsToProps = {
+  handleNextTicketType: handleClick.handleNextTicketType,
+  switchDestinations: handleClick.switchDestinations,
+  switchPeak: handleClick.switchPeak
+}
+
+export default connect( mapStateToProps, mapActionsToProps )( AppContainer );

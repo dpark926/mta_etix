@@ -102,6 +102,7 @@
   padding: 5px 15px;
   font-size: 20px;
   font-weight: 800;
+  z-index: 10;
 }
 
 .ticket-area-code-letter {
@@ -130,6 +131,7 @@
   border-left: 30px solid transparent;
   border-right: 30px solid transparent;
   border-bottom: 100px solid black;
+  z-index: 10;
 }
 
 .ticket-area-code-circle-bottom {
@@ -141,6 +143,7 @@
   border-left: 30px solid transparent;
   border-right: 30px solid transparent;
   border-top: 100px solid black;
+  z-index: 10;
 }
 
 .ticket-area-code-circle-inner-top {

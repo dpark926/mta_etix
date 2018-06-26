@@ -29,6 +29,22 @@ const clickReducer = ( state = initialState, { type, payload } ) => {
           ticket: payload.ticket,
           cost: payload.cost
         };
+      case 'nextTicketType':
+        return {
+          ...state,
+          ticketType: payload.ticketType
+        };
+      case 'switchDestinations':
+        return {
+          ...state,
+          clickedOrigin: payload.clickedOrigin,
+          clickedDestination: payload.clickedDestination,
+        };
+      case 'switchPeak':
+        return {
+          ...state,
+          ticket: payload.ticket,
+        };
       default:
         return state;
     }
