@@ -99,15 +99,15 @@
 
 .ticket-area-code-month-wrapper {
   border: 2px solid black;
-  padding: 5px 15px;
+  padding: 5px 14px;
   font-size: 20px;
   font-weight: 800;
   z-index: 10;
 }
 
 .ticket-area-code-letter {
-  line-height: 1.25;
-  font-size: 24px;
+  line-height: 1.15;
+  font-size: 20px;
   font-weight: 600;
 }
 

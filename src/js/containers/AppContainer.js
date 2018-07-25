@@ -37,6 +37,7 @@ class AppContainer extends Component {
       colorToggle1: false,
       colorToggle2: false,
       colorToggle3: false,
+      showActivate: true
     }
   }
 
@@ -86,6 +87,12 @@ class AppContainer extends Component {
 
   switchPeak = () => {
     this.props.switchPeak(this.props.clickReducer.ticket);
+  }
+
+  toggleActivate = () => {
+    this.setState({
+      showActivate: !this.state.showActivate
+    })
   }
 
   render() {
@@ -150,11 +157,11 @@ class AppContainer extends Component {
             </div>
           </div>
           <div className="app-container-lower">
-            <div className='ticket-activated-at'>
+            { this.state.showActivate && <div className='ticket-activated-at' onClick={this.toggleActivate}>
               Ticket activated at { excludeHour.includes(hour) ? activated.slice(0, 5) : activated.slice(0, 4) } { activated.slice(-2) }
-            </div>
+            </div>}
             <div className='ticket-type-info' onClick={this.switchPeak}>
-              { this.props.clickReducer.ticketType } { this.props.clickReducer.ticketType === 'Monthly' ? null : this.props.clickReducer.ticket }
+              { this.props.clickReducer.ticketType } { this.props.clickReducer.ticketType === 'Monthly' ? " - " + thisMonth : this.props.clickReducer.ticket }
             </div>
             <div className='lirr'>Long Island Rail Road</div>
             <div className='ticket-area-code' style={{backgroundColor: this.props.clickReducer.ticketType === "Monthly" ? '#F5EFCF' : '#D9EBEF'}}>
