@@ -96,6 +96,8 @@ class AppContainer extends Component {
   }
 
   render() {
+    const { clickReducer } = this.props;
+    const { showActivate } = this.state;
     const {
       block1,
       block2,
@@ -117,6 +119,7 @@ class AppContainer extends Component {
       "July",
       "August",
       "September",
+      "October",
       "November",
       "December"
     ];
@@ -130,7 +133,7 @@ class AppContainer extends Component {
             <Link to="/wallet">
               <div className="location-header-arrow fa fa-arrow-left" style={{fontSize: "1.5em"}}></div>
             </Link>
-            <h2 className="location-header-text">{ this.props.clickReducer.ticketType} { this.props.clickReducer.ticketType === 'Monthly' ? null : this.props.clickReducer.ticket}</h2>
+            <h2 className="location-header-text">{ clickReducer.ticketType} { clickReducer.ticketType === 'Monthly' ? null : clickReducer.ticket}</h2>
           </div>
           <div className='time-block-button-wrapper'>
             <div className='time-block-wrapper'>
@@ -157,43 +160,43 @@ class AppContainer extends Component {
             </div>
           </div>
           <div className="app-container-lower">
-            { this.state.showActivate && <div className='ticket-activated-at' onClick={this.toggleActivate}>
+            { showActivate && <div className='ticket-activated-at' onClick={this.toggleActivate}>
               Ticket activated at { excludeHour.includes(hour) ? activated.slice(0, 5) : activated.slice(0, 4) } { activated.slice(-2) }
             </div>}
             <div className='ticket-type-info' onClick={this.switchPeak}>
-              { this.props.clickReducer.ticketType } { this.props.clickReducer.ticketType === 'Monthly' ? " - " + thisMonth : this.props.clickReducer.ticket }
+              { clickReducer.ticketType } { clickReducer.ticketType === 'Monthly' ? " - " + thisMonth : clickReducer.ticket }
             </div>
             <div className='lirr'>Long Island Rail Road</div>
-            <div className='ticket-area-code' style={{backgroundColor: this.props.clickReducer.ticketType === "Monthly" ? '#F5EFCF' : '#D9EBEF'}}>
-              <div className={`mtaLogo-bg ${this.props.clickReducer.ticketType === "Monthly" ? 'wht-logo' : ''}`}>
-                <img src={this.props.clickReducer.ticketType === "Monthly" ? mtaLogoWht : mtaLogoBlue }></img>
+            <div className='ticket-area-code' style={{backgroundColor: clickReducer.ticketType === "Monthly" ? '#F5EFCF' : '#D9EBEF'}}>
+              <div className={`mtaLogo-bg ${clickReducer.ticketType === "Monthly" ? 'wht-logo' : ''}`}>
+                <img src={clickReducer.ticketType === "Monthly" ? mtaLogoWht : mtaLogoBlue }></img>
               </div>
               <div className='ticket-area-code-wrapper1' onClick={this.switchDestinations}>
-                <div className='ticket-area-code-origindest'>{ this.props.clickReducer.clickedOrigin }</div>
-                { this.props.clickReducer.clickedOrigin === "Penn Station" ? <div className='ticket-area-code-areanum'>1</div> : <div className='ticket-area-code-areanum'>3</div>}
-                <div className='ticket-area-code-origindest'>{ this.props.clickReducer.clickedDestination }</div>
-                { this.props.clickReducer.clickedDestination === "Penn Station" ? <div className='ticket-area-code-areanum'>1</div> : <div className='ticket-area-code-areanum'>3</div>}
+                <div className='ticket-area-code-origindest'>{ clickReducer.clickedOrigin }</div>
+                { clickReducer.clickedOrigin === "Penn Station" ? <div className='ticket-area-code-areanum'>1</div> : <div className='ticket-area-code-areanum'>3</div>}
+                <div className='ticket-area-code-origindest'>{ clickReducer.clickedDestination }</div>
+                { clickReducer.clickedDestination === "Penn Station" ? <div className='ticket-area-code-areanum'>1</div> : <div className='ticket-area-code-areanum'>3</div>}
               </div>
-              { this.props.clickReducer.ticketType === "Monthly" &&
+              { clickReducer.ticketType === "Monthly" &&
                 <div className='ticket-area-code-month'>
                   <div className='ticket-area-code-month-wrapper' onClick={() => {this.nextTicketType('One-Way')}}>
                     { thisMonth.slice(0, 3).split("").map( letter => <div className='ticket-area-code-letter'>{letter.toUpperCase()}</div>) }
                   </div>
                 </div>
               }
-              { this.props.clickReducer.clickedOrigin === "Penn Station" &&
-                this.props.clickReducer.ticketType !== "Monthly" &&
+              { clickReducer.clickedOrigin === "Penn Station" &&
+                clickReducer.ticketType !== "Monthly" &&
                 <div className='ticket-area-code-wrapper2'>
                   <div className='ticket-area-code-circle-bottom' onClick={() => {this.nextTicketType('Monthly')}}>
-                    <div className='ticket-area-code-circle-inner-bottom'>{ this.props.clickReducer.ticket.split("").slice(0, 1) }</div>
+                    <div className='ticket-area-code-circle-inner-bottom'>{ clickReducer.ticket.split("").slice(0, 1) }</div>
                   </div>
                 </div>
               }
-              { this.props.clickReducer.clickedOrigin !== "Penn Station" &&
-                this.props.clickReducer.ticketType !== "Monthly" &&
+              { clickReducer.clickedOrigin !== "Penn Station" &&
+                clickReducer.ticketType !== "Monthly" &&
                 <div className='ticket-area-code-wrapper2'>
                   <div className='ticket-area-code-circle-top' onClick={() => {this.nextTicketType('Monthly')}}>
-                    <div className='ticket-area-code-circle-inner-top'>{ this.props.clickReducer.ticket.split("").slice(0, 1) }</div>
+                    <div className='ticket-area-code-circle-inner-top'>{ clickReducer.ticket.split("").slice(0, 1) }</div>
                   </div>
                 </div>
               }
@@ -211,7 +214,7 @@ class AppContainer extends Component {
             <Link to="/one-way">
               <div className="location-header-arrow fa fa-arrow-left" style={{fontSize: "1.5em", position: "fixed", margin: "20px 10px"}}></div>
             </Link>
-            <h2 className="location-header-text"> {this.props.clickReducer.ticketType } {this.props.clickReducer.ticket}</h2>
+            <h2 className="location-header-text"> {clickReducer.ticketType } {clickReducer.ticket}</h2>
           </div>
           <div className='time-block-button-wrapper animated slideInUp'>
             <div className='time-block-wrapper'>
@@ -221,7 +224,7 @@ class AppContainer extends Component {
             <a href='#'><Button handleClick={ this.handleClick} clicked={ clicked }/></a>
           </div>
           <div>
-            <div>{ this.props.clickReducer.ticketType } { this.props.clickReducer.ticket }</div>
+            <div>{ clickReducer.ticketType } { clickReducer.ticket }</div>
           </div>
         </div>
       );
