@@ -286,11 +286,17 @@ class AppContainer extends Component {
                   </div>
                 )}
             </div>
-            <div className="ticket-type-info" style={{ marginBottom: "100px" }}>
-              <div className="ticket-train-time" style={{ marginRight: "5px" }}>
+            <div className="ticket-type-info" style={{ marginBottom: "150px" }}>
+              <div
+                className="ticket-train-button"
+                style={{ marginRight: "5px" }}
+              >
                 Actions
               </div>
-              <div className="ticket-train-time" style={{ marginLeft: "5px" }}>
+              <div
+                className="ticket-train-button"
+                style={{ marginLeft: "5px" }}
+              >
                 Ticket Info
               </div>
             </div>

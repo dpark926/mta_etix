@@ -37,6 +37,16 @@
   padding: 10px;
 }
 
+.ticket-train-button {
+  background-color: var(--darker-blue);
+  width: 50%;
+  border-bottom: 1px solid #a7adba;
+  border-radius: 5px;
+  color: white;
+  padding: 15px;
+  font-size: 1.15rem;
+}
+
 .lirr {
   background-color: white;
   font-size: 12px;
@@ -52,7 +62,8 @@
   /* background-color: #cdecf5; */
   /* background-image: url("./imgs/mta-01.png"); */
   background-color: #d9ebef;
-  margin: 0 15px;
+  margin: 0 15px 15px 15px;
+  border-bottom: 2px solid #a7adba;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   display: flex;
@@ -102,26 +113,26 @@
 
 .ticket-area-code-month-wrapper {
   border: 2px solid black;
-  padding: 5px 14px;
-  font-size: 20px;
+  padding: 5px 10px;
+  font-size: 24px;
   font-weight: 800;
   z-index: 10;
 }
 
 .ticket-area-code-letter {
   line-height: 1.15;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 600;
 }
 
 .ticket-area-code-origindest {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 800;
   line-height: 2.5;
 }
 
 .ticket-area-code-areanum {
-  font-size: 2.6rem;
+  font-size: 2.8rem;
   font-weight: 800;
   padding-right: 10px;
 }
