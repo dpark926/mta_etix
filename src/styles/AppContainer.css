@@ -24,10 +24,13 @@
   padding: 7px;
   border-bottom: 2px solid light-gray;
   font-weight: 600;
+  display: flex;
+  justify-content: center;
 }
 
 .ticket-train-time {
   background-color: var(--darker-blue);
+  width: 50%;
   border-bottom: 1px solid #a7adba;
   border-radius: 5px;
   color: white;
