@@ -1,5 +1,5 @@
 .tap-button {
-  font-size: 0.7em;
+  font-size: 0.9em;
   font-weight: 700;
   /*border: 1px solid blue;*/
   margin-bottom: 5px;
@@ -7,6 +7,7 @@
 
 .ticket-activated-at {
   background-color: #ed203e;
+  font-size: 18px;
   border-radius: 5px;
   color: white;
   margin: 0 15px 5px 15px;
@@ -17,6 +18,7 @@
 
 .ticket-type-info {
   background-color: white;
+  font-size: 18px;
   border-bottom: 1px solid #a7adba;
   border-radius: 5px;
   color: black;
@@ -44,12 +46,12 @@
   border-radius: 5px;
   color: white;
   padding: 15px;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
 }
 
 .lirr {
   background-color: white;
-  font-size: 12px;
+  font-size: 15px;
   margin: 0 15px;
   font-weight: 600;
   text-align: left;
@@ -114,25 +116,25 @@
 .ticket-area-code-month-wrapper {
   border: 2px solid black;
   padding: 5px 10px;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 800;
   z-index: 10;
 }
 
 .ticket-area-code-letter {
   line-height: 1.15;
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 600;
 }
 
 .ticket-area-code-origindest {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   font-weight: 800;
   line-height: 2.5;
 }
 
 .ticket-area-code-areanum {
-  font-size: 2.8rem;
+  font-size: 2.9rem;
   font-weight: 800;
   padding-right: 10px;
 }
